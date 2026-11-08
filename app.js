@@ -1510,6 +1510,9 @@ function renderCheckoutSummary() {
   }
 }
 
+let pendingOrder = null;
+let promptPayInterval = null;
+
 function submitCheckoutOrder(event) {
   event.preventDefault();
 
@@ -1526,26 +1529,101 @@ function submitCheckoutOrder(event) {
   const orderId = 'AP-' + Math.floor(100000 + Math.random() * 900000);
   const { total } = calculateCartTotals();
 
-  // Show Success Screen
-  const checkoutBody = document.getElementById('checkout-form-container');
+  pendingOrder = {
+    orderId,
+    date: new Date().toLocaleDateString('th-TH', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }),
+    items: [...AppState.cart],
+    total,
+    name,
+    phone,
+    address,
+    paymentMethod,
+    trackingNo: 'KEX-' + Math.floor(10000000 + Math.random() * 90000000) + 'TH',
+    carrier: 'Kerry Express',
+    status: 'กำลังจัดเตรียมพัสดุ',
+    step: 2
+  };
+
+  const checkoutForm = document.getElementById('checkout-form-container');
+  const promptPayContainer = document.getElementById('checkout-promptpay-container');
+
+  if (paymentMethod === 'promptpay') {
+    if (checkoutForm) checkoutForm.classList.add('hidden');
+    if (promptPayContainer) {
+      promptPayContainer.classList.remove('hidden');
+      const amountEl = document.getElementById('promptpay-amount');
+      const refEl = document.getElementById('promptpay-ref');
+      if (amountEl) amountEl.innerText = `฿${total.toLocaleString()}`;
+      if (refEl) refEl.innerText = orderId;
+      startPromptPayCountdown();
+    }
+    return;
+  }
+
+  completeOrderPlacement();
+}
+
+function startPromptPayCountdown() {
+  if (promptPayInterval) clearInterval(promptPayInterval);
+  let seconds = 300;
+  const timerEl = document.getElementById('promptpay-timer');
+  promptPayInterval = setInterval(() => {
+    seconds--;
+    if (seconds <= 0) {
+      clearInterval(promptPayInterval);
+      cancelPromptPay();
+      showToast('หมดเวลาชำระเงิน กรุณาลองใหม่อีกครั้ง', 'error');
+      return;
+    }
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    if (timerEl) timerEl.innerText = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+  }, 1000);
+}
+
+function cancelPromptPay() {
+  if (promptPayInterval) clearInterval(promptPayInterval);
+  const checkoutForm = document.getElementById('checkout-form-container');
+  const promptPayContainer = document.getElementById('checkout-promptpay-container');
+  if (promptPayContainer) promptPayContainer.classList.add('hidden');
+  if (checkoutForm) checkoutForm.classList.remove('hidden');
+}
+
+function confirmPromptPayPayment() {
+  if (promptPayInterval) clearInterval(promptPayInterval);
+  const promptPayContainer = document.getElementById('checkout-promptpay-container');
+  if (promptPayContainer) promptPayContainer.classList.add('hidden');
+  completeOrderPlacement();
+}
+
+function completeOrderPlacement() {
+  if (!pendingOrder) return;
+
+  if (!AppState.orders) AppState.orders = [];
+  AppState.orders.unshift(pendingOrder);
+  try {
+    localStorage.setItem('activepulse_orders', JSON.stringify(AppState.orders));
+  } catch (e) {}
+
+  const checkoutForm = document.getElementById('checkout-form-container');
   const successBody = document.getElementById('checkout-success-container');
   const orderIdEl = document.getElementById('success-order-id');
   const orderTotalEl = document.getElementById('success-order-total');
   const orderPaymentEl = document.getElementById('success-order-payment');
 
-  if (orderIdEl) orderIdEl.innerText = orderId;
-  if (orderTotalEl) orderTotalEl.innerText = `฿${total.toLocaleString()}`;
+  if (checkoutForm) checkoutForm.classList.add('hidden');
+  if (successBody) successBody.classList.remove('hidden');
+
+  if (orderIdEl) orderIdEl.innerText = pendingOrder.orderId;
+  if (orderTotalEl) orderTotalEl.innerText = `฿${pendingOrder.total.toLocaleString()}`;
   if (orderPaymentEl) {
     const paymentNames = {
       'promptpay': 'พร้อมเพย์ QR Code (ชำระแล้ว)',
       'card': 'บัตรเครดิต/เดบิต (สำเร็จ)',
       'cod': 'เก็บเงินปลายทาง (COD)'
     };
-    orderPaymentEl.innerText = paymentNames[paymentMethod] || paymentMethod;
+    orderPaymentEl.innerText = paymentNames[pendingOrder.paymentMethod] || pendingOrder.paymentMethod;
   }
-
-  if (checkoutBody) checkoutBody.classList.add('hidden');
-  if (successBody) successBody.classList.remove('hidden');
 
   // Clear Cart
   AppState.cart = [];
@@ -1559,8 +1637,10 @@ function submitCheckoutOrder(event) {
 function finishOrderAndClose() {
   const checkoutBody = document.getElementById('checkout-form-container');
   const successBody = document.getElementById('checkout-success-container');
+  const promptPayContainer = document.getElementById('checkout-promptpay-container');
   if (checkoutBody) checkoutBody.classList.remove('hidden');
   if (successBody) successBody.classList.add('hidden');
+  if (promptPayContainer) promptPayContainer.classList.add('hidden');
 
   closeCheckoutModal();
 }
@@ -1733,8 +1813,152 @@ function setupEventListeners() {
       closeCheckoutModal();
       closeWishlistModal();
       closeSizeGuide();
+      closeTrackingModal();
     }
   });
+}
+
+// ==========================================
+// 14. ORDER TRACKING & HISTORY
+// ==========================================
+function getSampleOrders() {
+  return [
+    {
+      orderId: 'AP-892144',
+      date: '8 พ.ย. 2026, 14:30 น.',
+      total: 7590,
+      paymentMethod: 'พร้อมเพย์ QR',
+      carrier: 'Kerry Express',
+      trackingNo: 'KEX-88219455TH',
+      status: 'พัสดุกำลังนำจ่าย',
+      step: 3,
+      items: [
+        {
+          name: 'Nike VaporFly 3 Next% Carbon',
+          size: '42',
+          color: { label: 'แดงสปอร์ต' },
+          price: 7590,
+          quantity: 1,
+          image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80'
+        }
+      ]
+    }
+  ];
+}
+
+function openTrackingModal() {
+  const modal = document.getElementById('tracking-modal');
+  if (!modal) return;
+  modal.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+  renderTrackingOrders();
+}
+
+function closeTrackingModal() {
+  const modal = document.getElementById('tracking-modal');
+  if (modal) modal.classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+function renderTrackingOrders(filteredOrders = null) {
+  const container = document.getElementById('tracking-content-container');
+  if (!container) return;
+
+  const savedOrders = AppState.orders || [];
+  const orders = filteredOrders || (savedOrders.length > 0 ? savedOrders : getSampleOrders());
+
+  if (orders.length === 0) {
+    container.innerHTML = `
+      <div class="text-center py-10">
+        <div class="text-4xl mb-2">🔍</div>
+        <p class="font-bold text-slate-700 text-sm">ไม่พบประวัติคำสั่งซื้อ</p>
+        <p class="text-xs text-slate-400 mt-1">ลองค้นหาด้วยหมายเลขคำสั่งซื้อที่ถูกต้อง</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = orders.map(ord => `
+    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-xs space-y-3">
+      <div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-slate-200">
+        <div>
+          <span class="font-bold text-slate-900 text-sm">คำสั่งซื้อ: ${ord.orderId}</span>
+          <span class="text-slate-400 block text-[11px]">${ord.date}</span>
+        </div>
+        <div class="text-right">
+          <span class="font-extrabold text-orange-600 text-sm">฿${ord.total.toLocaleString()}</span>
+          <span class="block text-[11px] text-slate-500 font-medium">${ord.paymentMethod}</span>
+        </div>
+      </div>
+
+      <!-- Tracking Progress Steps -->
+      <div class="bg-white p-3 rounded-xl border border-slate-200/80">
+        <div class="flex items-center justify-between text-[11px] font-bold text-slate-500 mb-2">
+          <span>ขนส่ง: <b class="text-slate-800">${ord.carrier}</b></span>
+          <span class="font-mono text-orange-600 bg-orange-50 px-2 py-0.5 rounded cursor-pointer" onclick="navigator.clipboard?.writeText('${ord.trackingNo}'); showToast('คัดลอกเลขพัสดุ ${ord.trackingNo} แล้ว', 'info')">
+            📋 ${ord.trackingNo}
+          </span>
+        </div>
+
+        <div class="grid grid-cols-4 gap-1 text-center text-[10px] pt-1">
+          <div class="flex flex-col items-center">
+            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold mb-1">✓</div>
+            <span class="font-bold text-slate-700">ยืนยันคำสั่ง</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold mb-1">✓</div>
+            <span class="font-bold text-slate-700">แพ็คสินค้า</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-6 h-6 rounded-full ${ord.step >= 3 ? 'bg-orange-500 text-white animate-pulse' : 'bg-slate-200 text-slate-400'} flex items-center justify-center font-bold mb-1">🚚</div>
+            <span class="font-bold ${ord.step >= 3 ? 'text-orange-600' : 'text-slate-400'}">อยู่ระหว่างจัดส่ง</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-6 h-6 rounded-full ${ord.step >= 4 ? 'bg-emerald-500 text-white' : 'bg-slate-200 text-slate-400'} flex items-center justify-center font-bold mb-1">📦</div>
+            <span class="font-bold ${ord.step >= 4 ? 'text-emerald-600' : 'text-slate-400'}">นำจ่ายสำเร็จ</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Items in Order -->
+      <div class="space-y-1.5 pt-1">
+        ${ord.items.map(item => `
+          <div class="flex items-center gap-2">
+            <img src="${item.image}" alt="${item.name}" class="w-8 h-8 rounded-lg object-cover" />
+            <span class="flex-1 truncate text-slate-700 font-medium">${item.name} (${item.color.label || ''} ไซส์ ${item.size}) x${item.quantity}</span>
+            <span class="font-bold text-slate-900">฿${(item.price * item.quantity).toLocaleString()}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+function searchTrackingOrder() {
+  const input = document.getElementById('tracking-search-input');
+  if (!input) return;
+  const q = input.value.trim().toUpperCase();
+  if (!q) {
+    renderTrackingOrders();
+    return;
+  }
+
+  const allOrders = [...(AppState.orders || []), ...getSampleOrders()];
+  const filtered = allOrders.filter(o => o.orderId.toUpperCase().includes(q) || o.trackingNo.toUpperCase().includes(q));
+  renderTrackingOrders(filtered);
+}
+
+// ==========================================
+// 15. THEME TOGGLE (LIGHT / DARK)
+// ==========================================
+function toggleTheme() {
+  const isDark = document.body.classList.toggle('dark-theme');
+  const icon = document.getElementById('theme-icon');
+  if (icon) icon.innerText = isDark ? '☀️' : '🌙';
+  try {
+    localStorage.setItem('activepulse_theme', isDark ? 'dark' : 'light');
+  } catch(e) {}
+  showToast(isDark ? 'เปิดโหมดมืด (Dark Mode)' : 'เปิดโหมดสว่าง (Light Mode)', 'info');
 }
 
 // Boot app when DOM is ready

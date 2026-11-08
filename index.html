@@ -110,6 +110,15 @@
 
           <div class="h-6 w-px bg-slate-200 hidden xl:block"></div>
 
+          <!-- Dark / Light Theme Toggle -->
+          <button 
+            id="theme-toggle-btn"
+            onclick="toggleTheme()" 
+            class="p-2.5 rounded-full hover:bg-slate-100 text-slate-700 hover:text-orange-600 transition-colors"
+            title="สลับโหมดสว่าง / มืด">
+            <span id="theme-icon">🌙</span>
+          </button>
+
           <!-- Order Tracking Button -->
           <button 
             onclick="openTrackingModal()"
@@ -682,6 +691,83 @@
           </form>
         </div>
 
+        <!-- PromptPay QR Code Payment View -->
+        <div id="checkout-promptpay-container" class="hidden p-6 text-center space-y-4 overflow-y-auto">
+          <div class="max-w-sm mx-auto bg-white rounded-3xl border-2 border-blue-600 shadow-xl overflow-hidden text-slate-800">
+            <div class="bg-blue-600 text-white p-4">
+              <div class="flex items-center justify-between">
+                <span class="font-black text-sm tracking-widest uppercase">PROMPTPAY</span>
+                <span class="text-xs bg-white/20 px-2.5 py-0.5 rounded-full font-bold">พร้อมเพย์ QR</span>
+              </div>
+              <p class="text-[11px] text-blue-100 mt-1">ACTIVEPULSE SPORT THAILAND</p>
+            </div>
+            
+            <div class="p-6 space-y-4">
+              <div class="space-y-1">
+                <span class="text-xs text-slate-400 font-medium">ยอดชำระที่ต้องโอน</span>
+                <p id="promptpay-amount" class="text-3xl font-black text-slate-900">฿0</p>
+              </div>
+
+              <!-- SVG PromptPay QR Graphic -->
+              <div class="w-56 h-56 mx-auto bg-white border border-slate-200 rounded-2xl p-3 flex items-center justify-center shadow-inner relative">
+                <svg class="w-full h-full text-slate-900" viewBox="0 0 100 100" fill="currentColor">
+                  <!-- Finder Patterns -->
+                  <path d="M10 10h24v24h-24z m4 4v16h16v-16z m4 4h8v8h-8z"/>
+                  <path d="M66 10h24v24h-24z m4 4v16h16v-16z m4 4h8v8h-8z"/>
+                  <path d="M10 66h24v24h-24z m4 4v16h16v-16z m4 4h8v8h-8z"/>
+                  <!-- QR Data Bits Matrix -->
+                  <rect x="40" y="12" width="6" height="6"/>
+                  <rect x="52" y="12" width="6" height="6"/>
+                  <rect x="44" y="24" width="8" height="6"/>
+                  <rect x="12" y="44" width="8" height="6"/>
+                  <rect x="26" y="40" width="6" height="8"/>
+                  <rect x="40" y="40" width="8" height="8"/>
+                  <rect x="56" y="44" width="8" height="6"/>
+                  <rect x="72" y="42" width="6" height="8"/>
+                  <rect x="84" y="46" width="6" height="6"/>
+                  <rect x="42" y="58" width="6" height="8"/>
+                  <rect x="54" y="60" width="8" height="6"/>
+                  <rect x="70" y="58" width="8" height="8"/>
+                  <rect x="84" y="66" width="6" height="12"/>
+                  <rect x="44" y="74" width="8" height="8"/>
+                  <rect x="60" y="76" width="8" height="6"/>
+                  <rect x="74" y="78" width="6" height="8"/>
+                </svg>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="bg-blue-600 text-white rounded-lg p-1.5 shadow-md">
+                    <span class="text-xs font-black">TH QR</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 text-blue-900 rounded-xl p-2.5 text-xs font-medium space-y-1">
+                <p>เปิดแอพธนาคารใดก็ได้ แล้วสแกนเพื่อชำระเงิน</p>
+                <p class="text-[11px] text-blue-600">รหัสอ้างอิง: <span id="promptpay-ref" class="font-mono font-bold">AP-REF-9921</span></p>
+              </div>
+
+              <div class="text-xs text-slate-500 font-semibold">
+                หมดเวลาชำระเงินใน: <span id="promptpay-timer" class="text-red-500 font-mono font-bold">04:59</span> นาที
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center gap-3 pt-2">
+            <button 
+              type="button" 
+              onclick="cancelPromptPay()"
+              class="px-5 py-3 rounded-2xl border border-slate-300 text-slate-600 text-xs font-bold hover:bg-slate-100">
+              ย้อนกลับ
+            </button>
+            <button 
+              type="button" 
+              onclick="confirmPromptPayPayment()"
+              class="px-7 py-3 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white text-xs font-black shadow-lg shadow-emerald-500/30 flex items-center gap-2">
+              <span>⚡ จำลอง: สแกนจ่ายเรียบร้อย</span>
+              <span>✓</span>
+            </button>
+          </div>
+        </div>
+
         <!-- Order Success View (Hidden by default) -->
         <div id="checkout-success-container" class="hidden p-8 text-center space-y-4">
           <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-2 animate-bounce">
@@ -739,6 +825,46 @@
         </div>
         <div id="wishlist-modal-items" class="space-y-3 max-h-96 overflow-y-auto">
           <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       ORDER TRACKING & HISTORY MODAL (ติดตามพัสดุ)
+       ======================================================== -->
+  <div id="tracking-modal" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeTrackingModal()"></div>
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+      <div class="relative bg-white rounded-3xl max-w-2xl w-full shadow-2xl p-6 z-10 max-h-[90vh] flex flex-col">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
+          <div>
+            <h4 class="font-black text-slate-900 text-lg flex items-center gap-2">
+              <span>🚚</span> ติดตามสถานะพัสดุ & ประวัติคำสั่งซื้อ
+            </h4>
+            <p class="text-xs text-slate-400">ตรวจสอบความคืบหน้าการจัดส่งสินค้าแบบเรียลไทม์</p>
+          </div>
+          <button onclick="closeTrackingModal()" class="text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
+        </div>
+
+        <!-- Search Bar for Tracking -->
+        <div class="flex gap-2 mb-4">
+          <input 
+            type="text" 
+            id="tracking-search-input" 
+            placeholder="กรอกหมายเลขคำสั่งซื้อ เช่น AP-892144..."
+            class="flex-1 text-xs bg-slate-100 border border-slate-200 rounded-xl px-3 py-2.5 font-medium focus:outline-none focus:border-orange-500"
+          />
+          <button 
+            onclick="searchTrackingOrder()"
+            class="px-5 py-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-xl text-xs font-bold transition-colors">
+            ค้นหา
+          </button>
+        </div>
+
+        <!-- Order List / Tracking Details Container -->
+        <div id="tracking-content-container" class="space-y-4 overflow-y-auto flex-1 pr-1">
+          <!-- Rendered dynamically by JS -->
         </div>
       </div>
     </div>

@@ -253,6 +253,42 @@ input[type="radio"]:checked + label {
   100% { transform: translateX(-50%); }
 }
 
+/* Dark Theme Variations */
+body.dark-theme {
+  background-color: #0B0F19 !important;
+  color: #F1F5F9 !important;
+}
+
+body.dark-theme header.glass-nav {
+  background: rgba(11, 15, 25, 0.92) !important;
+  border-color: #1E293B !important;
+}
+
+body.dark-theme .bg-white {
+  background-color: #111827 !important;
+  color: #F8FAFC !important;
+}
+
+body.dark-theme .bg-slate-50 {
+  background-color: #0F172A !important;
+}
+
+body.dark-theme .bg-slate-100 {
+  background-color: #1E293B !important;
+  color: #E2E8F0 !important;
+}
+
+body.dark-theme .text-slate-900,
+body.dark-theme .text-slate-800,
+body.dark-theme .text-slate-700 {
+  color: #F8FAFC !important;
+}
+
+body.dark-theme .border-slate-100,
+body.dark-theme .border-slate-200 {
+  border-color: #1E293B !important;
+}
+
 /* Responsive adjustments */
 @media (max-width: 640px) {
   .hero-title {
