@@ -331,3 +331,4 @@ class _SizeGuideDialogState extends State<SizeGuideDialog> {
     );
   }
 }
+
