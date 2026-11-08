@@ -1,0 +1,11 @@
+{
+  "name": "ACTIVEPULSE Sports",
+  "short_name": "ActivePulse",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0B0F19",
+  "theme_color": "#FF5E36",
+  "description": "ร้านขายเสื้อผ้าและรองเท้ากีฬาของแท้ สีสันสดใส มีตะกร้าสินค้า รายละเอียดครบถ้วน",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}
