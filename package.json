@@ -1,0 +1,20 @@
+{
+  "name": "activepulse-sports-ecommerce",
+  "version": "1.0.0",
+  "description": "ร้านขายเสื้อผ้าและรองเท้ากีฬาของแท้ สีสันสดใส มีตะกร้าสินค้า รายละเอียดครบถ้วน ใช้งานได้จริง",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "sports",
+    "ecommerce",
+    "running-shoes",
+    "apparel",
+    "shopping-cart",
+    "activewear"
+  ],
+  "author": "ActivePulse Team",
+  "license": "MIT"
+}
+

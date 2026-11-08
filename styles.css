@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   ActivePulse Sports - Vibrant Athletic Store Stylesheet
+   ========================================================================== */
+
+:root {
+  --primary-neon: #00FF87;
+  --primary-cyan: #60EFFF;
+  --accent-orange: #FF5E36;
+  --accent-pink: #FF007A;
+  --accent-purple: #7928CA;
+  --accent-yellow: #FFD200;
+  
+  --bg-dark: #0B0F19;
+  --bg-card: #111827;
+  --bg-surface: #1E293B;
+  
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border-light: #E2E8F0;
+  
+  --glow-neon: 0 0 25px rgba(0, 255, 135, 0.45);
+  --glow-orange: 0 0 25px rgba(255, 94, 54, 0.45);
+  --glow-cyan: 0 0 25px rgba(96, 239, 255, 0.4);
+}
+
+/* Custom Sports Font & Base */
+body {
+  font-family: 'Kanit', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  scroll-behavior: smooth;
+  background-color: #F8FAFC;
+  color: #0F172A;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FF5E36, #FF007A);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF007A;
+}
+
+/* Animated Neon Gradients & Text */
+.gradient-text-fire {
+  background: linear-gradient(135deg, #FF5E36 0%, #FF007A 50%, #7928CA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-energy {
+  background: linear-gradient(135deg, #00FF87 0%, #60EFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-fire {
+  background: linear-gradient(135deg, #FF5E36 0%, #FF007A 100%);
+}
+
+.gradient-energy {
+  background: linear-gradient(135deg, #00C853 0%, #00E5FF 100%);
+}
+
+.gradient-sport-dark {
+  background: linear-gradient(135deg, #0B0F19 0%, #1A233A 100%);
+}
+
+.gradient-banner {
+  background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #31103F 100%);
+}
+
+/* Glassmorphism effects */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Vibrant Shadows & Hover Effects */
+.shadow-sport {
+  box-shadow: 0 10px 30px -8px rgba(255, 94, 54, 0.25);
+}
+
+.shadow-sport:hover {
+  box-shadow: 0 20px 35px -5px rgba(255, 94, 54, 0.38);
+  transform: translateY(-4px);
+}
+
+.shadow-card-hover {
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shadow-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 40px -10px rgba(15, 23, 42, 0.14);
+}
+
+/* Glow Badges */
+.badge-pulse {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 94, 54, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 94, 54, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 94, 54, 0);
+  }
+}
+
+.badge-neon-glow {
+  box-shadow: 0 0 12px rgba(0, 255, 135, 0.6);
+}
+
+/* Image zoom inside product card */
+.product-image-container img {
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.product-card:hover .product-image-container img {
+  transform: scale(1.08) rotate(-1deg);
+}
+
+/* Cart badge bounce */
+@keyframes cart-bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.35) rotate(6deg); }
+}
+
+.animate-cart-bounce {
+  animation: cart-bounce 0.4s ease-out;
+}
+
+/* Floating Action / Drawer Transitions */
+.drawer-backdrop {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.drawer-panel {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Color swatch ring */
+.color-swatch {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.color-swatch.active {
+  transform: scale(1.18);
+  outline: 2px solid #FF5E36;
+  outline-offset: 3px;
+}
+
+/* Size badge selected */
+.size-btn {
+  transition: all 0.2s ease;
+}
+
+.size-btn.active {
+  background: linear-gradient(135deg, #FF5E36, #FF007A);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(255, 94, 54, 0.35);
+  font-weight: 600;
+}
+
+/* Category Pill Active */
+.category-pill {
+  transition: all 0.25s ease;
+}
+
+.category-pill.active {
+  background: linear-gradient(135deg, #FF5E36 0%, #FF007A 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 94, 54, 0.35);
+}
+
+/* Floating Quick View Modal */
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Custom Checkbox & Radio */
+input[type="radio"]:checked + label {
+  border-color: #FF5E36;
+  background-color: #FFF7ED;
+}
+
+/* Sporty Slanted Accent Line */
+.slanted-accent {
+  position: relative;
+  overflow: hidden;
+}
+
+.slanted-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: skewX(-25deg);
+}
+
+/* Ticker tape for breaking promos */
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-move {
+  display: inline-block;
+  animation: ticker 25s linear infinite;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
