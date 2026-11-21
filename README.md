@@ -51,3 +51,14 @@ HYPEBLACK-App/
 - **HTML5 / CSS3 / Vanilla JavaScript**
 - **Tailwind CSS** (CDN) & **Google Fonts (Kanit)**
 - **GitHub Pages** (Static Hosting & Auto Deployment)
+
+---
+
+## 👥 ผู้จัดทำ (Authors)
+
+| ลำดับ | ชื่อ-นามสกุล | รหัสนักศึกษา |
+| :---: | :--- | :---: |
+| 1 | ศรัณย์ เชตนุช | `69113782` |
+| 2 | สุพีฌาลักษณ์ อมาตยกุล | `69113781` |
+| 3 | ธนานิษฐ์ เจริญวุฒิธนากรณ์ | `69113565` |
+
