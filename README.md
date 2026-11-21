@@ -1,104 +1,53 @@
-# ⚡ ACTIVEPULSE SPORTS | โมบายแอพขายเสื้อผ้าและรองเท้ากีฬา (Flutter)
+# 🖤 HYPEBLACK (ไฮป์แบล็ค) — Luxury, Sneakers & Accessories Marketplace
 
-โมบายแอพพลิเคชันร้านค้าออนไลน์สำหรับจำหน่าย **เสื้อผ้าและรองเท้ากีฬาของแท้ 100%** (Nike, Adidas, Puma, Asics, Jordan, ActivePulse) พัฒนาด้วยเฟรมเวิร์ก **Flutter (Dart)** สไตล์สปอร์ตสีสันสดใส ทันสมัย มีพลัง พร้อมระบบตะกร้าสินค้า คูปองส่วนลด ชำระเงิน และติดตามพัสดุครบวงจร ใช้งานได้จริงบนทั้ง **iOS**, **Android** และ **Web**
+> **🚀 ทดลองใช้งานเว็บแอปถาวร (Live Demo on GitHub Pages)**
+>
+> - 📱 **โหมดจำลองมือถือ (Mobile App Simulator):** **[https://parnpyn-stack.github.io/HYPEBLACK-App/mobile.html](https://parnpyn-stack.github.io/HYPEBLACK-App/mobile.html)**
+> - 🛍️ **หน้าร้านเต็มจอ (Full Web App):** **[https://parnpyn-stack.github.io/HYPEBLACK-App/](https://parnpyn-stack.github.io/HYPEBLACK-App/)**
 
----
-
-## 🌟 ฟีเจอร์หลักของโมบายแอพ (Key Features)
-
-### 1. 🎨 ดีไซน์สีสันสดใส & ทันสมัย (Vibrant Athletic UI)
-- ดีไซน์สีนีออน ส้มเพลิง (Flame Orange `#FF5E36`), ชมพูสด (`#FF007A`) และ เขียวนีออน (`#10B981`)
-- แบนเนอร์ **Flash Sale** พร้อมนาฬิกานับถอยหลัง (Countdown Timer) แบบเรียลไทม์
-- เมนูนำทางแบบล่าง (Bottom Navigation Bar) 5 แท็บ:
-  1. 🏠 **หน้าแรก (Home):** แบนเนอร์โปรโมชั่น, นับถอยหลัง Flash Sale, หมวดหมู่ยอดนิยม, สินค้าขายดี
-  2. 🛍️ **สินค้า (Shop):** ค้นหาแบบเรียลไทม์, ฟิลเตอร์หมวดหมู่, ตัวกรองแบรนด์, สไลเดอร์ปรับงบประมาณ, จัดเรียงสินค้า
-  3. ❤️ **ถูกใจ (Wishlist):** รายการสินค้าที่บันทึกไว้ พร้อมปุ่มกดใส่ตะกร้าได้ทันที
-  4. 🛒 **ตะกร้า (Cart):** ตะกร้าสินค้าพร้อม Badge แจ้งเตือนจำนวนชิ้นแบบเรียลไทม์
-  5. 🚚 **พัสดุ (Orders):** ติดตามสถานะจัดส่งและประวัติคำสั่งซื้อแบบ Stepper ไทม์ไลน์
-
-### 2. 🛒 ตะกร้าสินค้า & โค้ดส่วนลด (Interactive Cart & Coupons)
-- เพิ่ม/ลดจำนวนสินค้า หรือสไลด์เพื่อลบสินค้าออกจากตะกร้า
-- **แถบคำนวณส่งฟรี (Free Shipping Progress):** แจ้งเตือนยอดช้อปสะสมเพื่อรับสิทธิ์ส่งฟรีเมื่อครบ ฿1,500
-- **ระบบโค้ดส่วนลด (Coupons):**
-  - `SPORT20` : ลด 20% ทั้งตะกร้า
-  - `WELCOME10` : ลด 10% สำหรับสมาชิกใหม่
-  - `PULSE100` : ลดทันที 100 บาท (เมื่อช้อปครบ ฿800)
-  - `FREESHIP` : ฟรีค่าจัดส่งทันที
-
-### 3. 👟 หน้ารายละเอียดสินค้า (Product Detail Screen)
-- คลังภาพเลื่อนสไลด์ (Image Carousel) พร้อมจุดระบุตำแหน่ง
-- สลับเลือกสีด้วยพาเล็ตต์สีจริง (Color Swatches)
-- ตัวเลือกไซส์ (Size Chips)
-- **เครื่องมือคำนวณไซส์ & ตารางไซส์ (Size Guide Dialog):** คำนวณไซส์รองเท้าจากความยาวเท้า (ซม.) และไซส์เสื้อจากรอบอก (นิ้ว) อัตโนมัติ
-- จุดเด่นเทคโนโลยีและสเปกสินค้า
-- **รีวิวจากผู้ใช้งานจริง:** แสดงคะแนนดาว พร้อมฟอร์มให้ลูกค้าเขียนและส่งรีวิวได้จริง
-- ปุ่มแชร์ลิงก์สินค้า
-- แถบปุ่มล่างสำหรับ "เพิ่มลงตะกร้า" และ "⚡ สั่งซื้อทันที"
-
-### 4. 💳 ระบบชำระเงิน & พร้อมเพย์ QR (Checkout Flow)
-- ฟอร์มกรอกชื่อ ที่อยู่ และเบอร์โทรศัพท์สำหรับจัดส่ง
-- ตัวเลือกการชำระเงิน:
-  - **พร้อมเพย์ QR Code (PromptPay):** แสดงบัตร QR Code พร้อมตัวจับเวลานับถอยหลัง 5 นาที และปุ่มจำลองการสแกนจ่าย
-  - **บัตรเครดิต/เดบิต**
-  - **เก็บเงินปลายทาง (Cash on Delivery - COD)**
-- หน้าใบเสร็จคำสั่งซื้อเสร็จสมบูรณ์ พร้อมหมายเลข Order ID
-
-### 5. 🚚 ระบบติดตามสถานะพัสดุ (Parcel Tracking Stepper)
-- ค้นหาด้วยหมายเลข Order ID หรือเลขพัสดุ
-- ไทม์ไลน์แสดง 4 ขั้นตอน: ยืนยันคำสั่งซื้อ ➔ กำลังแพ็คสินค้า ➔ อยู่ระหว่างจัดส่ง ➔ นำจ่ายสำเร็จ
-- ปุ่มคัดลอกเลขพัสดุ (Kerry Express) ลงคลิปบอร์ดในคลิกเดียว
+<p align="center">
+  <a href="https://parnpyn-stack.github.io/HYPEBLACK-App/mobile.html">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://parnpyn-stack.github.io/HYPEBLACK-App/" alt="Scan QR Code to open HYPEBLACK on Mobile" />
+  </a>
+  <br />
+  <sub>📲 สแกน QR Code เพื่อเปิด HYPEBLACK บนมือถือทันที</sub>
+</p>
 
 ---
 
-## 📁 โครงสร้างโปรเจกต์ Flutter (Project Structure)
-```
-Dating-app/
-│
-├── pubspec.yaml                       # การกำหนดค่า dependencies ของ Flutter
-├── lib/
-│   ├── main.dart                      # จุดเริ่มต้นของแอพพลิเคชันและ Theme การตกแต่ง
-│   ├── models/
-│   │   ├── product.dart               # โมเดลสินค้า (16 รายการ พร้อมสี ไซส์ สเปก รีวิว)
-│   │   ├── cart_item.dart             # โมเดลรายการสินค้าในตะกร้า
-│   │   └── order.dart                 # โมเดลคำสั่งซื้อและการติดตามพัสดุ
-│   ├── services/
-│   │   └── store_state.dart           # การจัดการ State ทั้งหมด (Cart, Wishlist, Filter, Orders)
-│   ├── widgets/
-│   │   ├── product_card.dart          # การ์ดแสดงสินค้าสีสันสดใส
-│   │   └── size_guide_dialog.dart     # ตารางเทียบไซส์ & เครื่องมือคำนวณไซส์
-│   └── screens/
-│       ├── main_navigation_screen.dart # แถบนำทางด้านล่าง 5 แท็บ
-│       ├── home_screen.dart           # หน้าแรก (Hero Banner, Flash Sale, หมวดหมู่)
-│       ├── shop_screen.dart           # หน้าร้านค้า (ค้นหา, ฟิลเตอร์แบรนด์, สไลเดอร์ราคา)
-│       ├── product_detail_screen.dart # หน้ารายละเอียดสินค้า, แกลเลอรี, รีวิว
-│       ├── cart_screen.dart           # หน้าตะกร้าสินค้าและคูปองส่วนลด
-│       ├── checkout_screen.dart       # หน้าชำระเงิน & พร้อมเพย์ QR Code
-│       ├── wishlist_screen.dart       # หน้ารายการโปรด
-│       └── order_tracking_screen.dart # หน้าติดตามพัสดุ & ประวัติคำสั่งซื้อ
-│
-└── android/                           # ไฟล์คอนฟิกสำหรับ Android
+## ✨ ฟีเจอร์หลัก (Key Features)
+
+- **🖤 All-Black Dark Luxury UI** — ดีไซน์โทนสีดำหรูหรา ตัดด้วยสีทอง (`#E5B869`) และป้ายรับรองของแท้สีเขียวมรกต (`#00E599`)
+- **👜 สินค้าแบรนด์เนมและสตรีทแวร์คัดสรร 18 รายการ** — ครบทุกหมวดหมู่พร้อมรูปภาพตรงรุ่นจริง:
+  - **Luxury Bags:** Goyard Saint Louis PM, Louis Vuitton Keepall 50 Eclipse, Chanel Classic Double Flap 10", Celine Teen Triomphe, Prada Re-Edition 2005
+  - **Watches & Accessories:** Rolex Submariner Date 41mm "Starbucks", Cartier Love Bracelet 18K, Chrome Hearts Forever Ring, Gentle Monster x Maison Margiela MM007, Hermès Constance H Belt
+  - **Hype Sneakers:** Travis Scott x Air Jordan 1 Low "Reverse Mocha", Nike Dunk Low "Panda", Adidas Samba OG, New Balance 1906R
+  - **Art Toys & Streetwear:** Pop Mart Labubu "Fall in Wild", Bearbrick 1000% Iron Man Mark 50, Fear of God Essentials Hoodie, Supreme Box Logo Hoodie
+- **🔍 ระบบค้นหาและกรองสินค้าอัจฉริยะ** — กรองตามหมวดหมู่ แบรนด์ ช่วงราคา สถานะพร้อมส่ง และเรียงลำดับตามยอดนิยม/ราคา/คะแนนรีวิว
+- **🛒 ตะกร้าสินค้า & ระบบโค้ดส่วนลด** — รองรับการเลือกไซส์ เพิ่ม-ลดจำนวน บันทึกรายการโปรด (Wishlist) และจำลองขั้นตอนชำระเงิน
+  - โค้ดส่วนลดทดสอบ: `HYPEVIP` (ลด 15%), `LUXURY500` (ลด ฿500), `FREESHIP` (ส่งฟรี)
+- **📱 Mobile App Simulator (`mobile.html`)** — สลับมุมมองจำลองสมาร์ตโฟนได้ 3 รุ่น (`iPhone 16 Pro`, `Galaxy S24`, `Compact SE`)
+- **📲 รองรับ PWA** — เปิดผ่าน Safari / Chrome บนมือถือแล้วกด **Add to Home Screen** เพื่อใช้งานแบบแอปเต็มหน้าจอ
+
+---
+
+## 🛠️ โครงสร้างไฟล์หลัก (Project Structure)
+
+```text
+HYPEBLACK-App/
+├── index.html                   # หน้าร้านหลัก HYPEBLACK Web App
+├── mobile.html                  # หน้าตัวจำลองสมาร์ตโฟน (Mobile Simulator)
+├── app.js                       # ข้อมูลสินค้า 18 รายการ, ระบบตะกร้า, ฟิลเตอร์ และ Modal
+├── styles.css                   # สไตล์ธีม All-Black Dark Luxury
+├── manifest.json                # ไฟล์ตั้งค่า PWA (Web App Manifest)
+├── web/                         # Favicon และไอคอนแอป PWA
+└── .github/workflows/pages.yml  # GitHub Actions สำหรับ Deploy ขึ้น GitHub Pages อัตโนมัติ
 ```
 
 ---
 
-## 🚀 วิธีเปิดใช้งานแอพพลิเคชัน (How to Run)
+## 💻 เทคโนโลยีที่ใช้ (Tech Stack)
 
-เมื่อมี Flutter SDK ติดตั้งในเครื่อง สามารถรันคำสั่งต่อไปนี้ได้ทันที:
-
-### 1. ติดตั้ง Packages
-```bash
-flutter pub get
-```
-
-### 2. รันบนอุปกรณ์ (Emulator / Phone / Chrome Web)
-- รันบน Android / iOS Simulator:
-```bash
-flutter run
-```
-- รันบน Chrome Web:
-```bash
-flutter run -d chrome
-```
-
----
-*หมายเหตุ: สำหรับเวอร์ชันเว็บสแตนด์อโลน สามารถเปิดไฟล์ `index.html` หรือรัน `node server.js` เพื่อทดสอบบนเบราว์เซอร์ได้เช่นกัน*
+- **HTML5 / CSS3 / Vanilla JavaScript**
+- **Tailwind CSS** (CDN) & **Google Fonts (Kanit)**
+- **GitHub Pages** (Static Hosting & Auto Deployment)
