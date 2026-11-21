@@ -1,0 +1,11 @@
+{
+  "name": "HYPEBLACK Luxury & Streetwear",
+  "short_name": "HYPEBLACK",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#08090C",
+  "theme_color": "#08090C",
+  "description": "ตลาดซื้อขายสินค้าแบรนด์เนม สนีกเกอร์ และแอคเซสเซอรี่ของแท้ 100%",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}

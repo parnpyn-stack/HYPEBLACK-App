@@ -1,635 +1,724 @@
 /**
- * ACTIVEPULSE SPORTS E-COMMERCE ENGINE
- * Full-featured Shopping Application Logic
+ * HYPEBLACK LUXURY, SNEAKERS & ACCESSORIES MARKETPLACE
+ * Thailand's #1 Authentic Trading Engine
  */
 
 // ==========================================
-// 1. PRODUCT CATALOG DATA (16 Realistic Items)
+// 1. PRODUCT CATALOG DATA (22 Curated Authentic Items)
 // ==========================================
 const PRODUCTS = [
+  // --- 👜 LUXURY BRANDNAME BAGS ---
   {
-    id: 'prod-01',
-    name: 'Nike VaporFly 3 Next% Carbon',
-    nameEn: 'Nike VaporFly 3 Racing Shoes',
-    brand: 'Nike',
-    category: 'shoes-running',
-    categoryName: 'รองเท้าวิ่งมาราธอน',
-    price: 7590,
-    originalPrice: 8900,
+    id: 'hb-01',
+    name: 'Goyard Saint Louis PM Tote Bag - Black/Tan',
+    nameEn: 'Goyard Saint Louis PM Bag Coated Canvas',
+    brand: 'Goyard',
+    category: 'luxury',
+    categoryName: 'กระเป๋าแบรนด์เนม',
+    price: 68900,
+    originalPrice: 75000,
     rating: 4.9,
-    reviewsCount: 312,
-    soldCount: 850,
+    reviewsCount: 148,
+    soldCount: 320,
     isHot: true,
     isNew: true,
-    stock: 5,
-    tag: '⚡ ลดแรง 15%',
-    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80',
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง อุปกรณ์ครบ (กล่อง, ถุงผ้า, ถุงกระดาษ)',
+    tag: '⚡ พร้อมส่งทันที',
+    image: 'https://images.stockx.com/images/Goyard-Tote-Saint-Louis-Chevron-PM-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500',
     gallery: [
-      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=800&q=80'
+      'https://images.stockx.com/images/Goyard-Tote-Saint-Louis-Chevron-PM-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500'
     ],
     colors: [
-      { name: 'Red Flame', hex: '#EF4444', label: 'แดงสปอร์ต' },
-      { name: 'Neon Green', hex: '#10B981', label: 'เขียวนีออน' },
-      { name: 'Core Black', hex: '#1E293B', label: 'ดำออบซิเดียน' }
+      { name: 'Black & Tan', hex: '#2A2521', label: 'ดำตัดแทนคลาสสิก' },
+      { name: 'Special Green', hex: '#1E4620', label: 'เขียวโกยาร์ด' }
     ],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    description: 'รองเท้าวิ่งทำลายสถิติ ออกแบบมาสำหรับนักวิ่งมาราธอนและฮาล์ฟมาราธอนที่ต้องการความเร็วขั้นสุด แผ่นคาร์บอนไฟเบอร์ Flyplate เต็มความยาวเท้า ผสานโฟม ZoomX ตอบสนองแรงส่งสูงสุดในทุกก้าว',
+    sizes: ['PM (34x28x15 cm)', 'GM (40x34x20 cm)'],
+    description: 'กระเป๋าโท้ทไอคอนิคระดับโลก ลาย Goyardine ทอละเอียดด้วยเทคโนโลยีพิมพ์มืออันเป็นเอกลักษณ์ เบา ทนทาน กันน้ำ ด้านในมาพร้อมกระเป๋าใบเล็กแบบถอดได้ ตรวจสอบแท้ 100% โดยผู้เชี่ยวชาญ HYPEBLACK',
     features: [
-      'แผ่นคาร์บอนไฟเบอร์ Flyplate มอบแรงส่งไปข้างหน้า',
-      'โฟม ZoomX น้ำหนักเบาที่สุด ให้พลังงานคืนกลับ 85%',
-      'อัปเปอร์ Flyknit โปร่งสบายระบายอากาศ 360 องศา',
-      'น้ำหนักเพียง 198 กรัม (ไซส์ 42)'
+      'ผ้าแคนวาส Goyardine เคลือบพิเศษ ทนทานต่อการขีดข่วนและละอองน้ำ',
+      'หูหิ้วทำจากหนังวัว Chevroches แท้ นุ่มสบายมือ',
+      'พร้อมใบรับประกันและป้ายตรวจสอบของแท้จาก HYPEBLACK',
+      'ขนาด PM จุของในชีวิตประจำวันและเดินทางได้อย่างลงตัว'
     ],
     specs: {
-      'ประเภทกีฬา': 'วิ่งถนน / มาราธอน',
-      'ดรอป': '8 มม. (ส้นเท้า 40 มม. / หน้าเท้า 32 มม.)',
-      'การรับประกัน': 'ของแท้ 100% ประกันศูนย์ 6 เดือน'
+      'แบรนด์': 'Goyard (Paris)',
+      'วัสดุ': 'Goyardine Canvas & Chevroches Calfskin',
+      'แหล่งผลิต': 'Made in France',
+      'การรับประกัน': 'HYPEBLACK Verified 100% Authentic Guarantee'
     }
   },
   {
-    id: 'prod-02',
-    name: 'Adidas Adizero Boston 12 Pro',
-    nameEn: 'Adidas Adizero Boston 12 Training & Race',
-    brand: 'Adidas',
-    category: 'shoes-running',
-    categoryName: 'รองเท้าวิ่งทำความเร็ว',
-    price: 4990,
-    originalPrice: 5800,
-    rating: 4.8,
-    reviewsCount: 184,
-    soldCount: 620,
+    id: 'hb-02',
+    name: 'Louis Vuitton Keepall Bandoulière 50 Eclipse',
+    nameEn: 'LV Keepall Bandouliere 50 Monogram Eclipse',
+    brand: 'Louis Vuitton',
+    category: 'luxury',
+    categoryName: 'กระเป๋าแบรนด์เนม',
+    price: 92500,
+    originalPrice: 98000,
+    rating: 5.0,
+    reviewsCount: 92,
+    soldCount: 180,
     isHot: true,
     isNew: false,
-    stock: 9,
-    tag: '🔥 ขายดีอันดับ 1',
-    image: 'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80',
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง อุปกรณ์ครบจากช็อปไทย (กล่อง, ถุงผ้า, กุญแจ, สายสะพาย)',
+    tag: '👑 ไอเทมยอดนิยม',
+    image: 'https://images.stockx.com/images/Louis-Vuitton-Keepall-Bandouliere-Monogram-Eclipse-50-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500',
     gallery: [
-      'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=800&q=80'
+      'https://images.stockx.com/images/Louis-Vuitton-Keepall-Bandouliere-Monogram-Eclipse-50-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500'
     ],
     colors: [
-      { name: 'Solar Yellow', hex: '#FACC15', label: 'เหลืองนีออน' },
-      { name: 'Cloud White', hex: '#F8FAFC', label: 'ขาวสว่าง' },
-      { name: 'Cyan Blue', hex: '#06B6D4', label: 'ฟ้าไซแอน' }
+      { name: 'Monogram Eclipse', hex: '#1E232A', label: 'ดำโมโนแกรม' }
     ],
-    sizes: ['39', '40', '41', '42', '43', '44'],
-    description: 'คู่หูซ้อมวิ่งระยะไกลและลงแข่ง ผสานก้านคาร์บอน EnergyRods 2.0 เสริมความคล่องตัวด้วยพื้นสองชั้น Lightstrike Pro และ Lightstrike 2.0 ทนทาน นุ่มแน่น ไม่มีย้วย',
+    sizes: ['Size 45', 'Size 50 (Cabin Size)', 'Size 55'],
+    description: 'กระเป๋าเดินทางรุ่นในตำนานของหลุยส์ วิตตอง ในโทนสีเทาดำ Monogram Eclipse สุภาพ เรียบหรู ขนาดพอดีสำหรับถือขึ้นเครื่องบิน (Carry-on) พร้อมสายสะพายไหล่ปรับระดับได้',
     features: [
-      'ก้านไฟเบอร์กลาส EnergyRods 2.0 ลดการสูญเสียพลังงาน',
-      'พื้นชั้นกลางแบบคู่ Lightstrike Pro + 2.0',
-      'พื้นยาง Continental ยึดเกาะถนนเปียกได้ดีเยี่ยม'
+      'แคนวาส Monogram Eclipse และหนังคาวไฮด์ย้อมสีดำ',
+      'อะไหล่โลหะสีเงินด้านเมทัลลิก แข็งแรงทนทาน',
+      'มาพร้อมแม่กุญแจ กุญแจ ป้ายชื่อ และห่วงรัดหูหิ้วครบชุด',
+      'ผ่านการตรวจเช็ค Hologram / Microchip แท้โดย HYPEBLACK'
     ],
     specs: {
-      'ประเภทกีฬา': 'วิ่งระยะ 5K - 42.195K / วิ่งเทมโป',
-      'ดรอป': '6.5 มม.',
-      'การรับประกัน': 'ของแท้ 100% เปลี่ยนไซส์ฟรีใน 14 วัน'
+      'แบรนด์': 'Louis Vuitton',
+      'วัสดุ': 'Coated Canvas & Cowhide Leather',
+      'ขนาด': '50 x 29 x 23 ซม. (ยาว x สูง x กว้าง)',
+      'การรับประกัน': 'รับประกันของแท้ตลอดชีพ 100%'
     }
   },
   {
-    id: 'prod-03',
-    name: 'Air Jordan 38 Low "Cosmic Speed"',
-    nameEn: 'Air Jordan XXXVIII Low Basketball',
-    brand: 'Jordan',
-    category: 'shoes-court',
-    categoryName: 'รองเท้าบาสเก็ตบอล',
-    price: 6490,
-    originalPrice: 7200,
+    id: 'hb-03',
+    name: 'Chanel Classic Double Flap Medium 10" Caviar GHW',
+    nameEn: 'Chanel Classic Double Flap Bag Medium Black Caviar',
+    brand: 'Chanel',
+    category: 'luxury',
+    categoryName: 'กระเป๋าแบรนด์เนม',
+    price: 375000,
+    originalPrice: 395000,
+    rating: 5.0,
+    reviewsCount: 64,
+    soldCount: 85,
+    isHot: true,
+    isNew: true,
+    isReadyToShip: false,
+    condition: 'มือหนึ่ง Microchip อุปกรณ์ครบกล่องแม่เหล็ก ริบบิ้น ดอกคามิลเลีย ใบเสร็จช็อป',
+    tag: '💎 ระดับไฮเอนด์',
+    image: 'https://images.stockx.com/images/Chanel-Classic-Double-Flap-Quilted-Medium-Black-Caviar-Goldtone.png?fit=fill&bg=FFFFFF&w=700&h=500',
+    gallery: [
+      'https://images.stockx.com/images/Chanel-Classic-Double-Flap-Quilted-Medium-Black-Caviar-Goldtone.png?fit=fill&bg=FFFFFF&w=700&h=500'
+    ],
+    colors: [
+      { name: 'Black Caviar Gold', hex: '#0B0B0E', label: 'ดำคาเวียร์อะไหล่ทอง' }
+    ],
+    sizes: ['Medium 10" (25.5x15.5x6.5 cm)'],
+    description: 'ที่สุดแห่งความคลาสสิกเหนือกาลเวลา หนังเกรนคาเวียร์ทนทานต่อรอยขีดข่วน ตัดกับอะไหล่ทองเปล่งประกาย ฝาเปิดสองชั้น (Double Flap) พร้อมตัวล็อค CC Lock สัญลักษณ์ระดับตำนาน',
+    features: [
+      'หนังคาเวียร์ (Grained Calfskin) คัดเกรดสูงสุด',
+      'อะไหล่ทอง Gold-tone Metal เงางามไม่ลอก',
+      'ฝังชิป Microchip แท้ตรวจสอบระบบ Chanel ทั่วโลก',
+      'ผ่านการประเมินสภาพและตรวจแท้ 2 ชั้นโดยผู้เชี่ยวชาญ'
+    ],
+    specs: {
+      'แบรนด์': 'Chanel (Paris)',
+      'วัสดุ': 'Grained Calfskin & Gold-Finish Metal',
+      'ขนาด': '15.5 × 25.5 × 6.5 ซม.',
+      'การรับประกัน': 'HYPEBLACK Luxury Verified 100%'
+    }
+  },
+  {
+    id: 'hb-04',
+    name: 'Celine Teen Triomphe Bag in Shiny Calfskin - Black',
+    nameEn: 'Celine Teen Triomphe Shoulder Bag Black',
+    brand: 'Celine',
+    category: 'luxury',
+    categoryName: 'กระเป๋าแบรนด์เนม',
+    price: 135000,
+    originalPrice: 145000,
     rating: 4.9,
-    reviewsCount: 142,
-    soldCount: 390,
+    reviewsCount: 52,
+    soldCount: 110,
     isHot: false,
     isNew: true,
-    stock: 4,
-    tag: '✨ รุ่นลิมิเต็ด',
-    image: 'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80',
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง อุปกรณ์ครบ (กล่อง ถุงผ้า การ์ด)',
+    tag: '⚡ พร้อมส่งด่วน',
+    image: 'https://images.stockx.com/images/Celine-Teen-Triomphe-Bag-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500',
     gallery: [
-      'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1579338559194-a162d19bf842?auto=format&fit=crop&w=800&q=80'
+      'https://images.stockx.com/images/Celine-Teen-Triomphe-Bag-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500'
     ],
     colors: [
-      { name: 'Hyper Royal', hex: '#2563EB', label: 'น้ำเงินไฮเปอร์' },
-      { name: 'Triple White', hex: '#FFFFFF', label: 'ขาวล้วน' },
-      { name: 'Infrared Black', hex: '#111827', label: 'ดำตัดส้ม' }
+      { name: 'Shiny Black', hex: '#141417', label: 'ดำเงาพรีเมียม' }
     ],
-    sizes: ['41', '42', '43', '44', '45', '46'],
-    description: 'รองเท้าบาสเก็ตบอลตัวท็อปสำหรับผู้เล่นที่ต้องการการเคลื่อนไหวรอบทิศทางอย่างรวดเร็ว ระบบ X-Plate ช่วยล็อคข้อเท้าและรักษาความเสถียรเมื่อครอสโอเวอร์และขึ้นชู้ต',
+    sizes: ['Teen (18.5 x 13.5 x 7 cm)'],
+    description: 'กระเป๋าสะพายรุ่นยอดนิยมที่สร้างปรากฏการณ์ระดับโลก ตัวล็อคโลหะสีทองลาย Triomphe เอกลักษณ์ของแบรนด์เซลีน หนังลูกวัวเรียบเงางาม คล่องตัวในทุกสไตล์',
     features: [
-      'เทคโนโลยี X-Plate เพื่อความมั่นคงสูงเมื่อสไลด์ตัวด้านข้าง',
-      'Zoom Air Strobel เต็มแผ่น ซับแรงกระแทกได้นุ่มนวลที่สุด',
-      'ลายก้างปลาแบบพิเศษ ยึดเกาะคอร์ทปาเก้ต์และพื้นปูนไร้ลื่น'
+      'หนังลูกวัว Shiny Calfskin ผิวสัมผัสเนียนละเอียด',
+      'ซับในหนังแกะ Lambskin นุ่มนวล',
+      'ตัวล็อค Triomphe แบบสแน็ปทองเหลืองชุบทอง',
+      'สายสะพายหนังปรับระดับได้ เหมาะกับทั้งสะพายไหล่และครอสบอดี้'
     ],
     specs: {
-      'ประเภทกีฬา': 'บาสเก็ตบอล / วอลเลย์บอล / แบดมินตัน',
-      'ความสูงข้อ': 'Low-cut เพิ่มความคล่องตัว',
-      'การรับประกัน': 'รับประกันศูนย์ไทย 6 เดือน'
+      'แบรนด์': 'Celine',
+      'วัสดุ': 'Calfskin & Lambskin Lining',
+      'ขนาด': '18.5 X 13.5 X 7 ซม.',
+      'การรับประกัน': 'ตรวจแท้ 100% โดย HYPEBLACK'
     }
   },
   {
-    id: 'prod-04',
-    name: 'Predator Elite FG "Solar Strike"',
-    nameEn: 'Predator Elite Firm Ground Football Boots',
-    brand: 'Adidas',
-    category: 'shoes-football',
-    categoryName: 'รองเท้าสตั๊ดฟุตบอล',
-    price: 7990,
-    originalPrice: 8500,
-    rating: 4.9,
-    reviewsCount: 98,
-    soldCount: 270,
-    isHot: true,
-    isNew: true,
-    stock: 6,
-    tag: '⚽ พรีเมียมสตั๊ด',
-    image: 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=800&q=80'
-    ],
-    colors: [
-      { name: 'Solar Red', hex: '#DC2626', label: 'แดงสว่าง' },
-      { name: 'Lucid Lemon', hex: '#EAB308', label: 'เหลืองเลมอน' }
-    ],
-    sizes: ['39', '40', '41', '42', '43', '44'],
-    description: 'พลังในการปั่นไซด์โค้งและยิงประตูระดับมืออาชีพ ชิ้นยาง Strikeskin จัดวางตามหลักสรีรศาสตร์บนอัปเปอร์ HybridTouch 2.0 ให้สัมผัสบอลติดเท้าอย่างมหัศจรรย์',
-    features: [
-      'ครีบยาง Strikeskin เพิ่มแรงปั่นและคุมทิศทางลูกฟุตบอล',
-      'ชุดพื้น Controlframe 2.0 รองรับสปีดและความคล่องตัว',
-      'ปุ่มสตั๊ด FG เหมาะสำหรับสนามหญ้าจริงและหญ้าเทียมคุณภาพ'
-    ],
-    specs: {
-      'ประเภทสนาม': 'หญ้าจริง (Firm Ground) / หญ้าเทียม (AG)',
-      'น้ำหนัก': '180 กรัม',
-      'การรับประกัน': 'ของแท้ 100%'
-    }
-  },
-  {
-    id: 'prod-05',
-    name: 'AeroDry Pro เสื้อวิ่งระบายอากาศ Quick-Dry (ชาย)',
-    nameEn: 'AeroDry Pro Men Breathable Running Tee',
-    brand: 'ActivePulse',
-    category: 'apparel-men',
-    categoryName: 'เสื้อผ้ากีฬาชาย',
-    price: 690,
-    originalPrice: 1290,
+    id: 'hb-05',
+    name: 'Prada Re-Edition 2005 Re-Nylon Shoulder Bag',
+    nameEn: 'Prada Re-Edition 2005 Re-Nylon Bag Black',
+    brand: 'Prada',
+    category: 'luxury',
+    categoryName: 'กระเป๋าแบรนด์เนม',
+    price: 49500,
+    originalPrice: 55000,
     rating: 4.8,
-    reviewsCount: 420,
-    soldCount: 1950,
+    reviewsCount: 115,
+    soldCount: 420,
     isHot: true,
     isNew: false,
-    stock: 25,
-    tag: '💥 ลด 46%',
-    image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80',
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง อุปกรณ์ครบ สายโซ่ สายผ้า กระเป๋าใบเล็ก การ์ด ถุงผ้า',
+    tag: '⚡ พร้อมส่งทันที',
+    image: 'https://images.stockx.com/images/Prada-Re-Edition-2005-Re-Nylon-Bag-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500',
     gallery: [
-      'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80'
+      'https://images.stockx.com/images/Prada-Re-Edition-2005-Re-Nylon-Bag-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500'
     ],
     colors: [
-      { name: 'Electric Cyan', hex: '#06B6D4', label: 'ฟ้าสปอร์ต' },
-      { name: 'Neon Lime', hex: '#10B981', label: 'เขียวนีออน' },
-      { name: 'Stealth Black', hex: '#1E293B', label: 'ดำด้าน' },
-      { name: 'Pure White', hex: '#F1F5F9', label: 'ขาวสว่าง' }
+      { name: 'Nero Black', hex: '#0B0D11', label: 'ดำไนลอนเนโร' }
     ],
-    sizes: ['S', 'M', 'L', 'XL', '2XL'],
-    description: 'เสื้อวิ่งรุ่นยอดนิยม ผลิตจากเส้นใย Micro-Poly Honeycomb ระบายเหงื่อได้ไวกว่าผ้าทั่วไป 3 เท่า แห้งไว ไม่อมน้ำ ป้องกันกลิ่นอับชื้น พร้อมแถบสะท้อนแสง 3M สำหรับวิ่งกลางคืน',
+    sizes: ['One Size (22x18x6.5 cm)'],
+    description: 'กระเป๋าที่ครองใจสายแฟชั่นทั่วโลก ดีไซน์มัลติฟังก์ชันจากวัสดุ Re-Nylon รีไซเคิลเอกสิทธิ์ของปราด้า มาพร้อมกระเป๋าเพาช์ใบเล็กคล้องสายและสายสะพายสองรูปแบบ',
     features: [
-      'เทคโนโลยี Quick-Dry แห้งไวใน 10 นาที',
-      'น้ำหนักเบาเพียง 95 กรัม สบายตัวราวกับไม่ได้ใส่',
-      'แถบสะท้อนแสง 3M Scotchlite บริเวณหน้าอกและหลัง',
-      'ป้องกันรังสี UV UPF 40+'
+      'ผลิตจากผ้าไนลอนรีไซเคิล Re-Nylon ทนทาน น้ำหนักเบา',
+      'สายโซ่โลหะถอดได้ และสายผ้าทอลาย Prada ปรับความยาวได้',
+      'โลโก้รูปสามเหลี่ยมโลหะเคลือบอีนาเมลด้านหน้า',
+      'ช่องเก็บของอเนกประสงค์ใช้งานได้จริงทุกวัน'
     ],
     specs: {
-      'เนื้อผ้า': 'Polyester 92%, Spandex 8%',
-      'เหมาะสำหรับ': 'วิ่ง, เทรนนิ่งยิม, ปั่นจักรยาน, บาสเก็ตบอล',
-      'การดูแล': 'ซักเครื่องได้ แห้งไวโดยไม่ต้องรีด'
+      'แบรนด์': 'Prada (Milano)',
+      'วัสดุ': 'Re-Nylon & Saffiano Leather Details',
+      'ขนาด': '22 x 18 x 6.5 ซม.',
+      'การรับประกัน': 'HYPEBLACK Verified Authentic'
     }
   },
+
+  // --- 💍 ACCESSORIES, WATCHES & JEWELRY ---
   {
-    id: 'prod-06',
-    name: 'HyperFlex กางเกงวิ่ง 2in1 มีซับในกระชับกล้ามเนื้อ (ชาย)',
-    nameEn: 'HyperFlex 2-in-1 Men Running Shorts',
-    brand: 'ActivePulse',
-    category: 'apparel-men',
-    categoryName: 'เสื้อผ้ากีฬาชาย',
-    price: 790,
-    originalPrice: 1490,
-    rating: 4.9,
-    reviewsCount: 389,
-    soldCount: 1420,
+    id: 'hb-06',
+    name: 'Rolex Submariner Date 41mm "Starbucks" 126610LV',
+    nameEn: 'Rolex Submariner Date 41mm Green Cerachrom Bezel',
+    brand: 'Rolex',
+    category: 'accessory',
+    categoryName: 'นาฬิกาและเครื่องประดับ',
+    price: 545000,
+    originalPrice: 580000,
+    rating: 5.0,
+    reviewsCount: 38,
+    soldCount: 42,
     isHot: true,
     isNew: true,
-    stock: 18,
-    tag: '⚡ ซับในรัดกล้ามเนื้อ',
-    image: 'https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=800&q=80',
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง กล่องเขียว ใบรับประกันการ์ดศูนย์ เหรียญเขียว คู่มือ ข้อครบ',
+    tag: '👑 ลงทุน & สะสม',
+    image: 'https://images.stockx.com/images/Rolex-Submariner-116610LV-Green-front.jpg?fit=fill&bg=FFFFFF&w=700&h=500',
     gallery: [
-      'https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=800&q=80'
+      'https://images.stockx.com/images/Rolex-Submariner-116610LV-Green-front.jpg?fit=fill&bg=FFFFFF&w=700&h=500'
     ],
     colors: [
-      { name: 'Charcoal Grey', hex: '#4B5563', label: 'เทากราไฟต์' },
-      { name: 'Midnight Black', hex: '#111827', label: 'ดำเข้ม' },
-      { name: 'Navy Blue', hex: '#1E3A8A', label: 'กรมท่า' }
+      { name: 'Oystersteel Green Bezel', hex: '#165B33', label: 'ขอบเซรามิกเขียวสตาร์บัคส์' }
     ],
-    sizes: ['S', 'M', 'L', 'XL', '2XL'],
-    description: 'กางเกงวิ่งตัวท็อป 2in1 ตัวนอกเบาพริ้วมีช่องระบาย ตัวในซับรัดกล้ามเนื้อช่วยป้องกันการเสียดสีของต้นขา พร้อมกระเป๋าใส่โทรศัพท์มือถือขนาดใหญ่ด้านใน ไม่แกว่งเวลาวิ่ง',
+    sizes: ['41 mm (Standard Oyster)'],
+    description: 'นาฬิกาดำน้ำอันดับหนึ่งของโลก ขอบหน้าปัดเซรามิก Cerachrom สีเขียวเฉดพิเศษ ตัวเรือนสตีล Oystersteel 904L กลไก Calibre 3235 สำรองพลังงาน 70 ชั่วโมง ได้รับการตรวจสอบกลไกแท้โดยช่างนาฬิกา HYPEBLACK',
     features: [
-      'ซับใน Compression ป้องกันขาเบียดและพยุงกล้ามเนื้อ',
-      'ช่องเก็บสมาร์ทโฟน 6.7 นิ้ว แนบแน่นไม่กระเด้ง',
-      'ช่องเสียบผ้าขนหนู/เสื้อที่ขอบเอวด้านหลัง',
-      'กระเป๋าซิปกันน้ำสำหรับกุญแจและบัตร'
+      'ขอบตัวเรือนหมุนได้ทิศทางเดียวพร้อมแผ่นเซรามิก Cerachrom สีเขียว',
+      'ระบบกันน้ำลึก 300 เมตร (1,000 ฟุต) พร้อมเม็ดมะยม Triplock',
+      'พรายน้ำ Chromalight สีฟ้าสว่างชัดเจนในที่มืด',
+      'สาย Oyster พร้อมระบบขยายสาย Rolex Glidelock ใช้งานสะดวก'
     ],
     specs: {
-      'เนื้อผ้า': 'Nylon 88%, Spandex 12%',
-      'ความยาว': '5 นิ้ว (Inseam 5")',
-      'ฟังก์ชัน': 'Anti-Chafing / Sweat-Wicking'
+      'แบรนด์': 'Rolex (Geneva)',
+      'รหัสรุ่น': '126610LV',
+      'กลไก': 'Automatic Calibre 3235 (Superlative Chronometer)',
+      'การรับประกัน': 'ประกันศูนย์ Rolex 5 ปี + HYPEBLACK Guarantee'
     }
   },
   {
-    id: 'prod-07',
-    name: 'SculptFit High-Impact สปอร์ตบรากระชับสูง (หญิง)',
-    nameEn: 'SculptFit High Support Women Sports Bra',
-    brand: 'ActivePulse',
-    category: 'apparel-women',
-    categoryName: 'เสื้อผ้ากีฬาหญิง',
-    price: 890,
-    originalPrice: 1590,
+    id: 'hb-07',
+    name: 'Cartier Love Bracelet Small Model - 18K Yellow Gold',
+    nameEn: 'Cartier Love Bracelet Small Model 18K Yellow Gold',
+    brand: 'Cartier',
+    category: 'accessory',
+    categoryName: 'เครื่องประดับแบรนด์เนม',
+    price: 178000,
+    originalPrice: 188000,
     rating: 4.9,
-    reviewsCount: 520,
+    reviewsCount: 88,
+    soldCount: 160,
+    isHot: true,
+    isNew: true,
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง อุปกรณ์ครบ (กล่องแดงคาร์เทียร์ ไขควง ใบรับประกัน Certificate)',
+    tag: '⚡ พร้อมส่งด่วน',
+    image: 'https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw82e12e1c/images/large/402b40c50af55d028578998daaaa670e.png?sw=750&sh=750&sm=fit&sfrm=png',
+    gallery: [
+      'https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw82e12e1c/images/large/402b40c50af55d028578998daaaa670e.png?sw=750&sh=750&sm=fit&sfrm=png'
+    ],
+    colors: [
+      { name: 'Yellow Gold', hex: '#E5B869', label: 'ทองคำ 18K สีเหลืองประกาย' }
+    ],
+    sizes: ['Size 16', 'Size 17', 'Size 18', 'Size 19'],
+    description: 'กำไลข้อมือ Love ไอคอนระดับตำนาน ออกแบบในนิวยอร์กปี 1969 สัญลักษณ์แห่งความรักอันเป็นนิรันดร์ ลายสลักสกรูอันเป็นเอกลักษณ์ ปิดล็อคด้วยไขควงเฉพาะรุ่น',
+    features: [
+      'ผลิตจากทองคำแท้ 750/1000 (18K Yellow Gold)',
+      'ระบบล็อคแบบบานพับเปิด-ปิดด้วยไขควง Cartier',
+      'หมายเลข Serial Number สลักชัดเจนตรงตามใบรับประกัน',
+      'ผ่านการตรวจเช็คน้ำหนักและเนื้อทอง 18K แท้ 100%'
+    ],
+    specs: {
+      'แบรนด์': 'Cartier',
+      'วัสดุ': '18K Yellow Gold (Au750)',
+      'ความกว้าง': '3.65 มิลลิเมตร',
+      'การรับประกัน': 'HYPEBLACK Verified Authentic Guarantee'
+    }
+  },
+  {
+    id: 'hb-08',
+    name: 'Chrome Hearts Forever Spacer Ring 6mm (925 Silver)',
+    nameEn: 'Chrome Hearts Forever Spacer Ring 6mm Sterling Silver',
+    brand: 'Chrome Hearts',
+    category: 'accessory',
+    categoryName: 'เครื่องประดับแบรนด์เนม',
+    price: 19900,
+    originalPrice: 22500,
+    rating: 4.9,
+    reviewsCount: 230,
+    soldCount: 580,
+    isHot: true,
+    isNew: true,
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง อุปกรณ์ครบ (ถุงหนังกลับ ซองกระดาษ แมตช์แท้จากช็อป)',
+    tag: '🔥 ฮิตที่สุดในสตรีท',
+    image: 'https://images.stockx.com/images/Chrome-Hearts-Forever-Ring.jpg?fit=fill&bg=FFFFFF&w=700&h=500',
+    gallery: [
+      'https://images.stockx.com/images/Chrome-Hearts-Forever-Ring.jpg?fit=fill&bg=FFFFFF&w=700&h=500'
+    ],
+    colors: [
+      { name: 'Oxidized Silver', hex: '#CBD5E1', label: 'เงินแท้ 925 รมดำสไตล์กอธิก' }
+    ],
+    sizes: ['US 6', 'US 7', 'US 8', 'US 9', 'US 10'],
+    description: 'แหวนเงินแท้รุ่นยอมรับทั่วโลก สลักอักษรกอธิกคำว่า "FOREVER" สลับกับไม้กางเขน CH Cross อันทรงพลัง งานทำมือในลอสแอนเจลิส รมดำมีมิติ คลาสสิกตลอดกาล',
+    features: [
+      'เงินแท้ 925 Sterling Silver ผ่านกระบวนการ Oxidized รมดำ',
+      'สลักตัวอักษร FOREVER และไม้กางเขน CH Plus สวยคมชัด',
+      'หน้ากว้าง 6 มม. สวมใส่ง่าย ใส่ได้ทั้งชายและหญิง',
+      'ตรวจสอบตราประทับและน้ำหนักแท้โดยช่างผู้เชี่ยวชาญ HYPEBLACK'
+    ],
+    specs: {
+      'แบรนด์': 'Chrome Hearts (Hollywood, USA)',
+      'วัสดุ': '925 Sterling Silver',
+      'หน้ากว้าง': '6 mm',
+      'การรับประกัน': 'ตรวจแท้ 100% โดย HYPEBLACK'
+    }
+  },
+  {
+    id: 'hb-09',
+    name: 'Gentle Monster x Maison Margiela MM007 Sunglasses',
+    nameEn: 'Gentle Monster x Maison Margiela MM007 01 Sunglasses',
+    brand: 'Gentle Monster',
+    category: 'accessory',
+    categoryName: 'แว่นตาและแอคเซสเซอรี่',
+    price: 13900,
+    originalPrice: 15500,
+    rating: 4.8,
+    reviewsCount: 95,
+    soldCount: 310,
+    isHot: true,
+    isNew: true,
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง อุปกรณ์ครบกล่องคอลแลบ ผ้าเช็ดแว่น ซองหนัง การ์ดรับประกัน',
+    tag: '⚡ พร้อมส่งด่วน',
+    image: 'https://gm-prd-resource.gentlemonster.com/catalog/product/PYWOLWAUJL4T/42b65b00-a62e-4d70-985f-d8420f2a67d7/11002189_FRONT.jpg',
+    gallery: [
+      'https://gm-prd-resource.gentlemonster.com/catalog/product/PYWOLWAUJL4T/42b65b00-a62e-4d70-985f-d8420f2a67d7/11002189_FRONT.jpg'
+    ],
+    colors: [
+      { name: 'Glossy Black', hex: '#111827', label: 'ดำเงาเลนส์ดำ' }
+    ],
+    sizes: ['Free Size (Front: 147mm, Lens: 54x37mm)'],
+    description: 'การร่วมมือครั้งประวัติศาสตร์ระหว่าง Gentle Monster แบรนด์แว่นตาล้ำสมัยจากเกาหลีใต้ และ Maison Margiela แฟชั่นเฮาส์ระดับตำนาน โดดเด่นด้วยด้ายสี่ตะเข็บไอคอนิกสีขาวที่ขาแว่น',
+    features: [
+      'กรอบแว่นอะซิเตททรงเหลี่ยมคลาสสิกขัดเงาประณีต',
+      'สัญลักษณ์รอยเย็บด้าย 4 ตะเข็บสีขาวอันเป็นเอกลักษณ์ของ Margiela',
+      'เลนส์ Zeiss ป้องกันรังสี UV 99.9% สบายตา',
+      'สินค้าของแท้พร้อมโค้ดตรวจสอบบนระบบ Gentle Monster'
+    ],
+    specs: {
+      'แบรนด์': 'Gentle Monster x Maison Margiela',
+      'วัสดุ': 'Acetate & UV400 Lenses',
+      'แหล่งผลิต': 'Made in South Korea',
+      'การรับประกัน': 'HYPEBLACK Verified 100%'
+    }
+  },
+  {
+    id: 'hb-10',
+    name: 'Hermès Constance H Reversible Belt 38mm Gold Buckle',
+    nameEn: 'Hermes Constance H Belt Buckle Reversible Leather Strap',
+    brand: 'Hermès',
+    category: 'accessory',
+    categoryName: 'เข็มขัดและเครื่องหนัง',
+    price: 38500,
+    originalPrice: 42000,
+    rating: 4.9,
+    reviewsCount: 76,
+    soldCount: 190,
+    isHot: false,
+    isNew: true,
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง อุปกรณ์ครบกล่องส้มแอร์เมส ถุงผ้าใส่หัวเข็มขัด ริบบิ้น ใบเสร็จ',
+    tag: '⚡ พร้อมส่งทันที',
+    image: 'https://images.stockx.com/images/Hermes-H-Belt-Buckle-Reversible-Leather-Strap-32mm-Noir-Gold-01.jpg?fit=fill&bg=FFFFFF&w=700&h=500',
+    gallery: [
+      'https://images.stockx.com/images/Hermes-H-Belt-Buckle-Reversible-Leather-Strap-32mm-Noir-Gold-01.jpg?fit=fill&bg=FFFFFF&w=700&h=500'
+    ],
+    colors: [
+      { name: 'Noir / Gold Buckle', hex: '#1C1917', label: 'ดำสลับน้ำตาล หัวทองเงา' }
+    ],
+    sizes: ['85 cm', '90 cm', '95 cm', '100 cm'],
+    description: 'เข็มขัดตัว H ระดับตำนานของแอร์เมส สายหนังแท้สลับใช้ได้ 2 ด้าน (Reversible) ด้านหนึ่งเป็นหนัง Togo สีดำ หนังนุ่มมีลายเกรน และอีกด้านเป็นหนัง Swift สีน้ำตาลโกลด์ เรียบหรูทุกโอกาส',
+    features: [
+      'หัวเข็มขัดโลหะทองเหลืองชุบทองคำเงางาม (Gold Plated H Buckle)',
+      'สายหนังแท้สองด้าน หนัง Togo ด้านดำ และหนัง Swift ด้านน้ำตาล',
+      'กว้าง 38 มม. ไซส์ยอดนิยมสำหรับกางเกงสแล็คและยีนส์',
+      'ตราประทับช่างและโค้ดปีผลิต (Stamp) แท้ตรวจสอบโดย HYPEBLACK'
+    ],
+    specs: {
+      'แบรนด์': 'Hermès (Paris)',
+      'วัสดุ': 'Togo & Swift Calfskin Leather',
+      'ความกว้าง': '38 mm',
+      'การรับประกัน': 'HYPEBLACK Verified 100% Authentic'
+    }
+  },
+
+  // --- 👟 HYPE SNEAKERS ---
+  {
+    id: 'hb-11',
+    name: 'Travis Scott x Air Jordan 1 Low OG "Reverse Mocha"',
+    nameEn: 'Air Jordan 1 Retro Low OG SP Travis Scott Reverse Mocha',
+    brand: 'Jordan',
+    category: 'sneakers',
+    categoryName: 'สนีกเกอร์รุ่นท็อป',
+    price: 42500,
+    originalPrice: 48000,
+    rating: 5.0,
+    reviewsCount: 310,
+    soldCount: 890,
+    isHot: true,
+    isNew: true,
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง กล่องครบ เชือกเสริม 3 สี ชิป RFID แท้',
+    tag: '🔥 ไฮป์อันดับ 1',
+    image: 'https://images.stockx.com/360/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Reverse-Mocha/Images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Reverse-Mocha/Lv2/img01.jpg',
+    gallery: [
+      'https://images.stockx.com/360/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Reverse-Mocha/Images/Air-Jordan-1-Retro-Low-OG-SP-Travis-Scott-Reverse-Mocha/Lv2/img01.jpg'
+    ],
+    colors: [
+      { name: 'Reverse Mocha', hex: '#634832', label: 'น้ำตาลมอคค่าตัดขาวครีม' }
+    ],
+    sizes: ['7 US / 40 EU', '8 US / 41 EU', '8.5 US / 42 EU', '9 US / 42.5 EU', '9.5 US / 43 EU', '10 US / 44 EU'],
+    description: 'ผลงานระดับมาสเตอร์พีซของแร็ปเปอร์ชื่อดัง Travis Scott ผสานโทนสีน้ำตาลมอคค่าและขาวครีม โลโก้ Swoosh กลับหัว (Reverse Swoosh) สี Sail เอกลักษณ์ที่นักสะสมสนีกเกอร์ทั่วโลกต้องมี',
+    features: [
+      'หนัง Nubuck สีน้ำตาลพรีเมียมตัดหนังวัวสีขาว Sail นุ่มพิเศษ',
+      'โลโก้ Swoosh กลับหัว (Oversized Reverse Swoosh)',
+      'ปักโลโก้ Cactus Jack และ Jordan Wings สีแดงสดที่ส้นรองเท้า',
+      'ผ่านการสแกน Blacklight และตรวจแท้โดยทีมงานสนีกเกอร์ HYPEBLACK'
+    ],
+    specs: {
+      'แบรนด์': 'Jordan x Travis Scott',
+      'รหัสโมเดล': 'DM7866-162',
+      'ปีที่วางจำหน่าย': '2022',
+      'การรับประกัน': 'ตรวจแท้ 100% พร้อมแท็ก HYPEBLACK Tag'
+    }
+  },
+  {
+    id: 'hb-12',
+    name: 'Nike Dunk Low Retro "White Black Panda"',
+    nameEn: 'Nike Dunk Low Retro White Black Panda',
+    brand: 'Nike',
+    category: 'sneakers',
+    categoryName: 'สนีกเกอร์ยอดนิยม',
+    price: 3890,
+    originalPrice: 4500,
+    rating: 4.8,
+    reviewsCount: 820,
+    soldCount: 3400,
+    isHot: true,
+    isNew: false,
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง กล่องแท้ครบ อุปกรณ์พร้อมส่ง',
+    tag: '⚡ พร้อมส่งด่วน',
+    image: 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1bcbca4-e853-4df7-b329-5be3c61ee057/NIKE+DUNK+LOW+RETRO.png',
+    gallery: [
+      'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1bcbca4-e853-4df7-b329-5be3c61ee057/NIKE+DUNK+LOW+RETRO.png'
+    ],
+    colors: [
+      { name: 'Black White', hex: '#0F172A', label: 'ขาว-ดำ แพนด้าคลาสสิก' }
+    ],
+    sizes: ['38.5 EU', '39 EU', '40 EU', '41 EU', '42 EU', '42.5 EU', '43 EU', '44 EU'],
+    description: 'สนีกเกอร์ที่แมตช์ชุดง่ายที่สุดในยุค ดีไซน์คัลเลอร์บล็อกขาว-ดำสุดคลาสสิกที่ใส่ได้กับทุกสไตล์ ยืนหนึ่งเรื่องความคุ้มค่าและความนิยมตลอดกาล',
+    features: [
+      'อัปเปอร์หนังเรียบคลาสสิก ทนทาน ทำความสะอาดง่าย',
+      'พื้นโฟมรองรับแรงกระแทก นุ่ม เบาสบายในชีวิตประจำวัน',
+      'พื้นยางชั้นนอกยึดเกาะดีเยี่ยมสไตล์รองเท้าบาสเก็ตบอลยุค 80s',
+      'รับประกันของแท้ 100% จากตัวแทนจำหน่ายทางการ'
+    ],
+    specs: {
+      'แบรนด์': 'Nike',
+      'รหัสโมเดล': 'DD1391-100',
+      'การรับประกัน': 'HYPEBLACK Verified แท้ 100%'
+    }
+  },
+  {
+    id: 'hb-13',
+    name: 'Adidas Samba OG "Cloud White Core Black"',
+    nameEn: 'Adidas Originals Samba OG Cloud White Core Black',
+    brand: 'Adidas',
+    category: 'sneakers',
+    categoryName: 'สนีกเกอร์วินเทจ',
+    price: 3800,
+    originalPrice: 4200,
+    rating: 4.9,
+    reviewsCount: 540,
     soldCount: 2200,
     isHot: true,
     isNew: false,
-    stock: 14,
-    tag: '🌸 ยอดฮิตสาวฟิตเนส',
-    image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80',
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง อุปกรณ์ครบจากช็อป ป้ายไทย/นอก',
+    tag: '🔥 เทรนด์ติดชาร์ต',
+    image: 'https://assets.adidas.com/images/w_700,f_auto,q_auto/3bbecbdf584e40398446a8bf0117cf62_9366/Samba_OG_Shoes_White_B75806_01_00_standard.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80'
+      'https://assets.adidas.com/images/w_700,f_auto,q_auto/3bbecbdf584e40398446a8bf0117cf62_9366/Samba_OG_Shoes_White_B75806_01_00_standard.jpg'
     ],
     colors: [
-      { name: 'Sunset Peach', hex: '#FB7185', label: 'พีชซันเซ็ต' },
-      { name: 'Lilac Purple', hex: '#A855F7', label: 'ม่วงไลแลค' },
-      { name: 'Obsidian Black', hex: '#0F172A', label: 'ดำออบซิเดียน' }
+      { name: 'White Core Black', hex: '#E2E8F0', label: 'ขาวตัดดำพื้นกัม' }
     ],
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    description: 'สปอร์ตบราซัพพอร์ตระดับสูงสุด สำหรับกิจกรรมที่มีแรงกระแทกสูง เช่น วิ่ง เต้นแอโรบิก หรือครอสฟิต ล็อคทรงอกกระชับนุ่มนวล สายบ่าบุนวมไม่กดทับ ผ้าระบายเหงื่อเย็นสบาย',
+    sizes: ['4 UK / 36.5 EU', '5 UK / 38 EU', '6 UK / 39 EU', '7 UK / 40.5 EU', '8 UK / 42 EU', '9 UK / 43 EU'],
+    description: 'รองเท้าฟุตบอลในร่มยุค 1950 ที่กลายมาเป็นสนีกเกอร์ยอดฮิตแห่งทศวรรษ หัวรองเท้าหนังกลับ T-Toe และพื้นยางกัมสุดวินเทจ ไอเทมชิ้นโปรดของเซเลบริตี้ระดับโลก',
     features: [
-      'High Impact Support ลดการแกว่งตัวของหน้าอกถึง 78%',
-      'ฟองน้ำชิ้นเดียวไร้รอยต่อ ถอดทำความสะอาดได้',
-      'สายหลังแบบ Racerback เสริมตาข่ายระบายอากาศ',
-      'ขอบเอวยางยืดกว้างนุ่ม ไม่ม้วนพับขณะเคลื่อนไหว'
+      'อัปเปอร์หนังแท้ฟูลเกรน ผสานหนังกลับ T-toe ที่หัวรองเท้า',
+      'แถบ 3-Stripes หยักสีดำตัดกับหนังสีขาวคมชัด',
+      'พื้นยางกัมสีน้ำตาลทนทาน ยึดเกาะทุกพื้นผิว',
+      'ของแท้ 100% รับประกันความพึงพอใจโดย HYPEBLACK'
     ],
     specs: {
-      'วัสดุ': 'Polyamide 75%, Elastane 25%',
-      'การใช้งาน': 'วิ่งมาราธอน, HIIT, ฟิตเนส, มวยสากล',
-      'ขนาดคัพรองรับ': 'A, B, C, D'
+      'แบรนด์': 'Adidas Originals',
+      'รหัสโมเดล': 'B75806',
+      'การรับประกัน': 'HYPEBLACK Verified 100%'
     }
   },
   {
-    id: 'prod-08',
-    name: 'CloudSoft กางเกงเลกกิ้งโยคะเอวสูง Seamless (หญิง)',
-    nameEn: 'CloudSoft Seamless High-Waist Yoga Leggings',
-    brand: 'ActivePulse',
-    category: 'apparel-women',
-    categoryName: 'เสื้อผ้ากีฬาหญิง',
-    price: 990,
-    originalPrice: 1790,
+    id: 'hb-14',
+    name: 'New Balance 1906R "Silver Metallic Gold"',
+    nameEn: 'New Balance 1906R Silver Metallic White Gold',
+    brand: 'New Balance',
+    category: 'sneakers',
+    categoryName: 'สนีกเกอร์สายแฟชั่น',
+    price: 5900,
+    originalPrice: 6800,
     rating: 4.8,
-    reviewsCount: 340,
-    soldCount: 1680,
+    reviewsCount: 160,
+    soldCount: 480,
     isHot: false,
     isNew: true,
-    stock: 22,
-    tag: '✨ ไร้รอยต่อ เก็บพุง',
-    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80',
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง กล่องแท้ ป้ายแท็กครบ',
+    tag: '⚡ พร้อมส่งด่วน',
+    image: 'https://nb.scene7.com/is/image/NB/m1906rer_nb_05_i?wid=700&hei=700',
     gallery: [
-      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80'
+      'https://nb.scene7.com/is/image/NB/m1906rer_nb_05_i?wid=700&hei=700'
     ],
     colors: [
-      { name: 'Olive Green', hex: '#4D7C0F', label: 'เขียวมะกอก' },
-      { name: 'Dusty Rose', hex: '#F43F5E', label: 'ชมพูกุหลาบ' },
-      { name: 'Midnight Navy', hex: '#1E293B', label: 'กรมท่าคลาสสิก' }
+      { name: 'Silver Metallic', hex: '#94A3B8', label: 'เงินเมทัลลิกตัดทอง' }
     ],
-    sizes: ['S', 'M', 'L', 'XL'],
-    description: 'เลกกิ้งสัมผัสเนียนนุ่มราวกับผิวชั้นที่สอง เทคโนโลยี Seamless ทอไร้ตะเข็บข้าง ไม่บาดผิว ขอบเอวสูงกระชับหน้าท้อง ก้นทรงพีชสวย มั่นใจในทุกท่าสควอทและโยคะ',
+    sizes: ['8 US / 41.5 EU', '8.5 US / 42 EU', '9 US / 42.5 EU', '9.5 US / 43 EU', '10 US / 44 EU'],
+    description: 'สนีกเกอร์สไตล์ Y2K เทคโนโลยีพื้น N-ergy ซับแรงกระแทกและเสถียรภาพสูงสุด อัปเปอร์ผ้าตาข่ายสีเงินเมทัลลิก โดดเด่นในทุกย่างก้าว',
     features: [
-      'Squat-Proof ไม่บาง ไม่ซีทรู มั่นใจ 100%',
-      'เอวสูง 4 นิ้ว ช่วยเก็บหน้าท้องและพยุงแกนกลางลำตัว',
-      'ยืดหยุ่น 4 ทิศทาง (4-Way Stretch) คล่องตัวสูงสุด',
-      'ไม่ขึ้นขุย ไม่ย้วย ผ่านการทดสอบซัก 200+ ครั้ง'
+      'พื้น N-ergy และ ABZORB ซับแรงกระแทกนุ่มกระชับตลอดวัน',
+      'โครงสร้าง Stability Web เสริมการรองรับส่วนโค้งของฝ่าเท้า',
+      'ดีไซน์เรโทรฟิวเจอริสติกยอดฮิต',
+      'ตรวจเช็คแท้โดยระบบ HYPEBLACK Verified'
     ],
     specs: {
-      'เนื้อผ้า': 'Nylon SoftTouch 80%, Lycra 20%',
-      'ความยาว': '7/8 ขาเต่อ สวยเพรียว',
-      'ฟังก์ชัน': 'Tummy Control & Butt Lift'
+      'แบรนด์': 'New Balance',
+      'รหัสโมเดล': 'M1906RE',
+      'การรับประกัน': 'ของแท้ 100%'
     }
   },
+
+  // --- 🧸 ART TOYS & COLLECTIBLES ---
   {
-    id: 'prod-09',
-    name: 'StormShield แจ็คเก็ตวิ่งกันลมสะท้อนแสง Ultra-Light',
-    nameEn: 'StormShield Ultra-Light Windbreaker Jacket',
-    brand: 'ActivePulse',
-    category: 'apparel-men',
-    categoryName: 'เสื้อผ้ากีฬาชาย',
-    price: 1390,
-    originalPrice: 2290,
-    rating: 4.9,
-    reviewsCount: 165,
-    soldCount: 510,
-    isHot: false,
-    isNew: true,
-    stock: 11,
-    tag: '🌧️ กันละอองฝน & ลม',
-    image: 'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80'
-    ],
-    colors: [
-      { name: 'Neon Coral', hex: '#FF5E36', label: 'ส้มสปอร์ต' },
-      { name: 'Cyber Lime', hex: '#10B981', label: 'เขียวนีออน' },
-      { name: 'Jet Black', hex: '#0B0F19', label: 'ดำสนิท' }
-    ],
-    sizes: ['S', 'M', 'L', 'XL', '2XL'],
-    description: 'แจ็คเก็ตวิ่งพับเก็บได้ขนาดเล็กพกพาง่าย เคลือบสาร DWR ป้องกันละอองฝนและลมหนาว ด้านหลังมีช่องระบายอากาศป้องกันการอบอ้าว แถบสะท้อนแสงจัดเต็มปลอดภัยยามค่ำคืน',
-    features: [
-      'พับเก็บเป็นกระเป๋าพกพาขนาดเท่าฝ่ามือในตัว',
-      'เคลือบกันละอองฝน DWR (Durable Water Repellent)',
-      'แถบสะท้อนแสง 360 องศา ปลอดภัยบนท้องถนน',
-      'ฮู้ดกระชับมีเชือกปรับระดับไม่หลุดเวลาวิ่งโต้ลม'
-    ],
-    specs: {
-      'น้ำหนัก': '125 กรัม',
-      'วัสดุ': 'Ripstop 100% Nylon DWR',
-      'การใช้งาน': 'วิ่งถนน, เดินป่า, ปั่นจักรยาน'
-    }
-  },
-  {
-    id: 'prod-10',
-    name: 'BreezeFit เสื้อกล้ามเทรนนิ่งหลังเว้า (หญิง)',
-    nameEn: 'BreezeFit Women Cross-Back Training Tank',
-    brand: 'ActivePulse',
-    category: 'apparel-women',
-    categoryName: 'เสื้อผ้ากีฬาหญิง',
-    price: 490,
-    originalPrice: 890,
-    rating: 4.7,
-    reviewsCount: 195,
-    soldCount: 930,
-    isHot: false,
-    isNew: false,
-    stock: 30,
-    tag: '🍃 เบาสบาย ไม่อมเหงื่อ',
-    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80'
-    ],
-    colors: [
-      { name: 'Mint Green', hex: '#34D399', label: 'เขียวมิ้นต์' },
-      { name: 'Lavender', hex: '#C084FC', label: 'ม่วงลาเวนเดอร์' },
-      { name: 'Cloud White', hex: '#F8FAFC', label: 'ขาวบริสุทธิ์' }
-    ],
-    sizes: ['S', 'M', 'L', 'XL'],
-    description: 'เสื้อกล้ามเว้าหลังดีไซน์สปอร์ตชิค ช่วยโชว์สายบราด้านหลังอย่างมีสไตล์ ผ้าเนื้อโปร่งนุ่ม ทิ้งตัวสวย แห้งไว เหมาะกับฟิตเนส เวทเทรนนิ่ง และพิลาทิส',
-    features: [
-      'ดีไซน์หลังเปิดรูปตัว Y เพิ่มการระบายความร้อน',
-      'ผ้าคูลลิ่งทัช ให้ความรู้สึกเย็นทันทีที่สวมใส่',
-      'ชายเสื้อหน้าสั้นหลังยาว พรางสะโพกสวยงาม'
-    ],
-    specs: {
-      'วัสดุ': 'Rayon 65%, Polyester 30%, Spandex 5%',
-      'เหมาะกับ': 'Pilates, Weight Training, Yoga',
-      'คำแนะนำ': 'ซักมือหรือซักเครื่องใส่ถุงถนอมผ้า'
-    }
-  },
-  {
-    id: 'prod-11',
-    name: 'Puma Fast-R Nitro Elite 2 Cyber',
-    nameEn: 'Puma Fast-R Nitro Elite 2 Running',
-    brand: 'Puma',
-    category: 'shoes-running',
-    categoryName: 'รองเท้าวิ่งคาร์บอน',
-    price: 7290,
-    originalPrice: 8500,
-    rating: 4.9,
-    reviewsCount: 88,
-    soldCount: 210,
-    isHot: true,
-    isNew: true,
-    stock: 3,
-    tag: '⚡ ตัวท็อปแห่งปี 2026',
-    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=800&q=80'
-    ],
-    colors: [
-      { name: 'Electric Cyan', hex: '#00F2FE', label: 'ฟ้านีออนไซเบอร์' },
-      { name: 'Fire Orange', hex: '#FF4B2B', label: 'ส้มเพลิง' }
-    ],
-    sizes: ['40', '41', '42', '43', '44'],
-    description: 'รองเท้าวิ่งดีไซน์แยกระหว่างส้นกับหน้าเท้า ขับเคลื่อนด้วยแผ่นคาร์บอน PWRPLATE ยื่นยาวเหนือหน้าเท้า มอบแรงถีบส่งพลังงานที่เร็วกว่าเดิมถึง 22%',
-    features: [
-      'โฟมฉีดไนโตรเจน Nitro Elite เบา นุ่ม และเด้งคืนรูป',
-      'โครงสร้างส้นแยกเพื่อความสมดุลเวลาลงส้น',
-      'ยาง PUMAGRIP-LT ทนทาน ยึดเกาะถนนเปียกได้ดีเยี่ยม'
-    ],
-    specs: {
-      'น้ำหนัก': '210 กรัม',
-      'ระยะที่แนะนำ': '10KM, 21KM, มาราธอน',
-      'การรับประกัน': 'ของแท้ศูนย์ Puma'
-    }
-  },
-  {
-    id: 'prod-12',
-    name: 'Asics Metaspeed Sky Paris',
-    nameEn: 'Asics Metaspeed Sky Paris Edition',
-    brand: 'Asics',
-    category: 'shoes-running',
-    categoryName: 'รองเท้าวิ่งแข่งขัน',
-    price: 7990,
-    originalPrice: 8900,
+    id: 'hb-15',
+    name: 'Labubu The Monsters "Fall in Wild" Vinyl Plush Doll',
+    nameEn: 'Pop Mart Labubu The Monsters Fall in Wild Vinyl Doll',
+    brand: 'Pop Mart',
+    category: 'collectibles',
+    categoryName: 'อาร์ตทอยและของสะสม',
+    price: 8900,
+    originalPrice: 11500,
     rating: 5.0,
-    reviewsCount: 215,
-    soldCount: 460,
+    reviewsCount: 390,
+    soldCount: 950,
     isHot: true,
     isNew: true,
-    stock: 5,
-    tag: '🥇 เหรียญทองโอลิมปิก',
-    image: 'https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?auto=format&fit=crop&w=800&q=80',
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง ไม่แกะกล่อง การ์ดครบ ซีลพลาสติกแท้จากช็อป',
+    tag: '🔥 แรร์ไอเทมยอดฮิต',
+    image: 'https://prod-america-res.popmart.com/default/20240408_161327_778318__1200x1200.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?auto=format&fit=crop&w=800&q=80'
+      'https://prod-america-res.popmart.com/default/20240408_161327_778318__1200x1200.jpg'
     ],
     colors: [
-      { name: 'Sunrise Red', hex: '#DC2626', label: 'แดงตะวันรุ่ง' },
-      { name: 'Safety Yellow', hex: '#FACC15', label: 'เหลืองสว่าง' }
+      { name: 'Fall in Wild Olive', hex: '#4B5563', label: 'ชุดแคมป์ปิ้งหมวกบัคเก็ต' }
     ],
-    sizes: ['40', '41', '42', '43', '44', '45'],
-    description: 'ออกแบบมาเพื่อนักวิ่งสายก้าวยาว (Stride Runners) โฟม FF TURBO PLUS ตัวใหม่ นุ่มเบากว่าเดิม 8% พร้อมปรับองศาแผ่นคาร์บอนให้ขยายก้าววิ่งได้อย่างมีประสิทธิภาพสูงสุด',
+    sizes: ['Height 40 cm (Plush Doll)'],
+    description: 'อาร์ตทอยปรากฏการณ์ระดับโลก! ลาบูบู้ในชุดแคมป์ปิ้งคอลเลกชัน Fall in Wild ใบหน้าไวนิลฟันหยักซิกเนเจอร์พร้อมขนตุ๊กตานุ่มฟู อุปกรณ์ชุดและหมวกถอดเปลี่ยนได้ ตรวจสอบสแกน QR Code แท้จาก Pop Mart',
     features: [
-      'โฟมระดับท็อป FF TURBO PLUS ส่งแรงกระดอนสูงที่สุด',
-      'แผ่นคาร์บอนไฟเบอร์วางกว้างขึ้น เพิ่มความเสถียร',
-      'อัปเปอร์ MOTION WRAP 2.0 ล็อคกระชับเท้าไร้แรงกด'
+      'ใบหน้าไวนิล (Vinyl) งานละเอียด พร้อมตัวตุ๊กตาขนนุ่มเกรดพรีเมียม',
+      'ชุดเอี๊ยม หมวก และรองเท้าแคมป์ปิ้งสามารถถอดใส่ได้',
+      'สแกนโค้ดเช็คของแท้บนเว็บไซต์ทางการของ Pop Mart ได้ 100%',
+      'สภาพกล่องคมกริบ เหมาะสำหรับตั้งโชว์และสะสม'
     ],
     specs: {
-      'น้ำหนัก': '183 กรัม (เบาที่สุดในประวัติศาสตร์ Asics)',
-      'ความหนาส้น': '39.5 มม. / หน้าเท้า 34.5 มม.',
+      'แบรนด์': 'Pop Mart (Kasing Lung)',
+      'ความสูง': '40 เซนติเมตร',
+      'การรับประกัน': 'HYPEBLACK Verified แท้ 100% สแกน QR ติด'
+    }
+  },
+  {
+    id: 'hb-16',
+    name: 'Bearbrick 1000% Iron Man Mark 50 (Medicom Toy)',
+    nameEn: 'Medicom Toy BE@RBRICK 1000% Iron Man Mark L',
+    brand: 'Medicom Toy',
+    category: 'collectibles',
+    categoryName: 'อาร์ตทอยและของสะสม',
+    price: 39500,
+    originalPrice: 45000,
+    rating: 5.0,
+    reviewsCount: 42,
+    soldCount: 65,
+    isHot: true,
+    isNew: true,
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง สองกล่อง (กล่องน้ำตาลนอก + กล่องอาร์ตเวิร์คในครบ)',
+    tag: '⚡ พร้อมส่งด่วน',
+    image: 'https://images.stockx.com/images/Bearbrick-x-Marvel-Iron-Man-Mark-50-1000.jpg?fit=fill&bg=FFFFFF&w=700&h=500',
+    gallery: [
+      'https://images.stockx.com/images/Bearbrick-x-Marvel-Iron-Man-Mark-50-1000.jpg?fit=fill&bg=FFFFFF&w=700&h=500'
+    ],
+    colors: [
+      { name: 'Metallic Crimson & Gold', hex: '#B91C1C', label: 'แดงไอรอนแมนเมทัลลิกตัดทอง' }
+    ],
+    sizes: ['1000% (Height 70 cm)'],
+    description: 'แบร์บริคขนาดใหญ่ 70 ซม. คอลแลบกับ Marvel Studios ในชุดเกราะนาโนเทคโนโลยี Mark 50 จากภาพยนตร์ Avengers: Infinity War พ่นสีเมทัลลิกเงาวับระดับพรีเมียม ผลงานประติมากรรมสำหรับบ้านและออฟฟิศหรู',
+    features: [
+      'ขนาดสัดส่วน 1000% ความสูง 70 เซนติเมตร น้ำหนักอลังการ',
+      'ลิขสิทธิ์แท้ Medicom Toy ร่วมกับ Marvel Official',
+      'ลายดีเทลเกราะและเตาปฏิกรณ์ Arc Reactor คมกริบ',
+      'มีกล่องกระดาษสีน้ำตาลชั้นนอกป้องกันกล่องสะสมอย่างสมบูรณ์'
+    ],
+    specs: {
+      'แบรนด์': 'Medicom Toy (Tokyo, Japan)',
+      'ขนาด': '70 ซม. (1000%)',
+      'การรับประกัน': 'ของแท้ 100% มีตราโฮโลแกรมรับรอง'
+    }
+  },
+
+  // --- 👕 STREETWEAR ---
+  {
+    id: 'hb-17',
+    name: 'Fear of God Essentials 1977 Knit Hoodie - Iron',
+    nameEn: 'Fear of God Essentials 1977 Knitted Hoodie Iron Black',
+    brand: 'Fear of God',
+    category: 'streetwear',
+    categoryName: 'สตรีทแวร์ไฮเอนด์',
+    price: 5900,
+    originalPrice: 7200,
+    rating: 4.8,
+    reviewsCount: 190,
+    soldCount: 620,
+    isHot: false,
+    isNew: true,
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง ในถุงซิปล็อค Essentials ป้ายแท็กครบ',
+    tag: '⚡ พร้อมส่งด่วน',
+    image: 'https://images.stockx.com/images/Fear-of-God-Essentials-Fleece-Hoodie-FW24-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500',
+    gallery: [
+      'https://images.stockx.com/images/Fear-of-God-Essentials-Fleece-Hoodie-FW24-Black-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500'
+    ],
+    colors: [
+      { name: 'Iron Black', hex: '#262626', label: 'ดำชาร์โคลไอรอน' }
+    ],
+    sizes: ['S (Oversized)', 'M (Oversized)', 'L (Oversized)', 'XL'],
+    description: 'ฮู้ดดี้ผ้าไหมพรมถักเนื้อหนานุ่มพิเศษจาก Jerry Lorenzo สกรีนตัวเลขนูน "1977" บนหน้าอก ทรง Oversized สตรีทแวร์ระดับท็อปที่สวมใส่สบายและให้ลุคที่หรูหรา',
+    features: [
+      'เนื้อผ้าถักผสมผสานความอบอุ่นและความนุ่มสบายขั้นสุด',
+      'ตัวเลขนูน 1977 กำมะหยี่เนื้อแน่นกลางหน้าอก',
+      'ป้ายยางซิลิโคน Essentials เอกลักษณ์ที่ด้านบนของหมวกฮู้ด',
+      'ตรวจสอบเนื้อผ้าและป้ายแท็กแท้โดย HYPEBLACK'
+    ],
+    specs: {
+      'แบรนด์': 'Fear of God Essentials',
+      'ทรง': 'Relaxed Oversized Fit',
       'การรับประกัน': 'ของแท้ 100%'
     }
   },
   {
-    id: 'prod-13',
-    name: 'VaporGrip ถุงเท้าวิ่งลดการเสียดสี Anti-Blister (เซ็ต 3 คู่)',
-    nameEn: 'VaporGrip Anti-Blister Performance Socks 3-Pack',
-    brand: 'ActivePulse',
-    category: 'accessories',
-    categoryName: 'อุปกรณ์และกระเป๋า',
-    price: 390,
-    originalPrice: 690,
-    rating: 4.8,
-    reviewsCount: 640,
-    soldCount: 3100,
-    isHot: false,
-    isNew: false,
-    stock: 50,
-    tag: '🧦 เซ็ตสุดคุ้ม 3 คู่',
-    image: 'https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?auto=format&fit=crop&w=800&q=80'
-    ],
-    colors: [
-      { name: 'Sport Mix', hex: '#3B82F6', label: 'คละสีสปอร์ต (ขาว/ดำ/ส้ม)' },
-      { name: 'Triple White', hex: '#F8FAFC', label: 'ขาวล้วน 3 คู่' },
-      { name: 'All Black', hex: '#111827', label: 'ดำล้วน 3 คู่' }
-    ],
-    sizes: ['M (38-41)', 'L (42-45)'],
-    description: 'ถุงเท้าวิ่งข้อสั้นเทคโนโลยี Dry-Cool ทอหนาพิเศษบริเวณส้นเท้าและปลายเท้า ป้องกันการเสียดสีและการพองน้ำ (Blister) แถบรัดอุ้งเท้าช่วยพยุงไม่ให้ถุงเท้าเลื่อนหลุด',
-    features: [
-      'เส้นใย Anti-Friction ป้องกันตุ่มพองน้ำ 100%',
-      'แถบยางพยุงอุ้งเท้า (Arch Support) ลดความเมื่อยล้า',
-      'ตาข่ายทอด้านบนระบายความร้อนไม่อับชื้น'
-    ],
-    specs: {
-      'บรรจุ': '1 กล่อง มี 3 คู่',
-      'วัสดุ': 'Cotton 70%, CoolMax 25%, Spandex 5%'
-    }
-  },
-  {
-    id: 'prod-14',
-    name: 'Titan Pro กระเป๋ายิมพร้อมช่องแยกใส่รองเท้ากันน้ำ',
-    nameEn: 'Titan Pro Gym Duffel Bag with Shoe Compartment',
-    brand: 'ActivePulse',
-    category: 'accessories',
-    categoryName: 'อุปกรณ์และกระเป๋า',
-    price: 890,
-    originalPrice: 1590,
-    rating: 4.9,
-    reviewsCount: 230,
-    soldCount: 890,
-    isHot: false,
+    id: 'hb-18',
+    name: 'Supreme Box Logo Hooded Sweatshirt - Washed Black',
+    nameEn: 'Supreme Box Logo Hooded Sweatshirt Black FW23',
+    brand: 'Supreme',
+    category: 'streetwear',
+    categoryName: 'สตรีทแวร์ไฮเอนด์',
+    price: 18900,
+    originalPrice: 22000,
+    rating: 5.0,
+    reviewsCount: 88,
+    soldCount: 240,
+    isHot: true,
     isNew: true,
-    stock: 16,
-    tag: '🎒 จุสะใจ 40 ลิตร',
-    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80',
+    isReadyToShip: true,
+    condition: 'มือหนึ่ง อุปกรณ์ครบในซอง ป้ายราคาบาร์โค้ดแท้ สติกเกอร์แดง',
+    tag: '👑 ตำนานสตรีทแวร์',
+    image: 'https://images.stockx.com/images/Supreme-Box-Logo-Hooded-Sweatshirt-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500',
     gallery: [
-      'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80'
+      'https://images.stockx.com/images/Supreme-Box-Logo-Hooded-Sweatshirt-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500'
     ],
     colors: [
-      { name: 'Obsidian Black', hex: '#111827', label: 'ดำด้านสปอร์ต' },
-      { name: 'Military Olive', hex: '#3F6212', label: 'เขียวทหาร' },
-      { name: 'Navy Cobalt', hex: '#1E3A8A', label: 'น้ำเงินโคบอลต์' }
+      { name: 'Washed Black', hex: '#171717', label: 'ดำฟอกพรีเมียม' }
     ],
-    sizes: ['Free Size (40L)'],
-    description: 'กระเป๋าสะพายยิมและฟิตเนสความจุ 40 ลิตร ผ้า Oxford 900D กันน้ำ 100% มีช่องแยกใส่รองเท้าพร้อมตาข่ายระบายกลิ่นอับ และช่องแยกใส่เสื้อผ้าเปียกเหงื่อโดยเฉพาะ',
+    sizes: ['M', 'L', 'XL'],
+    description: 'ฮู้ดดี้บ็อกซ์โลโก้สีดำรุ่นที่เป็นที่ต้องการที่สุดของ Supreme New York ปักโลโก้ Box Logo คมกริบกลางอก ผ้าคอตตอนฟลีซเนื้อหนาหนัก ผลิตในประเทศแคนาดา',
     features: [
-      'ช่องใส่รองเท้าด้านข้าง แยกขาดจากสัมภาระด้านใน',
-      'ช่องพลาสติก TPU กันน้ำสำหรับเสื้อผ้าเปียกเหงื่อ',
-      'สายสะพายบุนวมนุ่ม ถอดปรับได้ ไม่เจ็บไหล่'
+      'ผ้า Heavyweight Crossgrain Fleece หนา ทน อยู่ทรงสวย',
+      'ปักโลโก้ Supreme Box Logo แน่นประณีตด้วยด้ายพิเศษ',
+      'ป้ายคอและป้ายข้างแท้ Made in Canada',
+      'ผ่านการตรวจสอบการเย็บและป้ายแท็กโดยผู้เชี่ยวชาญสตรีทแวร์'
     ],
     specs: {
-      'ความจุ': '40 ลิตร',
-      'ขนาด': '52 x 26 x 28 ซม.',
-      'วัสดุ': 'Heavy Duty Waterproof 900D Polyester'
-    }
-  },
-  {
-    id: 'prod-15',
-    name: 'HydroPulse กระบอกน้ำเก็บเย็น 24 ชม. 1000ml สแตนเลส 316',
-    nameEn: 'HydroPulse 1000ml Vacuum Insulated Sports Bottle',
-    brand: 'ActivePulse',
-    category: 'accessories',
-    categoryName: 'อุปกรณ์และกระเป๋า',
-    price: 590,
-    originalPrice: 990,
-    rating: 4.9,
-    reviewsCount: 310,
-    soldCount: 1450,
-    isHot: false,
-    isNew: false,
-    stock: 35,
-    tag: '❄️ เก็บความเย็น 24 ชม.',
-    image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80'
-    ],
-    colors: [
-      { name: 'Neon Cyber Blue', hex: '#0284C7', label: 'ฟ้าเมทัลลิก' },
-      { name: 'Matte Black', hex: '#18181B', label: 'ดำแมตต์' },
-      { name: 'Flame Orange', hex: '#EA580C', label: 'ส้มเฟลม' }
-    ],
-    sizes: ['1,000 ml'],
-    description: 'กระบอกน้ำเก็บอุณหภูมิสแตนเลสฟู้ดเกรด SUS316 ปลอดสนิม 100% รักษาความเย็นจัดได้นานถึง 24 ชั่วโมง และร้อน 12 ชั่วโมง ฝาเปิดแบบกดปุ่มคลิกเดียวพร้อมหลอดซิลิโคนดูดง่าย',
-    features: [
-      'ฉนวนสุญญากาศผนัง 3 ชั้น ไร้ไอน้ำเกาะรอบขวด',
-      'ผลิตจากสแตนเลส SUS316 ปลอดสารก่อมะเร็ง BPA-Free',
-      'หูหิ้วแข็งแรง พกพาไปฟิตเนสและวิ่งได้สะดวก'
-    ],
-    specs: {
-      'ความจุ': '1,000 ml (1 ลิตร)',
-      'การเก็บอุณหภูมิ': 'เย็น 24 ชม. / ร้อน 12 ชม.',
-      'การรับประกัน': 'ประกันการรั่วซึม 1 ปี'
-    }
-  },
-  {
-    id: 'prod-16',
-    name: 'AeroPeak หมวกวิ่งมาราธอนน้ำหนักเบา กันแดด UV50+',
-    nameEn: 'AeroPeak Lightweight Marathon Cap UV50+',
-    brand: 'ActivePulse',
-    category: 'accessories',
-    categoryName: 'อุปกรณ์และกระเป๋า',
-    price: 390,
-    originalPrice: 650,
-    rating: 4.8,
-    reviewsCount: 178,
-    soldCount: 820,
-    isHot: false,
-    isNew: false,
-    stock: 24,
-    tag: '☀️ กันแดด UPF50+',
-    image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80'
-    ],
-    colors: [
-      { name: 'Laser White', hex: '#F8FAFC', label: 'ขาวสะท้อนแสง' },
-      { name: 'Stealth Black', hex: '#1E293B', label: 'ดำด้าน' },
-      { name: 'Volt Lime', hex: '#84CC16', label: 'เหลืองโวลต์' }
-    ],
-    sizes: ['Free Size (ปรับได้ 54-62 ซม.)'],
-    description: 'หมวกวิ่งน้ำหนักเบาเพียง 42 กรัม ปีกหมวกแบบนิ่มพับเก็บใส่กระเป๋ากางเกงได้ไม่เสียทรง ผ้าตาข่าย Laser-cut ระบายความร้อนได้รวดเร็ว แถบซับเหงื่อรอบศีรษะป้องกันเหงื่อไหลเข้าตา',
-    features: [
-      'ปีกหมวกพับงอได้คืนรูป ไม่หัก ไม่งอเสียทรง',
-      'ป้องกันรังสียูวี UPF 50+ ปกป้องใบหน้าจากแดดแรง',
-      'สายปรับขอยางยืดสปอร์ตด้านหลัง กระชับรับทุกสรีระศีรษะ'
-    ],
-    specs: {
-      'น้ำหนัก': '42 กรัม',
-      'วัสดุ': 'Polyester Quick-Dry 100%'
+      'แบรนด์': 'Supreme (New York)',
+      'แหล่งผลิต': 'Made in Canada',
+      'การรับประกัน': 'HYPEBLACK Verified 100% Authentic Guarantee'
     }
   }
 ];
 
-// Coupon Codes database
+// Available Coupons
 const COUPONS = {
-  'SPORT20': { discountPercent: 20, description: 'ลด 20% ทั้งตะกร้าสำหรับสายสปอร์ต' },
-  'WELCOME10': { discountPercent: 10, description: 'ลด 10% ต้อนรับลูกค้าใหม่' },
-  'PULSE100': { discountAmount: 100, minSpend: 800, description: 'ลดทันที 100 บาท เมื่อช้อปครบ 800 บาท' },
-  'FREESHIP': { freeShipping: true, description: 'ส่งฟรีทันที ไม่มียอดขั้นต่ำ' }
+  'HYPEVIP': { discountPercent: 15, description: 'ลดพิเศษ 15% สำหรับสมาชิกระดับ VIP' },
+  'LUXURY500': { discountAmount: 500, minSpend: 5000, description: 'ลดทันที 500 บาท เมื่อช้อปครบ 5,000 บาท' },
+  'FREESHIP': { freeShipping: true, description: 'จัดส่งด่วนพร้อมประกันขนส่งฟรี ไม่มีขั้นต่ำ' }
 };
 
 // ==========================================
@@ -641,26 +730,30 @@ const AppState = {
   wishlist: [],
   activeCategory: 'all',
   selectedBrand: 'all',
+  readyToShipOnly: false,
   searchQuery: '',
-  priceRange: 10000,
+  priceRange: 600000,
   sortBy: 'popular',
   appliedCoupon: null,
   activeProductModal: null,
   selectedColorIndex: 0,
   selectedSize: null,
   selectedQuantity: 1,
-  checkoutStep: 1, // 1: Cart, 2: Address & Payment, 3: Success
-  shippingFee: 50,
-  freeShippingThreshold: 1500
+  checkoutStep: 1,
+  shippingFee: 100,
+  freeShippingThreshold: 50000
 };
 
 // ==========================================
-// 3. STORAGE & INITIALIZATION
+// 3. INITIALIZATION
 // ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  initApp();
+});
+
 function initApp() {
   loadFromStorage();
   setupEventListeners();
-  renderCategories();
   renderProducts();
   updateCartUI();
   updateWishlistBadges();
@@ -669,97 +762,69 @@ function initApp() {
 
 function loadFromStorage() {
   try {
-    const savedCart = localStorage.getItem('activepulse_cart');
+    const savedCart = localStorage.getItem('hypeblack_cart');
+    const savedWish = localStorage.getItem('hypeblack_wishlist');
     if (savedCart) AppState.cart = JSON.parse(savedCart);
-    
-    const savedWishlist = localStorage.getItem('activepulse_wishlist');
-    if (savedWishlist) AppState.wishlist = JSON.parse(savedWishlist);
+    if (savedWish) AppState.wishlist = JSON.parse(savedWish);
   } catch (e) {
-    console.warn('Storage read error, using default state', e);
+    console.error('Storage error', e);
   }
 }
 
-function saveCartToStorage() {
+function saveToStorage() {
   try {
-    localStorage.setItem('activepulse_cart', JSON.stringify(AppState.cart));
+    localStorage.setItem('hypeblack_cart', JSON.stringify(AppState.cart));
+    localStorage.setItem('hypeblack_wishlist', JSON.stringify(AppState.wishlist));
   } catch (e) {
-    console.error('Storage write error', e);
+    console.error('Save storage error', e);
   }
 }
 
-function saveWishlistToStorage() {
-  try {
-    localStorage.setItem('activepulse_wishlist', JSON.stringify(AppState.wishlist));
-  } catch (e) {
-    console.error('Storage write error', e);
+function setupEventListeners() {
+  const searchInput = document.getElementById('global-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      AppState.searchQuery = e.target.value.toLowerCase().trim();
+      renderProducts();
+    });
   }
 }
 
 // ==========================================
-// 4. RENDERING FUNCTIONS
+// 4. FILTERING & RENDERING
 // ==========================================
-
-function renderCategories() {
-  const categories = [
-    { id: 'all', label: '🔥 ทั้งหมด', count: PRODUCTS.length },
-    { id: 'shoes-running', label: '👟 รองเท้าวิ่ง', count: PRODUCTS.filter(p => p.category === 'shoes-running').length },
-    { id: 'shoes-court', label: '🏀 บาสเก็ตบอล', count: PRODUCTS.filter(p => p.category === 'shoes-court').length },
-    { id: 'shoes-football', label: '⚽ สตั๊ดฟุตบอล', count: PRODUCTS.filter(p => p.category === 'shoes-football').length },
-    { id: 'apparel-men', label: '🎽 เสื้อผ้าชาย', count: PRODUCTS.filter(p => p.category === 'apparel-men').length },
-    { id: 'apparel-women', label: '🧘‍♀️ เสื้อผ้าหญิง', count: PRODUCTS.filter(p => p.category === 'apparel-women').length },
-    { id: 'accessories', label: '🎒 อุปกรณ์ & กระเป๋า', count: PRODUCTS.filter(p => p.category === 'accessories').length }
-  ];
-
-  const container = document.getElementById('category-pills');
-  if (!container) return;
-
-  container.innerHTML = categories.map(cat => `
-    <button 
-      onclick="filterByCategory('${cat.id}')"
-      class="category-pill whitespace-nowrap px-5 py-2.5 rounded-full font-medium text-sm transition-all flex items-center gap-2 ${
-        AppState.activeCategory === cat.id 
-          ? 'active bg-gradient-to-r from-orange-500 to-pink-500 text-white shadow-lg shadow-orange-500/25 ring-2 ring-orange-400' 
-          : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
-      }">
-      <span>${cat.label}</span>
-      <span class="text-xs px-2 py-0.5 rounded-full ${AppState.activeCategory === cat.id ? 'bg-white/30 text-white' : 'bg-slate-100 text-slate-500'}">${cat.count}</span>
-    </button>
-  `).join('');
-}
-
 function getFilteredProducts() {
-  return AppState.products.filter(item => {
-    // Category match
-    const matchesCategory = (AppState.activeCategory === 'all' || item.category === AppState.activeCategory);
-    
-    // Brand match
-    const matchesBrand = (AppState.selectedBrand === 'all' || item.brand.toLowerCase() === AppState.selectedBrand.toLowerCase());
-
-    // Search query match (name, nameEn, description, brand, categoryName)
-    const q = AppState.searchQuery.toLowerCase().trim();
-    const matchesSearch = !q || (
-      item.name.toLowerCase().includes(q) ||
-      item.nameEn.toLowerCase().includes(q) ||
-      item.brand.toLowerCase().includes(q) ||
-      item.categoryName.toLowerCase().includes(q) ||
-      item.description.toLowerCase().includes(q)
-    );
-
-    // Price range match
-    const matchesPrice = item.price <= AppState.priceRange;
-
-    return matchesCategory && matchesBrand && matchesSearch && matchesPrice;
-  }).sort((a, b) => {
-    switch (AppState.sortBy) {
-      case 'price-asc': return a.price - b.price;
-      case 'price-desc': return b.price - a.price;
-      case 'discount-desc': return (b.originalPrice - b.price) - (a.originalPrice - a.price);
-      case 'rating-desc': return b.rating - a.rating;
-      case 'newest': return (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0);
-      case 'popular':
-      default:
-        return b.soldCount - a.soldCount;
+  return AppState.products.filter(product => {
+    // Category Filter
+    if (AppState.activeCategory !== 'all' && product.category !== AppState.activeCategory) {
+      return false;
     }
+    // Brand Filter
+    if (AppState.selectedBrand !== 'all' && product.brand.toLowerCase() !== AppState.selectedBrand.toLowerCase()) {
+      return false;
+    }
+    // Ready To Ship Filter
+    if (AppState.readyToShipOnly && !product.isReadyToShip) {
+      return false;
+    }
+    // Price Range Filter
+    if (product.price > AppState.priceRange) {
+      return false;
+    }
+    // Search Query
+    if (AppState.searchQuery) {
+      const q = AppState.searchQuery;
+      const matchName = product.name.toLowerCase().includes(q);
+      const matchBrand = product.brand.toLowerCase().includes(q);
+      const matchCat = product.categoryName.toLowerCase().includes(q);
+      if (!matchName && !matchBrand && !matchCat) return false;
+    }
+    return true;
+  }).sort((a, b) => {
+    if (AppState.sortBy === 'price-low') return a.price - b.price;
+    if (AppState.sortBy === 'price-high') return b.price - a.price;
+    if (AppState.sortBy === 'rating') return b.rating - a.rating;
+    return b.soldCount - a.soldCount;
   });
 }
 
@@ -773,13 +838,13 @@ function renderProducts() {
 
   if (filtered.length === 0) {
     grid.innerHTML = `
-      <div class="col-span-full py-16 text-center">
-        <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-orange-100 flex items-center justify-center text-4xl">
+      <div class="col-span-full py-20 text-center bg-[#12131A] rounded-3xl border border-[#242636] p-8">
+        <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#1A1C28] border border-[#2D3145] flex items-center justify-center text-3xl">
           🔍
         </div>
-        <h3 class="text-xl font-bold text-slate-800 mb-2">ไม่พบสินค้าที่ตรงกับเงื่อนไข</h3>
-        <p class="text-slate-500 mb-6">ลองปรับคำค้นหา หรือรีเซ็ตตัวกรองเพื่อดูสินค้าทั้งหมด</p>
-        <button onclick="resetFilters()" class="px-6 py-2.5 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-full font-semibold shadow-md hover:shadow-lg transition-all">
+        <h3 class="text-xl font-black text-white mb-2">ไม่พบสินค้าที่ตรงกับเงื่อนไข</h3>
+        <p class="text-slate-400 text-sm mb-6">ลองปรับคำค้นหา หรือรีเซ็ตตัวกรองเพื่อดูสินค้าทั้งหมด</p>
+        <button onclick="resetFilters()" class="px-6 py-2.5 bg-white text-black rounded-full font-bold shadow-lg hover:bg-slate-200 transition-all text-xs">
           รีเซ็ตตัวกรองทั้งหมด
         </button>
       </div>
@@ -789,107 +854,76 @@ function renderProducts() {
 
   grid.innerHTML = filtered.map(product => {
     const isWishlisted = AppState.wishlist.includes(product.id);
-    const discountPercent = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
 
     return `
-      <div class="product-card group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between relative">
+      <div class="card-dark-luxury rounded-2xl overflow-hidden flex flex-col justify-between relative group cursor-pointer" onclick="openProductModal('${product.id}')">
         
-        <!-- Top Badges & Wishlist -->
-        <div class="relative product-image-container bg-gradient-to-b from-slate-100 to-slate-200 aspect-square overflow-hidden cursor-pointer" onclick="openProductModal('${product.id}')">
+        <!-- Image Container -->
+        <div class="relative product-image-container bg-[#15161E] aspect-square overflow-hidden flex items-center justify-center p-3">
           <img 
             src="${product.image}" 
             alt="${product.name}" 
             loading="lazy"
-            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80';"
-            class="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-500"
+            class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
           />
 
-          <!-- Discount badge -->
-          <div class="absolute top-3 left-3 flex flex-col gap-1.5 z-10">
-            <span class="bg-gradient-to-r from-red-600 to-pink-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
-              🔥 -${discountPercent}%
+          <!-- HYPEBLACK Verified Authentic Tag -->
+          <div class="absolute top-3 left-3 flex flex-col gap-1.5 z-10 pointer-events-none">
+            <span class="bg-[#00E599]/15 text-[#00E599] border border-[#00E599]/40 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full flex items-center gap-1 backdrop-blur-md">
+              ✓ แท้ 100%
             </span>
-            ${product.isNew ? '<span class="bg-emerald-500 text-white text-xs font-bold px-2 py-0.5 rounded-full shadow-sm">NEW</span>' : ''}
+            ${product.isReadyToShip ? `
+              <span class="bg-[#E5B869]/20 text-[#E5B869] border border-[#E5B869]/40 text-[10px] font-bold px-2 py-0.5 rounded-full backdrop-blur-md flex items-center gap-1">
+                ⚡ พร้อมส่งด่วน
+              </span>
+            ` : ''}
           </div>
 
           <!-- Wishlist Heart Button -->
           <button 
             onclick="event.stopPropagation(); toggleWishlist('${product.id}')"
             aria-label="บันทึกรายการโปรด"
-            class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 hover:bg-white backdrop-blur shadow-md flex items-center justify-center transition-all duration-200 z-10 ${
-              isWishlisted ? 'text-red-500 scale-110' : 'text-slate-400 hover:text-red-500'
+            class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/60 hover:bg-black/90 border border-white/10 backdrop-blur shadow-md flex items-center justify-center transition-all duration-200 z-10 ${
+              isWishlisted ? 'text-red-500 scale-110' : 'text-slate-400 hover:text-red-400'
             }">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
             </svg>
           </button>
-
-          <!-- Quick view hint overlay -->
-          <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="bg-white/95 text-slate-800 text-xs font-semibold px-4 py-2 rounded-full shadow-lg transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-1.5">
-              👁️ ดูรายละเอียด
-            </span>
-          </div>
-
-          <!-- Stock alert if low -->
-          ${product.stock <= 5 ? `
-            <div class="absolute bottom-2 left-2 bg-amber-500/90 text-white text-[11px] font-semibold px-2 py-0.5 rounded backdrop-blur">
-              ⚡ เหลือเพียง ${product.stock} ชิ้น
-            </div>
-          ` : ''}
         </div>
 
-        <!-- Product Details -->
-        <div class="p-5 flex-1 flex flex-col justify-between">
+        <!-- Details -->
+        <div class="p-4 flex-1 flex flex-col justify-between">
           <div>
-            <!-- Brand & Category -->
-            <div class="flex items-center justify-between text-xs text-slate-400 mb-1.5 font-medium">
-              <span class="uppercase tracking-wider text-orange-600 font-semibold">${product.brand}</span>
-              <div class="flex items-center gap-1 text-amber-500 font-semibold">
-                <span>★</span>
-                <span>${product.rating}</span>
-                <span class="text-slate-400 font-normal">(${product.reviewsCount})</span>
-              </div>
+            <!-- Brand -->
+            <div class="flex items-center justify-between text-xs mb-1">
+              <span class="font-extrabold text-[#E5B869] tracking-wider uppercase text-[11px]">${product.brand}</span>
+              <span class="text-[10px] text-slate-400 flex items-center gap-0.5 font-semibold">
+                ★ ${product.rating}
+              </span>
             </div>
 
             <!-- Title -->
-            <h4 class="font-bold text-slate-800 text-base leading-snug line-clamp-2 group-hover:text-orange-600 transition-colors cursor-pointer" onclick="openProductModal('${product.id}')">
+            <h4 class="font-bold text-white text-xs sm:text-sm line-clamp-2 leading-snug group-hover:text-slate-200 transition-colors">
               ${product.name}
             </h4>
-            <p class="text-xs text-slate-400 line-clamp-1 mt-0.5 mb-2">${product.nameEn}</p>
-
-            <!-- Color Swatches preview -->
-            <div class="flex items-center gap-1.5 mb-3">
-              ${product.colors.map(c => `
-                <span class="w-3.5 h-3.5 rounded-full border border-slate-300 shadow-inner" style="background-color: ${c.hex};" title="${c.label}"></span>
-              `).join('')}
-              <span class="text-[11px] text-slate-400 ml-1">(${product.colors.length} สี)</span>
-            </div>
           </div>
 
-          <!-- Price & Add To Cart Button -->
-          <div class="pt-3 border-t border-slate-100 mt-2">
-            <div class="flex items-baseline gap-2 mb-3">
-              <span class="text-xl font-extrabold text-slate-900">฿${product.price.toLocaleString()}</span>
-              <span class="text-xs text-slate-400 line-through">฿${product.originalPrice.toLocaleString()}</span>
+          <!-- Price & Market Ask -->
+          <div class="pt-3 mt-3 border-t border-[#222432] flex items-end justify-between">
+            <div>
+              <span class="block text-[10px] text-slate-400 font-medium">ราคาเริ่มต้น</span>
+              <span class="text-base sm:text-lg font-black text-white tracking-tight">
+                ฿${product.price.toLocaleString()}
+              </span>
             </div>
-
-            <div class="grid grid-cols-2 gap-2">
-              <button 
-                onclick="openProductModal('${product.id}')"
-                class="w-full py-2 px-3 rounded-xl border border-slate-200 text-slate-700 text-xs font-semibold hover:bg-slate-100 transition-colors flex items-center justify-center gap-1">
-                <span>รายละเอียด</span>
-              </button>
-
-              <button 
-                onclick="quickAddToCart('${product.id}')"
-                class="w-full py-2 px-3 rounded-xl bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white text-xs font-semibold shadow-md shadow-orange-500/20 active:scale-95 transition-all flex items-center justify-center gap-1">
-                <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                </svg>
-                <span>ใส่ตะกร้า</span>
-              </button>
-            </div>
+            
+            <button 
+              onclick="event.stopPropagation(); quickAddToCart('${product.id}')"
+              class="w-8 h-8 rounded-full bg-white hover:bg-slate-200 text-black flex items-center justify-center font-bold text-sm shadow-md transition-transform active:scale-95"
+              title="เพิ่มลงตะกร้า">
+              +
+            </button>
           </div>
 
         </div>
@@ -900,160 +934,226 @@ function renderProducts() {
 }
 
 // ==========================================
-// 5. QUICK VIEW / PRODUCT MODAL
+// 5. FILTER HANDLERS
 // ==========================================
-function openProductModal(productId) {
-  const product = PRODUCTS.find(p => p.id === productId);
+function filterByCategory(cat) {
+  AppState.activeCategory = cat;
+  
+  document.querySelectorAll('.category-pill').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  const target = document.getElementById(`cat-btn-${cat}`);
+  if (target) target.classList.add('active');
+
+  renderProducts();
+}
+
+function filterByBrand(brand) {
+  AppState.selectedBrand = brand;
+
+  document.querySelectorAll('.brand-chip').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  const target = document.getElementById(`brand-btn-${brand}`);
+  if (target) target.classList.add('active');
+
+  renderProducts();
+}
+
+function toggleReadyToShipFilter() {
+  AppState.readyToShipOnly = !AppState.readyToShipOnly;
+  const btn = document.getElementById('ready-to-ship-toggle');
+  if (btn) {
+    if (AppState.readyToShipOnly) {
+      btn.classList.add('bg-[#E5B869]', 'text-black', 'border-transparent');
+      btn.classList.remove('bg-[#161722]', 'text-slate-300');
+    } else {
+      btn.classList.remove('bg-[#E5B869]', 'text-black', 'border-transparent');
+      btn.classList.add('bg-[#161722]', 'text-slate-300');
+    }
+  }
+  renderProducts();
+}
+
+function handleSearchInput(e) {
+  AppState.searchQuery = e.target.value.toLowerCase().trim();
+  renderProducts();
+}
+
+function handlePriceRangeChange(val) {
+  AppState.priceRange = parseInt(val, 10);
+  const display = document.getElementById('price-range-display');
+  if (display) display.innerText = `฿${AppState.priceRange.toLocaleString()}`;
+  renderProducts();
+}
+
+function handleSortChange(sort) {
+  AppState.sortBy = sort;
+  renderProducts();
+}
+
+function resetFilters() {
+  AppState.activeCategory = 'all';
+  AppState.selectedBrand = 'all';
+  AppState.readyToShipOnly = false;
+  AppState.searchQuery = '';
+  AppState.priceRange = 600000;
+  AppState.sortBy = 'popular';
+
+  const searchInput = document.getElementById('global-search');
+  if (searchInput) searchInput.value = '';
+
+  const priceRange = document.getElementById('price-range-slider');
+  if (priceRange) priceRange.value = 600000;
+
+  const display = document.getElementById('price-range-display');
+  if (display) display.innerText = '฿600,000';
+
+  filterByCategory('all');
+  filterByBrand('all');
+}
+
+// ==========================================
+// 6. PRODUCT DETAIL MODAL
+// ==========================================
+function openProductModal(id) {
+  const product = AppState.products.find(p => p.id === id);
   if (!product) return;
 
   AppState.activeProductModal = product;
   AppState.selectedColorIndex = 0;
-  AppState.selectedSize = product.sizes[0];
+  AppState.selectedSize = product.sizes ? product.sizes[0] : null;
   AppState.selectedQuantity = 1;
 
   const modal = document.getElementById('product-detail-modal');
-  const content = document.getElementById('product-modal-content');
+  const content = document.getElementById('modal-content');
   if (!modal || !content) return;
 
-  const discountPercent = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
-
   content.innerHTML = `
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
       
-      <!-- Left: Image Gallery -->
-      <div class="flex flex-col gap-4">
-        <div class="relative bg-slate-100 rounded-2xl overflow-hidden aspect-square border border-slate-200/80 shadow-inner">
+      <!-- Left Images Gallery -->
+      <div class="lg:col-span-6 space-y-4">
+        <div class="bg-[#15161F] rounded-2xl border border-[#262838] aspect-square overflow-hidden flex items-center justify-center p-4 relative">
           <img 
-            id="modal-main-img" 
+            id="modal-main-image" 
             src="${product.image}" 
             alt="${product.name}" 
-            class="w-full h-full object-cover object-center transition-all duration-300"
+            class="w-full h-full object-cover rounded-xl"
           />
           <div class="absolute top-4 left-4 flex flex-col gap-2">
-            <span class="bg-gradient-to-r from-red-600 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-              🔥 ส่วนลด ${discountPercent}%
+            <span class="bg-[#00E599]/20 text-[#00E599] border border-[#00E599]/50 text-xs font-black px-3 py-1 rounded-full backdrop-blur-md flex items-center gap-1.5 shadow-md">
+              ✓ HYPEBLACK VERIFIED แท้ 100%
             </span>
-            <span class="bg-slate-900/80 backdrop-blur text-white text-xs font-semibold px-3 py-1 rounded-full">
-              ${product.categoryName}
-            </span>
+            ${product.isReadyToShip ? `
+              <span class="bg-[#E5B869]/20 text-[#E5B869] border border-[#E5B869]/50 text-xs font-bold px-3 py-0.5 rounded-full backdrop-blur-md">
+                ⚡ พร้อมส่งด่วน 1-2 วัน
+              </span>
+            ` : ''}
           </div>
         </div>
 
         <!-- Thumbnails -->
-        <div class="flex items-center gap-3 overflow-x-auto pb-2">
-          ${(product.gallery || [product.image]).map((img, idx) => `
-            <button 
-              onclick="setModalImage('${img}')"
-              class="w-16 h-16 rounded-xl overflow-hidden border-2 transition-all flex-shrink-0 hover:border-orange-500 focus:border-orange-500 ${idx === 0 ? 'border-orange-500' : 'border-slate-200'}">
-              <img src="${img}" alt="Thumbnail" class="w-full h-full object-cover" />
-            </button>
+        <div class="flex gap-2 overflow-x-auto pb-2">
+          ${product.gallery.map((img, idx) => `
+            <div 
+              onclick="document.getElementById('modal-main-image').src = '${img}'" 
+              class="w-16 h-16 rounded-xl bg-[#15161F] border border-[#262838] hover:border-white cursor-pointer overflow-hidden flex-shrink-0 p-1">
+              <img src="${img}" class="w-full h-full object-cover rounded-lg" />
+            </div>
           `).join('')}
+        </div>
+
+        <!-- Authentic Assurance Card -->
+        <div class="bg-[#12131A] border border-[#242636] rounded-2xl p-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#00E599]/10 border border-[#00E599]/30 text-[#00E599] flex items-center justify-center text-lg flex-shrink-0 font-bold">
+            ✓
+          </div>
+          <div class="text-xs">
+            <h5 class="font-bold text-white mb-0.5">รับประกันของแท้ 100% โดยผู้เชี่ยวชาญ HYPEBLACK</h5>
+            <p class="text-slate-400">ตรวจสอบความแท้ทุกจุดด้วยเครื่องมือตรวจแสง UV และทีมงานผู้เชี่ยวชาญก่อนจัดส่ง พร้อมแท็กและใบรับประกัน</p>
+          </div>
         </div>
       </div>
 
-      <!-- Right: Product Information & Purchase Controls -->
-      <div class="flex flex-col justify-between">
+      <!-- Right Details & Options -->
+      <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
         <div>
-          <!-- Brand & Ratings -->
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-extrabold tracking-wider text-orange-600 uppercase bg-orange-50 px-2.5 py-1 rounded-md">
-              แบรนด์แท้ 100% : ${product.brand}
+          <!-- Brand & Badges -->
+          <div class="flex items-center justify-between text-xs mb-2">
+            <span class="font-extrabold text-[#E5B869] text-sm uppercase tracking-wider">${product.brand}</span>
+            <span class="bg-[#1E202E] text-slate-300 px-3 py-1 rounded-full text-xs font-semibold">
+              ${product.condition || 'สภาพมือหนึ่ง อุปกรณ์ครบ'}
             </span>
-            <div class="flex items-center gap-1 text-sm font-semibold text-amber-500">
-              <span>★</span>
-              <span>${product.rating}</span>
-              <span class="text-slate-400 font-normal">(${product.reviewsCount} รีวิว)</span>
-              <span class="text-slate-300">•</span>
-              <span class="text-slate-500 font-normal">ขายแล้ว ${product.soldCount} ชิ้น</span>
-            </div>
           </div>
 
           <!-- Product Title -->
-          <h2 class="text-2xl md:text-3xl font-black text-slate-900 leading-tight mb-1">
+          <h2 class="text-xl sm:text-2xl font-black text-white leading-tight mb-3">
             ${product.name}
           </h2>
-          <p class="text-sm text-slate-500 mb-4">${product.nameEn}</p>
 
           <!-- Price Display -->
-          <div class="bg-slate-50 rounded-2xl p-4 mb-6 border border-slate-200/60 flex items-baseline gap-3">
-            <span class="text-3xl font-black text-slate-900">฿${product.price.toLocaleString()}</span>
-            <span class="text-base text-slate-400 line-through">฿${product.originalPrice.toLocaleString()}</span>
-            <span class="text-xs font-bold text-red-600 bg-red-100 px-2 py-0.5 rounded-full ml-auto">
-              ประหยัด ฿${(product.originalPrice - product.price).toLocaleString()}
-            </span>
-          </div>
-
-          <!-- Color Selector -->
-          <div class="mb-5">
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
-              เลือกสี: <span id="selected-color-label" class="text-slate-900 font-bold">${product.colors[0].label}</span>
-            </label>
-            <div class="flex items-center gap-3">
-              ${product.colors.map((c, idx) => `
-                <button 
-                  onclick="selectModalColor(${idx}, '${c.label}')"
-                  class="color-swatch w-9 h-9 rounded-full border-2 border-white shadow-md flex items-center justify-center transition-all ${idx === 0 ? 'active' : ''}"
-                  style="background-color: ${c.hex};"
-                  title="${c.label}">
-                </button>
-              `).join('')}
+          <div class="bg-[#15161F] border border-[#262838] p-4 rounded-2xl mb-5 flex items-baseline justify-between">
+            <div>
+              <span class="text-xs text-slate-400 block mb-0.5">ราคาซื้อทันที (Buy Now)</span>
+              <span class="text-2xl sm:text-3xl font-black text-white">
+                ฿${product.price.toLocaleString()}
+              </span>
+            </div>
+            <div class="text-right">
+              <span class="text-xs text-emerald-400 font-bold block">✓ สต็อกพร้อมจัดส่ง</span>
+              <span class="text-[11px] text-slate-400">ส่งด่วนถึงมือใน 1-2 วัน</span>
             </div>
           </div>
 
-          <!-- Size Selector -->
+          <!-- Size Options -->
           <div class="mb-5">
             <div class="flex items-center justify-between mb-2">
-              <label class="text-xs font-bold uppercase tracking-wider text-slate-500">
-                เลือกขนาด (ไซส์):
-              </label>
-              <button onclick="openSizeGuide()" class="text-xs text-orange-600 hover:text-orange-700 font-semibold underline flex items-center gap-1">
+              <label class="text-xs font-bold text-white uppercase tracking-wider">เลือกขนาด / ไซส์ (พร้อมราคาตลาด)</label>
+              <button onclick="openSizeGuide()" class="text-xs text-[#E5B869] hover:underline font-semibold flex items-center gap-1">
                 📏 ตารางเทียบไซส์
               </button>
             </div>
-            <div class="flex flex-wrap gap-2">
-              ${product.sizes.map((s, idx) => `
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              ${product.sizes.map((sz, i) => `
                 <button 
-                  onclick="selectModalSize('${s}', this)"
-                  class="size-btn px-4 py-2 rounded-xl text-sm font-semibold border ${idx === 0 ? 'active' : 'border-slate-200 bg-white text-slate-700 hover:bg-slate-50'}">
-                  ${s}
+                  onclick="selectModalSize('${sz}', this)"
+                  class="size-btn ${i === 0 ? 'active' : ''} py-2.5 px-3 rounded-xl border border-[#262838] bg-[#12131A] text-slate-300 text-xs font-semibold hover:border-slate-400 transition-all text-center">
+                  <span class="block font-bold">${sz}</span>
+                  <span class="block text-[10px] text-slate-400">฿${product.price.toLocaleString()}</span>
                 </button>
               `).join('')}
             </div>
           </div>
 
-          <!-- Quantity Control -->
-          <div class="mb-6 flex items-center gap-4">
-            <span class="text-xs font-bold uppercase tracking-wider text-slate-500">จำนวน:</span>
-            <div class="flex items-center border border-slate-200 rounded-xl bg-white overflow-hidden shadow-sm">
-              <button onclick="adjustModalQty(-1)" class="w-10 h-10 flex items-center justify-center text-slate-600 hover:bg-slate-100 font-bold text-lg">-</button>
-              <span id="modal-qty" class="w-12 text-center font-bold text-slate-800 text-sm">1</span>
-              <button onclick="adjustModalQty(1)" class="w-10 h-10 flex items-center justify-center text-slate-600 hover:bg-slate-100 font-bold text-lg">+</button>
-            </div>
-            <span class="text-xs text-slate-400">คลังเหลือ ${product.stock} ชิ้น</span>
+          <!-- Description -->
+          <div class="text-xs text-slate-300 space-y-2 mb-4 leading-relaxed">
+            <p>${product.description}</p>
           </div>
 
-          <!-- Features Bullets -->
-          <div class="mb-6 bg-slate-50 rounded-2xl p-4 border border-slate-200/60 text-xs text-slate-600 space-y-1.5">
-            <p class="font-bold text-slate-800 mb-1">จุดเด่นเทคโนโลยี:</p>
-            ${product.features.map(f => `<p class="flex items-start gap-2"><span class="text-emerald-500">✓</span> <span>${f}</span></p>`).join('')}
+          <!-- Specs Table -->
+          <div class="bg-[#12131A] rounded-xl p-3 border border-[#262838] text-xs space-y-1.5">
+            ${Object.entries(product.specs).map(([k, v]) => `
+              <div class="flex justify-between py-1 border-b border-[#1E202E] last:border-0">
+                <span class="text-slate-400 font-medium">${k}</span>
+                <span class="text-slate-200 font-bold">${v}</span>
+              </div>
+            `).join('')}
           </div>
         </div>
 
         <!-- Action Buttons -->
-        <div class="pt-4 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
+        <div class="pt-4 border-t border-[#262838] flex gap-3">
           <button 
-            onclick="addModalProductToCart(false)"
-            class="flex-1 py-3.5 px-6 rounded-2xl border-2 border-orange-500 text-orange-600 font-bold text-sm hover:bg-orange-50 transition-colors flex items-center justify-center gap-2">
-            <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-            </svg>
-            <span>เพิ่มลงตะกร้า</span>
+            onclick="addModalProductToCart()" 
+            class="flex-1 py-3.5 px-4 rounded-xl bg-white hover:bg-slate-200 text-black font-extrabold text-sm shadow-xl transition-all flex items-center justify-center gap-2">
+            <span>🛒 เพิ่มลงตะกร้า</span>
           </button>
-
+          
           <button 
-            onclick="addModalProductToCart(true)"
-            class="flex-1 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-bold text-sm shadow-lg shadow-orange-500/30 transition-all flex items-center justify-center gap-2">
-            <span>⚡ สั่งซื้อทันที</span>
+            onclick="buyNowModalProduct()" 
+            class="flex-1 py-3.5 px-4 rounded-xl gold-gradient-btn font-extrabold text-sm shadow-xl transition-all flex items-center justify-center gap-2">
+            <span>⚡ ซื้อทันที (พร้อมส่ง)</span>
           </button>
         </div>
 
@@ -1063,28 +1163,15 @@ function openProductModal(productId) {
   `;
 
   modal.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
+  modal.classList.add('flex');
 }
 
 function closeProductModal() {
   const modal = document.getElementById('product-detail-modal');
-  if (modal) modal.classList.add('hidden');
-  document.body.style.overflow = '';
-}
-
-function setModalImage(src) {
-  const mainImg = document.getElementById('modal-main-img');
-  if (mainImg) mainImg.src = src;
-}
-
-function selectModalColor(index, label) {
-  AppState.selectedColorIndex = index;
-  const labelEl = document.getElementById('selected-color-label');
-  if (labelEl) labelEl.innerText = label;
-
-  document.querySelectorAll('.color-swatch').forEach((btn, idx) => {
-    btn.classList.toggle('active', idx === index);
-  });
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
 }
 
 function selectModalSize(size, el) {
@@ -1093,874 +1180,397 @@ function selectModalSize(size, el) {
   if (el) el.classList.add('active');
 }
 
-function adjustModalQty(delta) {
-  const newQty = AppState.selectedQuantity + delta;
-  const maxStock = AppState.activeProductModal?.stock || 10;
-  if (newQty >= 1 && newQty <= maxStock) {
-    AppState.selectedQuantity = newQty;
-    const qtyEl = document.getElementById('modal-qty');
-    if (qtyEl) qtyEl.innerText = newQty;
-  }
-}
-
 // ==========================================
-// 6. CART OPERATIONS & DRAWER
+// 7. CART & CHECKOUT
 // ==========================================
-
 function quickAddToCart(productId) {
-  const product = PRODUCTS.find(p => p.id === productId);
+  const product = AppState.products.find(p => p.id === productId);
   if (!product) return;
 
-  const defaultColor = product.colors[0];
-  const defaultSize = product.sizes[0];
-
-  addToCartInternal(product, defaultColor, defaultSize, 1);
-  showToast(`เพิ่ม "${product.name}" ลงในตะกร้าเรียบร้อยแล้ว`, 'success');
+  addToCart(product, product.sizes ? product.sizes[0] : 'Standard');
 }
 
-function addModalProductToCart(isBuyNow = false) {
-  const product = AppState.activeProductModal;
-  if (!product) return;
-
-  const color = product.colors[AppState.selectedColorIndex] || product.colors[0];
-  const size = AppState.selectedSize || product.sizes[0];
-  const qty = AppState.selectedQuantity || 1;
-
-  addToCartInternal(product, color, size, qty);
+function addModalProductToCart() {
+  if (!AppState.activeProductModal) return;
+  addToCart(AppState.activeProductModal, AppState.selectedSize);
   closeProductModal();
-
-  if (isBuyNow) {
-    openCartDrawer();
-    openCheckoutModal();
-  } else {
-    showToast(`เพิ่ม "${product.name}" (ไซส์ ${size}) ลงตะกร้าแล้ว`, 'success');
-    openCartDrawer();
-  }
 }
 
-function addToCartInternal(product, color, size, qty) {
-  const cartItemId = `${product.id}-${color.name}-${size}`;
-  const existingItem = AppState.cart.find(item => item.cartItemId === cartItemId);
+function buyNowModalProduct() {
+  if (!AppState.activeProductModal) return;
+  addToCart(AppState.activeProductModal, AppState.selectedSize);
+  closeProductModal();
+  openCartDrawer();
+}
 
-  if (existingItem) {
-    existingItem.quantity += qty;
+function addToCart(product, size) {
+  const existing = AppState.cart.find(item => item.id === product.id && item.size === size);
+
+  if (existing) {
+    existing.quantity += 1;
   } else {
     AppState.cart.push({
-      cartItemId,
-      productId: product.id,
+      id: product.id,
       name: product.name,
-      nameEn: product.nameEn,
       brand: product.brand,
       price: product.price,
-      originalPrice: product.originalPrice,
       image: product.image,
-      color: color,
-      size: size,
-      quantity: qty,
-      stock: product.stock
+      size: size || 'Standard',
+      quantity: 1
     });
   }
 
-  saveCartToStorage();
+  saveToStorage();
   updateCartUI();
-  triggerCartBadgeAnimation();
+  showToast(`เพิ่ม "${product.name}" ลงในตะกร้าแล้ว`, 'success');
 }
 
-function updateCartQuantity(cartItemId, delta) {
-  const itemIndex = AppState.cart.findIndex(i => i.cartItemId === cartItemId);
-  if (itemIndex === -1) return;
-
-  const newQty = AppState.cart[itemIndex].quantity + delta;
-  if (newQty <= 0) {
-    AppState.cart.splice(itemIndex, 1);
-    showToast('ลบสินค้าออกจากตะกร้าแล้ว', 'info');
-  } else {
-    AppState.cart[itemIndex].quantity = newQty;
+function updateCartQuantity(index, delta) {
+  if (!AppState.cart[index]) return;
+  AppState.cart[index].quantity += delta;
+  if (AppState.cart[index].quantity <= 0) {
+    AppState.cart.splice(index, 1);
   }
-
-  saveCartToStorage();
+  saveToStorage();
   updateCartUI();
 }
 
-function removeCartItem(cartItemId) {
-  AppState.cart = AppState.cart.filter(item => item.cartItemId !== cartItemId);
-  saveCartToStorage();
+function removeCartItem(index) {
+  AppState.cart.splice(index, 1);
+  saveToStorage();
   updateCartUI();
-  showToast('นำสินค้าออกจากตะกร้าแล้ว', 'info');
-}
-
-function clearCart() {
-  if (confirm('คุณต้องการลบสินค้าทั้งหมดในตะกร้าหรือไม่?')) {
-    AppState.cart = [];
-    AppState.appliedCoupon = null;
-    saveCartToStorage();
-    updateCartUI();
-    showToast('ล้างตะกร้าสินค้าเรียบร้อยแล้ว', 'info');
-  }
 }
 
 function calculateCartTotals() {
   const subtotal = AppState.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  
   let discount = 0;
-  let isFreeShippingByCoupon = false;
 
   if (AppState.appliedCoupon) {
-    const coupon = COUPONS[AppState.appliedCoupon];
-    if (coupon) {
-      if (coupon.discountPercent) {
-        discount = Math.round(subtotal * (coupon.discountPercent / 100));
-      } else if (coupon.discountAmount) {
-        if (!coupon.minSpend || subtotal >= coupon.minSpend) {
-          discount = coupon.discountAmount;
-        }
-      }
-      if (coupon.freeShipping) {
-        isFreeShippingByCoupon = true;
+    const c = COUPONS[AppState.appliedCoupon];
+    if (c) {
+      if (c.discountPercent) {
+        discount = Math.round(subtotal * (c.discountPercent / 100));
+      } else if (c.discountAmount) {
+        discount = c.discountAmount;
       }
     }
   }
 
-  const shipping = (subtotal >= AppState.freeShippingThreshold || isFreeShippingByCoupon || subtotal === 0) 
+  const shipping = (subtotal >= AppState.freeShippingThreshold || (AppState.appliedCoupon && COUPONS[AppState.appliedCoupon]?.freeShipping)) 
     ? 0 
     : AppState.shippingFee;
 
   const total = Math.max(0, subtotal - discount + shipping);
 
-  return { subtotal, discount, shipping, total, isFreeShipping: shipping === 0 && subtotal > 0 };
+  return { subtotal, discount, shipping, total };
 }
 
 function updateCartUI() {
   const countBadges = document.querySelectorAll('.cart-count-badge');
-  const totalItems = AppState.cart.reduce((sum, item) => sum + item.quantity, 0);
+  const totalCount = AppState.cart.reduce((sum, item) => sum + item.quantity, 0);
 
   countBadges.forEach(badge => {
-    badge.innerText = totalItems;
-    badge.classList.toggle('hidden', totalItems === 0);
+    badge.innerText = totalCount;
+    if (totalCount > 0) {
+      badge.classList.remove('hidden');
+    } else {
+      badge.classList.add('hidden');
+    }
   });
 
-  const cartListContainer = document.getElementById('cart-items-list');
-  const cartSubtotalEl = document.getElementById('cart-subtotal');
-  const cartDiscountEl = document.getElementById('cart-discount');
-  const cartShippingEl = document.getElementById('cart-shipping');
-  const cartTotalEl = document.getElementById('cart-total');
-  const freeShipBar = document.getElementById('free-shipping-progress');
-  const freeShipText = document.getElementById('free-shipping-text');
-  const emptyCartState = document.getElementById('empty-cart-view');
-  const filledCartState = document.getElementById('filled-cart-view');
+  const cartItemsList = document.getElementById('cart-items-list');
+  const { subtotal, discount, shipping, total } = calculateCartTotals();
 
-  const { subtotal, discount, shipping, total, isFreeShipping } = calculateCartTotals();
-
-  // Free shipping progress calculation
-  if (freeShipBar && freeShipText) {
-    const remainingForFreeShip = Math.max(0, AppState.freeShippingThreshold - subtotal);
-    const progressPercent = Math.min(100, Math.round((subtotal / AppState.freeShippingThreshold) * 100));
-    freeShipBar.style.width = `${progressPercent}%`;
-
-    if (remainingForFreeShip === 0 && subtotal > 0) {
-      freeShipText.innerHTML = `🎉 <span class="font-bold text-emerald-600">ยินดีด้วย! คุณได้รับสิทธิ์จัดส่งฟรีแล้ว</span>`;
+  if (cartItemsList) {
+    if (AppState.cart.length === 0) {
+      cartItemsList.innerHTML = `
+        <div class="py-16 text-center">
+          <div class="w-16 h-16 rounded-full bg-[#181924] border border-[#262838] mx-auto mb-4 flex items-center justify-center text-2xl">
+            🛒
+          </div>
+          <p class="text-white font-bold text-sm mb-1">ตะกร้าของคุณว่างเปล่า</p>
+          <p class="text-xs text-slate-400 mb-6">เลือกช้อปสินค้าแบรนด์เนมและสนีกเกอร์ของแท้ได้เลย</p>
+          <button onclick="closeCartDrawer()" class="px-5 py-2.5 rounded-full bg-white text-black font-bold text-xs hover:bg-slate-200">
+            ไปเลือกสินค้า
+          </button>
+        </div>
+      `;
     } else {
-      freeShipText.innerHTML = `ช้อปอีก <span class="font-bold text-orange-600">฿${remainingForFreeShip.toLocaleString()}</span> เพื่อรับส่งฟรี!`;
+      cartItemsList.innerHTML = AppState.cart.map((item, idx) => `
+        <div class="flex gap-3 bg-[#12131A] border border-[#242636] p-3 rounded-xl">
+          <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg bg-[#181924] flex-shrink-0" />
+          <div class="flex-1 flex flex-col justify-between">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <span class="text-[10px] text-[#E5B869] font-bold block uppercase">${item.brand}</span>
+                <h5 class="text-xs font-bold text-white line-clamp-1">${item.name}</h5>
+                <span class="text-[10px] text-slate-400">ไซส์: ${item.size}</span>
+              </div>
+              <button onclick="removeCartItem(${idx})" class="text-slate-500 hover:text-red-400 text-xs">✕</button>
+            </div>
+
+            <div class="flex items-center justify-between pt-2">
+              <span class="text-xs font-black text-white">฿${item.price.toLocaleString()}</span>
+              <div class="flex items-center gap-2 bg-[#1A1C28] px-2 py-0.5 rounded-lg border border-[#2D3145]">
+                <button onclick="updateCartQuantity(${idx}, -1)" class="text-slate-400 hover:text-white font-bold">-</button>
+                <span class="text-xs font-bold text-white">${item.quantity}</span>
+                <button onclick="updateCartQuantity(${idx}, 1)" class="text-slate-400 hover:text-white font-bold">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
     }
   }
 
-  if (AppState.cart.length === 0) {
-    if (emptyCartState) emptyCartState.classList.remove('hidden');
-    if (filledCartState) filledCartState.classList.add('hidden');
-    return;
-  }
+  // Update totals
+  const subtotalEl = document.getElementById('cart-subtotal');
+  const discountEl = document.getElementById('cart-discount');
+  const shippingEl = document.getElementById('cart-shipping');
+  const totalEl = document.getElementById('cart-total');
 
-  if (emptyCartState) emptyCartState.classList.add('hidden');
-  if (filledCartState) filledCartState.classList.remove('hidden');
-
-  if (cartSubtotalEl) cartSubtotalEl.innerText = `฿${subtotal.toLocaleString()}`;
-  if (cartDiscountEl) cartDiscountEl.innerText = discount > 0 ? `-฿${discount.toLocaleString()}` : '฿0';
-  if (cartShippingEl) {
-    cartShippingEl.innerHTML = shipping === 0 
-      ? '<span class="text-emerald-600 font-bold">ฟรี</span>' 
-      : `฿${shipping}`;
-  }
-  if (cartTotalEl) cartTotalEl.innerText = `฿${total.toLocaleString()}`;
-
-  if (cartListContainer) {
-    cartListContainer.innerHTML = AppState.cart.map(item => `
-      <div class="flex gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm relative group">
-        
-        <!-- Thumbnail -->
-        <div class="w-20 h-20 rounded-xl bg-slate-100 overflow-hidden flex-shrink-0 border border-slate-200/60">
-          <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover" />
-        </div>
-
-        <!-- Info -->
-        <div class="flex-1 flex flex-col justify-between">
-          <div>
-            <div class="flex items-start justify-between gap-2">
-              <h5 class="text-sm font-bold text-slate-800 line-clamp-1">${item.name}</h5>
-              <button 
-                onclick="removeCartItem('${item.cartItemId}')" 
-                class="text-slate-400 hover:text-red-500 p-1 -mr-1 transition-colors"
-                title="ลบรายการ">
-                <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-
-            <div class="flex items-center gap-2 text-xs text-slate-500 mt-1">
-              <span class="inline-flex items-center gap-1">
-                <span class="w-2.5 h-2.5 rounded-full" style="background-color: ${item.color.hex};"></span>
-                <span>${item.color.label}</span>
-              </span>
-              <span>•</span>
-              <span class="font-semibold text-slate-700">ไซส์ ${item.size}</span>
-            </div>
-          </div>
-
-          <!-- Price & Quantity -->
-          <div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-100">
-            <span class="font-extrabold text-sm text-slate-900">฿${(item.price * item.quantity).toLocaleString()}</span>
-            
-            <div class="flex items-center border border-slate-200 rounded-lg bg-slate-50 overflow-hidden">
-              <button onclick="updateCartQuantity('${item.cartItemId}', -1)" class="w-7 h-7 flex items-center justify-center text-slate-600 hover:bg-slate-200 font-bold text-sm">-</button>
-              <span class="w-8 text-center font-bold text-xs text-slate-800">${item.quantity}</span>
-              <button onclick="updateCartQuantity('${item.cartItemId}', 1)" class="w-7 h-7 flex items-center justify-center text-slate-600 hover:bg-slate-200 font-bold text-sm">+</button>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    `).join('');
-  }
-}
-
-function triggerCartBadgeAnimation() {
-  const badge = document.querySelector('.cart-button-trigger');
-  if (badge) {
-    badge.classList.remove('animate-cart-bounce');
-    void badge.offsetWidth; // trigger reflow
-    badge.classList.add('animate-cart-bounce');
-  }
+  if (subtotalEl) subtotalEl.innerText = `฿${subtotal.toLocaleString()}`;
+  if (discountEl) discountEl.innerText = discount > 0 ? `-฿${discount.toLocaleString()}` : '฿0';
+  if (shippingEl) shippingEl.innerText = shipping === 0 ? 'ส่งฟรี' : `฿${shipping.toLocaleString()}`;
+  if (totalEl) totalEl.innerText = `฿${total.toLocaleString()}`;
 }
 
 function openCartDrawer() {
+  updateCartUI();
   const drawer = document.getElementById('cart-drawer');
-  const panel = document.getElementById('cart-drawer-panel');
-  if (!drawer || !panel) return;
-
-  drawer.classList.remove('hidden');
-  setTimeout(() => {
-    panel.classList.remove('translate-x-full');
-  }, 10);
-  document.body.style.overflow = 'hidden';
+  if (drawer) drawer.classList.remove('hidden');
 }
 
 function closeCartDrawer() {
   const drawer = document.getElementById('cart-drawer');
-  const panel = document.getElementById('cart-drawer-panel');
-  if (!drawer || !panel) return;
-
-  panel.classList.add('translate-x-full');
-  setTimeout(() => {
-    drawer.classList.add('hidden');
-    document.body.style.overflow = '';
-  }, 300);
+  if (drawer) drawer.classList.add('hidden');
 }
 
-// ==========================================
-// 7. COUPON CODE ENGINE
-// ==========================================
-
 function applyCouponCode() {
-  const input = document.getElementById('coupon-code-input');
+  const input = document.getElementById('coupon-input');
   if (!input) return;
-
   const code = input.value.trim().toUpperCase();
-  if (!code) {
-    showToast('กรุณากรอกโค้ดส่วนลด', 'error');
-    return;
-  }
 
   if (COUPONS[code]) {
     AppState.appliedCoupon = code;
-    showToast(`ใช้โค้ด "${code}" สำเร็จ! (${COUPONS[code].description})`, 'success');
     updateCartUI();
+    showToast(`ใช้โค้ดส่วนลด "${code}" สำเร็จแล้ว!`, 'success');
   } else {
-    showToast('โค้ดส่วนลดไม่ถูกต้อง หรือหมดอายุแล้ว', 'error');
+    showToast('โค้ดส่วนลดไม่ถูกต้องหรือหมดอายุ', 'error');
   }
 }
 
 function applyPresetCoupon(code) {
-  const input = document.getElementById('coupon-code-input');
+  AppState.appliedCoupon = code;
+  const input = document.getElementById('coupon-input');
   if (input) input.value = code;
-  applyCouponCode();
+  updateCartUI();
+  showToast(`รับส่วนลดพิเศษโค้ด ${code} แล้ว`, 'success');
+  openCartDrawer();
 }
 
-// ==========================================
-// 8. WISHLIST FUNCTIONALITY
-// ==========================================
-
-function toggleWishlist(productId) {
-  const index = AppState.wishlist.indexOf(productId);
-  const product = PRODUCTS.find(p => p.id === productId);
-
-  if (index === -1) {
-    AppState.wishlist.push(productId);
-    showToast(`บันทึก "${product ? product.name : 'สินค้า'}" ไว้ในรายการโปรด`, 'success');
-  } else {
-    AppState.wishlist.splice(index, 1);
-    showToast('นำออกจากรายการโปรดแล้ว', 'info');
-  }
-
-  saveWishlistToStorage();
-  updateWishlistBadges();
-  renderProducts(); // Re-render to update heart icons
-}
-
-function updateWishlistBadges() {
-  const badges = document.querySelectorAll('.wishlist-count-badge');
-  badges.forEach(b => {
-    b.innerText = AppState.wishlist.length;
-    b.classList.toggle('hidden', AppState.wishlist.length === 0);
-  });
-}
-
-function showWishlistModal() {
-  const wishlistProducts = PRODUCTS.filter(p => AppState.wishlist.includes(p.id));
-  const container = document.getElementById('wishlist-modal-items');
-  const modal = document.getElementById('wishlist-modal');
-  if (!container || !modal) return;
-
-  if (wishlistProducts.length === 0) {
-    container.innerHTML = `
-      <div class="text-center py-12">
-        <div class="text-5xl mb-3">❤️</div>
-        <p class="text-slate-600 font-bold mb-1">ยังไม่มีสินค้าในรายการโปรด</p>
-        <p class="text-xs text-slate-400">กดไอคอนหัวใจที่สินค้าเพื่อบันทึกไว้ดูภายหลัง</p>
-      </div>
-    `;
-  } else {
-    container.innerHTML = wishlistProducts.map(p => `
-      <div class="flex items-center gap-4 p-3 bg-white rounded-xl border border-slate-200">
-        <img src="${p.image}" alt="${p.name}" class="w-16 h-16 rounded-lg object-cover" />
-        <div class="flex-1">
-          <h5 class="text-sm font-bold text-slate-800 line-clamp-1">${p.name}</h5>
-          <p class="text-xs text-orange-600 font-extrabold mt-0.5">฿${p.price.toLocaleString()}</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <button onclick="quickAddToCart('${p.id}'); closeWishlistModal();" class="px-3 py-1.5 bg-orange-500 text-white rounded-lg text-xs font-semibold hover:bg-orange-600">
-            ใส่ตะกร้า
-          </button>
-          <button onclick="toggleWishlist('${p.id}'); showWishlistModal();" class="text-slate-400 hover:text-red-500 p-1">
-            ✕
-          </button>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  modal.classList.remove('hidden');
-}
-
-function closeWishlistModal() {
-  const modal = document.getElementById('wishlist-modal');
-  if (modal) modal.classList.add('hidden');
-}
-
-// ==========================================
-// 9. CHECKOUT SIMULATION FLOW
-// ==========================================
-
-function openCheckoutModal() {
+// Checkout Flow
+function proceedToCheckout() {
   if (AppState.cart.length === 0) {
-    showToast('กรุณาเลือกสินค้าลงในตะกร้าก่อนดำเนินการชำระเงิน', 'error');
+    showToast('ไม่มีสินค้าในตะกร้า', 'error');
     return;
   }
-
   closeCartDrawer();
   const modal = document.getElementById('checkout-modal');
-  if (!modal) return;
-
-  AppState.checkoutStep = 1;
-  renderCheckoutSummary();
-  modal.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
+  if (modal) {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    renderCheckoutSummary();
+  }
 }
 
 function closeCheckoutModal() {
   const modal = document.getElementById('checkout-modal');
-  if (modal) modal.classList.add('hidden');
-  document.body.style.overflow = '';
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
 }
 
 function renderCheckoutSummary() {
-  const summaryList = document.getElementById('checkout-items-summary');
-  const totalAmountEl = document.getElementById('checkout-total-amount');
   const { subtotal, discount, shipping, total } = calculateCartTotals();
+  const sumEl = document.getElementById('checkout-total-price');
+  if (sumEl) sumEl.innerText = `฿${total.toLocaleString()}`;
+}
 
-  if (totalAmountEl) totalAmountEl.innerText = `฿${total.toLocaleString()}`;
+function completeOrder() {
+  const orderId = 'HB-' + Math.floor(100000 + Math.random() * 900000);
+  closeCheckoutModal();
+  AppState.cart = [];
+  AppState.appliedCoupon = null;
+  saveToStorage();
+  updateCartUI();
 
-  if (summaryList) {
-    summaryList.innerHTML = AppState.cart.map(i => `
-      <div class="flex justify-between items-center text-xs text-slate-600 py-1 border-b border-slate-100">
-        <span class="line-clamp-1 flex-1 pr-2">${i.name} (x${i.quantity})</span>
-        <span class="font-semibold text-slate-800">฿${(i.price * i.quantity).toLocaleString()}</span>
+  // Show Success PromptPay Modal
+  const successModal = document.getElementById('order-success-modal');
+  const orderNumEl = document.getElementById('success-order-id');
+  if (orderNumEl) orderNumEl.innerText = orderId;
+  if (successModal) {
+    successModal.classList.remove('hidden');
+    successModal.classList.add('flex');
+  }
+}
+
+function closeOrderSuccessModal() {
+  const successModal = document.getElementById('order-success-modal');
+  if (successModal) {
+    successModal.classList.add('hidden');
+    successModal.classList.remove('flex');
+  }
+}
+
+// ==========================================
+// 8. WISHLIST
+// ==========================================
+function toggleWishlist(id) {
+  const idx = AppState.wishlist.indexOf(id);
+  if (idx > -1) {
+    AppState.wishlist.splice(idx, 1);
+    showToast('ลบออกจากรายการโปรดแล้ว', 'info');
+  } else {
+    AppState.wishlist.push(id);
+    showToast('เพิ่มในรายการโปรดเรียบร้อย', 'success');
+  }
+  saveToStorage();
+  updateWishlistBadges();
+  renderProducts();
+}
+
+function updateWishlistBadges() {
+  const badges = document.querySelectorAll('.wishlist-count-badge');
+  const count = AppState.wishlist.length;
+  badges.forEach(b => {
+    b.innerText = count;
+    if (count > 0) b.classList.remove('hidden');
+    else b.classList.add('hidden');
+  });
+}
+
+function showWishlistModal() {
+  const modal = document.getElementById('wishlist-modal');
+  const list = document.getElementById('wishlist-items-list');
+  if (!modal || !list) return;
+
+  const wishedProducts = AppState.products.filter(p => AppState.wishlist.includes(p.id));
+
+  if (wishedProducts.length === 0) {
+    list.innerHTML = `
+      <div class="py-12 text-center text-slate-400">
+        <p class="text-3xl mb-2">❤️</p>
+        <p class="font-bold text-white text-sm">ยังไม่มีสินค้าในรายการโปรด</p>
+        <p class="text-xs">กดไอคอนหัวใจที่สินค้าเพื่อบันทึกไว้ดูภายหลัง</p>
+      </div>
+    `;
+  } else {
+    list.innerHTML = wishedProducts.map(p => `
+      <div class="flex items-center justify-between p-3 bg-[#12131A] border border-[#242636] rounded-xl gap-3">
+        <img src="${p.image}" class="w-14 h-14 object-cover rounded-lg bg-[#181924]" />
+        <div class="flex-1">
+          <span class="text-[10px] text-[#E5B869] font-bold block">${p.brand}</span>
+          <h5 class="text-xs font-bold text-white line-clamp-1">${p.name}</h5>
+          <span class="text-xs font-black text-white">฿${p.price.toLocaleString()}</span>
+        </div>
+        <button onclick="quickAddToCart('${p.id}'); toggleWishlist('${p.id}'); showWishlistModal();" class="px-3 py-1.5 bg-white text-black text-xs font-bold rounded-lg hover:bg-slate-200">
+          ใส่ตะกร้า
+        </button>
       </div>
     `).join('');
   }
+
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
 }
 
-let pendingOrder = null;
-let promptPayInterval = null;
-
-function submitCheckoutOrder(event) {
-  event.preventDefault();
-
-  const name = document.getElementById('cust-name')?.value;
-  const phone = document.getElementById('cust-phone')?.value;
-  const address = document.getElementById('cust-address')?.value;
-  const paymentMethod = document.querySelector('input[name="payment_method"]:checked')?.value || 'promptpay';
-
-  if (!name || !phone || !address) {
-    showToast('กรุณากรอกข้อมูลที่อยู่จัดส่งให้ครบถ้วน', 'error');
-    return;
-  }
-
-  const orderId = 'AP-' + Math.floor(100000 + Math.random() * 900000);
-  const { total } = calculateCartTotals();
-
-  pendingOrder = {
-    orderId,
-    date: new Date().toLocaleDateString('th-TH', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }),
-    items: [...AppState.cart],
-    total,
-    name,
-    phone,
-    address,
-    paymentMethod,
-    trackingNo: 'KEX-' + Math.floor(10000000 + Math.random() * 90000000) + 'TH',
-    carrier: 'Kerry Express',
-    status: 'กำลังจัดเตรียมพัสดุ',
-    step: 2
-  };
-
-  const checkoutForm = document.getElementById('checkout-form-container');
-  const promptPayContainer = document.getElementById('checkout-promptpay-container');
-
-  if (paymentMethod === 'promptpay') {
-    if (checkoutForm) checkoutForm.classList.add('hidden');
-    if (promptPayContainer) {
-      promptPayContainer.classList.remove('hidden');
-      const amountEl = document.getElementById('promptpay-amount');
-      const refEl = document.getElementById('promptpay-ref');
-      if (amountEl) amountEl.innerText = `฿${total.toLocaleString()}`;
-      if (refEl) refEl.innerText = orderId;
-      startPromptPayCountdown();
-    }
-    return;
-  }
-
-  completeOrderPlacement();
-}
-
-function startPromptPayCountdown() {
-  if (promptPayInterval) clearInterval(promptPayInterval);
-  let seconds = 300;
-  const timerEl = document.getElementById('promptpay-timer');
-  promptPayInterval = setInterval(() => {
-    seconds--;
-    if (seconds <= 0) {
-      clearInterval(promptPayInterval);
-      cancelPromptPay();
-      showToast('หมดเวลาชำระเงิน กรุณาลองใหม่อีกครั้ง', 'error');
-      return;
-    }
-    const m = Math.floor(seconds / 60);
-    const s = seconds % 60;
-    if (timerEl) timerEl.innerText = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
-  }, 1000);
-}
-
-function cancelPromptPay() {
-  if (promptPayInterval) clearInterval(promptPayInterval);
-  const checkoutForm = document.getElementById('checkout-form-container');
-  const promptPayContainer = document.getElementById('checkout-promptpay-container');
-  if (promptPayContainer) promptPayContainer.classList.add('hidden');
-  if (checkoutForm) checkoutForm.classList.remove('hidden');
-}
-
-function confirmPromptPayPayment() {
-  if (promptPayInterval) clearInterval(promptPayInterval);
-  const promptPayContainer = document.getElementById('checkout-promptpay-container');
-  if (promptPayContainer) promptPayContainer.classList.add('hidden');
-  completeOrderPlacement();
-}
-
-function completeOrderPlacement() {
-  if (!pendingOrder) return;
-
-  if (!AppState.orders) AppState.orders = [];
-  AppState.orders.unshift(pendingOrder);
-  try {
-    localStorage.setItem('activepulse_orders', JSON.stringify(AppState.orders));
-  } catch (e) {}
-
-  const checkoutForm = document.getElementById('checkout-form-container');
-  const successBody = document.getElementById('checkout-success-container');
-  const orderIdEl = document.getElementById('success-order-id');
-  const orderTotalEl = document.getElementById('success-order-total');
-  const orderPaymentEl = document.getElementById('success-order-payment');
-
-  if (checkoutForm) checkoutForm.classList.add('hidden');
-  if (successBody) successBody.classList.remove('hidden');
-
-  if (orderIdEl) orderIdEl.innerText = pendingOrder.orderId;
-  if (orderTotalEl) orderTotalEl.innerText = `฿${pendingOrder.total.toLocaleString()}`;
-  if (orderPaymentEl) {
-    const paymentNames = {
-      'promptpay': 'พร้อมเพย์ QR Code (ชำระแล้ว)',
-      'card': 'บัตรเครดิต/เดบิต (สำเร็จ)',
-      'cod': 'เก็บเงินปลายทาง (COD)'
-    };
-    orderPaymentEl.innerText = paymentNames[pendingOrder.paymentMethod] || pendingOrder.paymentMethod;
-  }
-
-  // Clear Cart
-  AppState.cart = [];
-  AppState.appliedCoupon = null;
-  saveCartToStorage();
-  updateCartUI();
-
-  showToast('🎉 สั่งซื้อสินค้าสำเร็จแล้ว! ขอขอบคุณที่ไว้วางใจ ActivePulse', 'success');
-}
-
-function finishOrderAndClose() {
-  const checkoutBody = document.getElementById('checkout-form-container');
-  const successBody = document.getElementById('checkout-success-container');
-  const promptPayContainer = document.getElementById('checkout-promptpay-container');
-  if (checkoutBody) checkoutBody.classList.remove('hidden');
-  if (successBody) successBody.classList.add('hidden');
-  if (promptPayContainer) promptPayContainer.classList.add('hidden');
-
-  closeCheckoutModal();
-}
-
-// ==========================================
-// 10. FILTER & SEARCH HANDLERS
-// ==========================================
-
-function filterByCategory(categoryId) {
-  AppState.activeCategory = categoryId;
-  renderCategories();
-  renderProducts();
-
-  // Smooth scroll down to products section if clicked on mobile
-  const catalog = document.getElementById('catalog-section');
-  if (catalog && window.innerWidth < 768) {
-    catalog.scrollIntoView({ behavior: 'smooth' });
+function closeWishlistModal() {
+  const modal = document.getElementById('wishlist-modal');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
   }
 }
 
-function filterByBrand(brand) {
-  AppState.selectedBrand = brand;
-  renderProducts();
-}
-
-function handleSearchInput(e) {
-  AppState.searchQuery = e.target.value;
-  renderProducts();
-}
-
-function handlePriceRangeChange(e) {
-  AppState.priceRange = Number(e.target.value);
-  const label = document.getElementById('price-range-label');
-  if (label) label.innerText = `฿${AppState.priceRange.toLocaleString()}`;
-  renderProducts();
-}
-
-function handleSortChange(e) {
-  AppState.sortBy = e.target.value;
-  renderProducts();
-}
-
-function resetFilters() {
-  AppState.activeCategory = 'all';
-  AppState.selectedBrand = 'all';
-  AppState.searchQuery = '';
-  AppState.priceRange = 10000;
-  AppState.sortBy = 'popular';
-
-  const searchInput = document.getElementById('global-search');
-  if (searchInput) searchInput.value = '';
-
-  const priceRange = document.getElementById('price-range-slider');
-  if (priceRange) priceRange.value = 10000;
-
-  const label = document.getElementById('price-range-label');
-  if (label) label.innerText = '฿10,000';
-
-  const sortSelect = document.getElementById('sort-select');
-  if (sortSelect) sortSelect.value = 'popular';
-
-  renderCategories();
-  renderProducts();
-  showToast('รีเซ็ตตัวกรองสินค้าทั้งหมดแล้ว', 'info');
-}
-
 // ==========================================
-// 11. TOAST NOTIFICATIONS
+// 9. MODALS & UTILITIES
 // ==========================================
-
-function showToast(message, type = 'info') {
-  const container = document.getElementById('toast-container');
-  if (!container) return;
-
-  const toast = document.createElement('div');
-  const bgColors = {
-    success: 'bg-slate-900 border-emerald-500 text-white',
-    error: 'bg-red-600 border-red-700 text-white',
-    info: 'bg-slate-900 border-orange-500 text-white'
-  };
-
-  const icons = {
-    success: '✅',
-    error: '⚠️',
-    info: '⚡'
-  };
-
-  toast.className = `flex items-center gap-3 px-5 py-3 rounded-2xl border-l-4 shadow-2xl text-sm font-medium transition-all duration-300 transform translate-y-3 opacity-0 ${bgColors[type] || bgColors.info}`;
-  toast.innerHTML = `
-    <span class="text-base">${icons[type] || '🔔'}</span>
-    <span class="flex-1">${message}</span>
-  `;
-
-  container.appendChild(toast);
-
-  // Trigger animation
-  setTimeout(() => {
-    toast.classList.remove('translate-y-3', 'opacity-0');
-  }, 10);
-
-  setTimeout(() => {
-    toast.classList.add('opacity-0', '-translate-y-2');
-    setTimeout(() => toast.remove(), 300);
-  }, 3200);
+function openSizeGuide() {
+  const modal = document.getElementById('size-guide-modal');
+  if (modal) {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
 }
 
-// ==========================================
-// 12. FLASH SALE COUNTDOWN TIMER
-// ==========================================
+function closeSizeGuide() {
+  const modal = document.getElementById('size-guide-modal');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+}
+
+function openTrackingModal() {
+  const modal = document.getElementById('tracking-modal');
+  if (modal) {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+}
+
+function closeTrackingModal() {
+  const modal = document.getElementById('tracking-modal');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+}
 
 function startFlashSaleTimer() {
-  const hoursEl = document.getElementById('timer-hours');
-  const minsEl = document.getElementById('timer-mins');
-  const secsEl = document.getElementById('timer-secs');
-
-  if (!hoursEl || !minsEl || !secsEl) return;
-
-  // Set flash sale target: 14 hours from now
-  let totalSeconds = 14 * 3600 + 45 * 60 + 20;
+  let totalSeconds = (14 * 3600) + (45 * 60) + 20;
 
   setInterval(() => {
-    if (totalSeconds <= 0) totalSeconds = 24 * 3600;
+    if (totalSeconds <= 0) return;
     totalSeconds--;
 
     const h = Math.floor(totalSeconds / 3600);
     const m = Math.floor((totalSeconds % 3600) / 60);
     const s = totalSeconds % 60;
 
-    hoursEl.innerText = String(h).padStart(2, '0');
-    minsEl.innerText = String(m).padStart(2, '0');
-    secsEl.innerText = String(s).padStart(2, '0');
+    const elH = document.getElementById('timer-hours');
+    const elM = document.getElementById('timer-mins');
+    const elS = document.getElementById('timer-secs');
+
+    if (elH) elH.innerText = String(h).padStart(2, '0');
+    if (elM) elM.innerText = String(m).padStart(2, '0');
+    if (elS) elS.innerText = String(s).padStart(2, '0');
   }, 1000);
 }
 
-// Size guide modal
-function openSizeGuide() {
-  const modal = document.getElementById('size-guide-modal');
-  if (modal) modal.classList.remove('hidden');
-}
-
-function closeSizeGuide() {
-  const modal = document.getElementById('size-guide-modal');
-  if (modal) modal.classList.add('hidden');
-}
-
-// ==========================================
-// 13. EVENT LISTENERS
-// ==========================================
-function setupEventListeners() {
-  const searchInput = document.getElementById('global-search');
-  if (searchInput) {
-    searchInput.addEventListener('input', handleSearchInput);
-  }
-
-  const priceSlider = document.getElementById('price-range-slider');
-  if (priceSlider) {
-    priceSlider.addEventListener('input', handlePriceRangeChange);
-  }
-
-  const sortSelect = document.getElementById('sort-select');
-  if (sortSelect) {
-    sortSelect.addEventListener('change', handleSortChange);
-  }
-
-  // Keyboard shortcut (Escape closes modal)
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeProductModal();
-      closeCartDrawer();
-      closeCheckoutModal();
-      closeWishlistModal();
-      closeSizeGuide();
-      closeTrackingModal();
-    }
-  });
-}
-
-// ==========================================
-// 14. ORDER TRACKING & HISTORY
-// ==========================================
-function getSampleOrders() {
-  return [
-    {
-      orderId: 'AP-892144',
-      date: '8 พ.ย. 2026, 14:30 น.',
-      total: 7590,
-      paymentMethod: 'พร้อมเพย์ QR',
-      carrier: 'Kerry Express',
-      trackingNo: 'KEX-88219455TH',
-      status: 'พัสดุกำลังนำจ่าย',
-      step: 3,
-      items: [
-        {
-          name: 'Nike VaporFly 3 Next% Carbon',
-          size: '42',
-          color: { label: 'แดงสปอร์ต' },
-          price: 7590,
-          quantity: 1,
-          image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80'
-        }
-      ]
-    }
-  ];
-}
-
-function openTrackingModal() {
-  const modal = document.getElementById('tracking-modal');
-  if (!modal) return;
-  modal.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
-  renderTrackingOrders();
-}
-
-function closeTrackingModal() {
-  const modal = document.getElementById('tracking-modal');
-  if (modal) modal.classList.add('hidden');
-  document.body.style.overflow = '';
-}
-
-function renderTrackingOrders(filteredOrders = null) {
-  const container = document.getElementById('tracking-content-container');
+function showToast(message, type = 'info') {
+  const container = document.getElementById('toast-container');
   if (!container) return;
 
-  const savedOrders = AppState.orders || [];
-  const orders = filteredOrders || (savedOrders.length > 0 ? savedOrders : getSampleOrders());
+  const toast = document.createElement('div');
+  toast.className = `p-3 px-4 rounded-xl text-xs font-bold text-white shadow-2xl flex items-center gap-2 border transition-all transform duration-300 pointer-events-auto ${
+    type === 'success' 
+      ? 'bg-[#12131A] border-[#00E599]/60 text-[#00E599]' 
+      : type === 'error'
+      ? 'bg-[#12131A] border-red-500/60 text-red-400'
+      : 'bg-[#12131A] border-[#E5B869]/60 text-[#E5B869]'
+  }`;
 
-  if (orders.length === 0) {
-    container.innerHTML = `
-      <div class="text-center py-10">
-        <div class="text-4xl mb-2">🔍</div>
-        <p class="font-bold text-slate-700 text-sm">ไม่พบประวัติคำสั่งซื้อ</p>
-        <p class="text-xs text-slate-400 mt-1">ลองค้นหาด้วยหมายเลขคำสั่งซื้อที่ถูกต้อง</p>
-      </div>
-    `;
-    return;
-  }
+  const icon = type === 'success' ? '✓' : type === 'error' ? '✕' : 'ℹ';
+  toast.innerHTML = `<span>${icon}</span> <span>${message}</span>`;
 
-  container.innerHTML = orders.map(ord => `
-    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-xs space-y-3">
-      <div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-slate-200">
-        <div>
-          <span class="font-bold text-slate-900 text-sm">คำสั่งซื้อ: ${ord.orderId}</span>
-          <span class="text-slate-400 block text-[11px]">${ord.date}</span>
-        </div>
-        <div class="text-right">
-          <span class="font-extrabold text-orange-600 text-sm">฿${ord.total.toLocaleString()}</span>
-          <span class="block text-[11px] text-slate-500 font-medium">${ord.paymentMethod}</span>
-        </div>
-      </div>
+  container.appendChild(toast);
 
-      <!-- Tracking Progress Steps -->
-      <div class="bg-white p-3 rounded-xl border border-slate-200/80">
-        <div class="flex items-center justify-between text-[11px] font-bold text-slate-500 mb-2">
-          <span>ขนส่ง: <b class="text-slate-800">${ord.carrier}</b></span>
-          <span class="font-mono text-orange-600 bg-orange-50 px-2 py-0.5 rounded cursor-pointer" onclick="navigator.clipboard?.writeText('${ord.trackingNo}'); showToast('คัดลอกเลขพัสดุ ${ord.trackingNo} แล้ว', 'info')">
-            📋 ${ord.trackingNo}
-          </span>
-        </div>
-
-        <div class="grid grid-cols-4 gap-1 text-center text-[10px] pt-1">
-          <div class="flex flex-col items-center">
-            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold mb-1">✓</div>
-            <span class="font-bold text-slate-700">ยืนยันคำสั่ง</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold mb-1">✓</div>
-            <span class="font-bold text-slate-700">แพ็คสินค้า</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-6 h-6 rounded-full ${ord.step >= 3 ? 'bg-orange-500 text-white animate-pulse' : 'bg-slate-200 text-slate-400'} flex items-center justify-center font-bold mb-1">🚚</div>
-            <span class="font-bold ${ord.step >= 3 ? 'text-orange-600' : 'text-slate-400'}">อยู่ระหว่างจัดส่ง</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-6 h-6 rounded-full ${ord.step >= 4 ? 'bg-emerald-500 text-white' : 'bg-slate-200 text-slate-400'} flex items-center justify-center font-bold mb-1">📦</div>
-            <span class="font-bold ${ord.step >= 4 ? 'text-emerald-600' : 'text-slate-400'}">นำจ่ายสำเร็จ</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Items in Order -->
-      <div class="space-y-1.5 pt-1">
-        ${ord.items.map(item => `
-          <div class="flex items-center gap-2">
-            <img src="${item.image}" alt="${item.name}" class="w-8 h-8 rounded-lg object-cover" />
-            <span class="flex-1 truncate text-slate-700 font-medium">${item.name} (${item.color.label || ''} ไซส์ ${item.size}) x${item.quantity}</span>
-            <span class="font-bold text-slate-900">฿${(item.price * item.quantity).toLocaleString()}</span>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-  `).join('');
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(10px)';
+    setTimeout(() => toast.remove(), 300);
+  }, 3000);
 }
-
-function searchTrackingOrder() {
-  const input = document.getElementById('tracking-search-input');
-  if (!input) return;
-  const q = input.value.trim().toUpperCase();
-  if (!q) {
-    renderTrackingOrders();
-    return;
-  }
-
-  const allOrders = [...(AppState.orders || []), ...getSampleOrders()];
-  const filtered = allOrders.filter(o => o.orderId.toUpperCase().includes(q) || o.trackingNo.toUpperCase().includes(q));
-  renderTrackingOrders(filtered);
-}
-
-// ==========================================
-// 15. THEME TOGGLE (LIGHT / DARK)
-// ==========================================
-function toggleTheme() {
-  const isDark = document.body.classList.toggle('dark-theme');
-  const icon = document.getElementById('theme-icon');
-  if (icon) icon.innerText = isDark ? '☀️' : '🌙';
-  try {
-    localStorage.setItem('activepulse_theme', isDark ? 'dark' : 'light');
-  } catch(e) {}
-  showToast(isDark ? 'เปิดโหมดมืด (Dark Mode)' : 'เปิดโหมดสว่าง (Light Mode)', 'info');
-}
-
-// Boot app when DOM is ready
-document.addEventListener('DOMContentLoaded', initApp);
-

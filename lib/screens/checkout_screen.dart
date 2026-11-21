@@ -186,8 +186,8 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           children: [
             Container(
               padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Colors.emerald.shade50,
+              decoration: const BoxDecoration(
+                color: Color(0xFFECFDF5),
                 shape: BoxShape.circle,
               ),
               child: const Icon(

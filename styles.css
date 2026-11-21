@@ -1,163 +1,133 @@
 @charset "UTF-8";
 
 /* ==========================================================================
-   ActivePulse Sports - Vibrant Athletic Store Stylesheet
+   SASOM LUXURY & STREETWEAR MARKETPLACE - ALL-BLACK DARK THEME
    ========================================================================== */
 
 :root {
-  --primary-neon: #00FF87;
-  --primary-cyan: #60EFFF;
+  --bg-deep-black: #08090C;
+  --bg-card: #12131A;
+  --bg-card-hover: #181924;
+  --bg-surface: #1E202E;
+  
+  --border-dark: #242636;
+  --border-light: rgba(255, 255, 255, 0.12);
+  
+  --sasom-green: #00E599;
+  --sasom-green-glow: rgba(0, 229, 153, 0.35);
+  
+  --luxury-gold: #E5B869;
+  --luxury-gold-dark: #B8860B;
+  
   --accent-orange: #FF5E36;
   --accent-pink: #FF007A;
-  --accent-purple: #7928CA;
-  --accent-yellow: #FFD200;
   
-  --bg-dark: #0B0F19;
-  --bg-card: #111827;
-  --bg-surface: #1E293B;
-  
-  --text-main: #0F172A;
+  --text-primary: #FFFFFF;
+  --text-secondary: #94A3B8;
   --text-muted: #64748B;
-  --border-light: #E2E8F0;
-  
-  --glow-neon: 0 0 25px rgba(0, 255, 135, 0.45);
-  --glow-orange: 0 0 25px rgba(255, 94, 54, 0.45);
-  --glow-cyan: 0 0 25px rgba(96, 239, 255, 0.4);
 }
 
-/* Custom Sports Font & Base */
+/* Base Body Styling */
 body {
   font-family: 'Kanit', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   scroll-behavior: smooth;
-  background-color: #F8FAFC;
-  color: #0F172A;
+  background-color: var(--bg-deep-black);
+  color: #F8FAFC;
   overflow-x: hidden;
 }
 
-/* Custom Scrollbar */
+/* Custom Luxury Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #08090C;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #FF5E36, #FF007A);
+  background: #242636;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF007A;
+  background: #E5B869;
 }
 
-/* Animated Neon Gradients & Text */
-.gradient-text-fire {
-  background: linear-gradient(135deg, #FF5E36 0%, #FF007A 50%, #7928CA 100%);
+/* Glassmorphism Dark Nav */
+.glass-nav-dark {
+  background: rgba(14, 15, 22, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-modal-dark {
+  background: rgba(18, 19, 26, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Card Glows */
+.card-dark-luxury {
+  background: #12131A;
+  border: 1px solid #242636;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.card-dark-luxury:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(229, 184, 105, 0.08);
+}
+
+/* SASOM Verified Badge Glow */
+.badge-verified-glow {
+  box-shadow: 0 0 14px rgba(0, 229, 153, 0.3);
+}
+
+/* Luxury Gold Gradient */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF0D0 0%, #E5B869 50%, #B8860B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.gradient-text-energy {
-  background: linear-gradient(135deg, #00FF87 0%, #60EFFF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.gold-gradient-btn {
+  background: linear-gradient(135deg, #F5D38A 0%, #E5B869 50%, #C49232 100%);
+  color: #08090C;
 }
 
-.gradient-fire {
-  background: linear-gradient(135deg, #FF5E36 0%, #FF007A 100%);
-}
-
-.gradient-energy {
-  background: linear-gradient(135deg, #00C853 0%, #00E5FF 100%);
-}
-
-.gradient-sport-dark {
-  background: linear-gradient(135deg, #0B0F19 0%, #1A233A 100%);
-}
-
-.gradient-banner {
-  background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #31103F 100%);
-}
-
-/* Glassmorphism effects */
-.glass-nav {
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.glass-dark {
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-
-/* Vibrant Shadows & Hover Effects */
-.shadow-sport {
-  box-shadow: 0 10px 30px -8px rgba(255, 94, 54, 0.25);
-}
-
-.shadow-sport:hover {
-  box-shadow: 0 20px 35px -5px rgba(255, 94, 54, 0.38);
-  transform: translateY(-4px);
-}
-
-.shadow-card-hover {
-  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.shadow-card-hover:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 40px -10px rgba(15, 23, 42, 0.14);
-}
-
-/* Glow Badges */
-.badge-pulse {
-  animation: pulse-glow 2s infinite;
-}
-
-@keyframes pulse-glow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 94, 54, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(255, 94, 54, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 94, 54, 0);
-  }
-}
-
-.badge-neon-glow {
-  box-shadow: 0 0 12px rgba(0, 255, 135, 0.6);
+.gold-gradient-btn:hover {
+  background: linear-gradient(135deg, #FFE4A0 0%, #F5D38A 50%, #D49F3D 100%);
 }
 
 /* Image zoom inside product card */
 .product-image-container img {
-  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.product-card:hover .product-image-container img {
-  transform: scale(1.08) rotate(-1deg);
+.card-dark-luxury:hover .product-image-container img {
+  transform: scale(1.06);
 }
 
-/* Cart badge bounce */
-@keyframes cart-bounce {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.35) rotate(6deg); }
+/* Category Pill Active */
+.category-pill.active {
+  background: #FFFFFF !important;
+  color: #08090C !important;
+  font-weight: 700 !important;
+  border-color: #FFFFFF !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
 }
 
-.animate-cart-bounce {
-  animation: cart-bounce 0.4s ease-out;
+/* Brand Filter Chip Active */
+.brand-chip.active {
+  background: #FFFFFF !important;
+  color: #08090C !important;
+  border-color: #FFFFFF !important;
+  font-weight: 700 !important;
 }
 
-/* Floating Action / Drawer Transitions */
+/* Drawer & Modal Animations */
 .drawer-backdrop {
   transition: opacity 0.3s ease-in-out;
 }
@@ -166,134 +136,11 @@ body {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Color swatch ring */
-.color-swatch {
-  position: relative;
-  transition: all 0.2s ease;
-}
-
-.color-swatch.active {
-  transform: scale(1.18);
-  outline: 2px solid #FF5E36;
-  outline-offset: 3px;
-}
-
 /* Size badge selected */
-.size-btn {
-  transition: all 0.2s ease;
-}
-
 .size-btn.active {
-  background: linear-gradient(135deg, #FF5E36, #FF007A);
-  color: #FFFFFF;
-  border-color: transparent;
-  box-shadow: 0 4px 12px rgba(255, 94, 54, 0.35);
-  font-weight: 600;
+  background: #FFFFFF !important;
+  color: #08090C !important;
+  border-color: #FFFFFF !important;
+  font-weight: 800;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
 }
-
-/* Category Pill Active */
-.category-pill {
-  transition: all 0.25s ease;
-}
-
-.category-pill.active {
-  background: linear-gradient(135deg, #FF5E36 0%, #FF007A 100%);
-  color: white;
-  box-shadow: 0 4px 15px rgba(255, 94, 54, 0.35);
-}
-
-/* Floating Quick View Modal */
-.modal-enter {
-  opacity: 0;
-  transform: scale(0.95);
-}
-
-.modal-enter-active {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-/* Custom Checkbox & Radio */
-input[type="radio"]:checked + label {
-  border-color: #FF5E36;
-  background-color: #FFF7ED;
-}
-
-/* Sporty Slanted Accent Line */
-.slanted-accent {
-  position: relative;
-  overflow: hidden;
-}
-
-.slanted-accent::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -20px;
-  width: 50px;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.15);
-  transform: skewX(-25deg);
-}
-
-/* Ticker tape for breaking promos */
-.ticker-wrap {
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.ticker-move {
-  display: inline-block;
-  animation: ticker 25s linear infinite;
-}
-
-@keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* Dark Theme Variations */
-body.dark-theme {
-  background-color: #0B0F19 !important;
-  color: #F1F5F9 !important;
-}
-
-body.dark-theme header.glass-nav {
-  background: rgba(11, 15, 25, 0.92) !important;
-  border-color: #1E293B !important;
-}
-
-body.dark-theme .bg-white {
-  background-color: #111827 !important;
-  color: #F8FAFC !important;
-}
-
-body.dark-theme .bg-slate-50 {
-  background-color: #0F172A !important;
-}
-
-body.dark-theme .bg-slate-100 {
-  background-color: #1E293B !important;
-  color: #E2E8F0 !important;
-}
-
-body.dark-theme .text-slate-900,
-body.dark-theme .text-slate-800,
-body.dark-theme .text-slate-700 {
-  color: #F8FAFC !important;
-}
-
-body.dark-theme .border-slate-100,
-body.dark-theme .border-slate-200 {
-  border-color: #1E293B !important;
-}
-
-/* Responsive adjustments */
-@media (max-width: 640px) {
-  .hero-title {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-}
-

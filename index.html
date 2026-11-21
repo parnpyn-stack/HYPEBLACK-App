@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ACTIVEPULSE | ศูนย์รวมเสื้อผ้าและรองเท้ากีฬาของแท้ 100% สีสันสดใส ช้อปง่าย ส่งไว</title>
+  <title>HYPEBLACK (ไฮป์แบล็ค) | ศูนย์รวมสินค้าแบรนด์เนม สนีกเกอร์ และแอคเซสเซอรี่ของแท้ 100%</title>
 
-  <!-- Google Fonts: Kanit (Thai/Latin) -->
+  <!-- Google Fonts: Kanit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
@@ -14,16 +14,18 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            brand: {
-              orange: '#FF5E36',
-              pink: '#FF007A',
-              neon: '#00FF87',
-              cyan: '#60EFFF',
-              dark: '#0B0F19',
-              darkSurface: '#161F30'
+            hype: {
+              black: '#08090C',
+              card: '#12131A',
+              cardHover: '#181924',
+              surface: '#1E202E',
+              border: '#242636',
+              green: '#00E599',
+              gold: '#E5B869'
             }
           },
           fontFamily: {
@@ -36,48 +38,60 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#08090C">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased pb-20 md:pb-10">
+<body class="bg-[#08090C] text-slate-100 antialiased pb-24 md:pb-12 selection:bg-[#E5B869] selection:text-black">
 
   <!-- ========================================================
-       TOP TICKER ANNOUNCEMENT BAR
+       TOP TRUST & VERIFICATION TICKER
        ======================================================== -->
-  <div class="bg-gradient-to-r from-orange-600 via-pink-600 to-purple-700 text-white text-xs font-semibold py-2 px-4 shadow-sm">
+  <div class="bg-[#0D0E15] text-slate-300 text-xs py-2 px-4 border-b border-white/5">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <div class="flex items-center gap-2 overflow-hidden">
-        <span class="bg-white/20 text-white text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider font-extrabold flex-shrink-0 animate-pulse">🔥 FLASH DEAL</span>
-        <p class="truncate text-xs">
-          ลดกระหน่ำสูงสุด 60% รับประกันของแท้ 100% | ใช้โค้ด <span class="underline font-black bg-white/10 px-1.5 py-0.5 rounded cursor-pointer" onclick="applyPresetCoupon('SPORT20')">SPORT20</span> ลดเพิ่ม 20% | ส่งฟรีเมื่อช้อปครบ ฿1,500
+      <div class="flex items-center gap-2 overflow-hidden text-[11px] sm:text-xs">
+        <span class="bg-[#00E599]/20 text-[#00E599] border border-[#00E599]/40 text-[9px] px-2 py-0.5 rounded-full font-extrabold flex-shrink-0 animate-pulse">
+          ✓ 100% AUTHENTIC
+        </span>
+        <p class="truncate text-slate-300">
+          สินค้าทุกชิ้นผ่านการตรวจสอบของแท้โดยผู้เชี่ยวชาญ HYPEBLACK | ใช้โค้ด <span class="underline font-bold text-[#E5B869] cursor-pointer" onclick="applyPresetCoupon('HYPEVIP')">HYPEVIP</span> ลด 15% | ส่งฟรีแบรนด์เนม
         </p>
       </div>
-      <div class="hidden md:flex items-center gap-4 text-xs">
-        <span class="flex items-center gap-1 cursor-pointer hover:underline" onclick="openSizeGuide()">📏 ตารางไซส์</span>
+      <div class="hidden md:flex items-center gap-4 text-xs text-slate-400">
+        <span class="cursor-pointer hover:text-white" onclick="openSizeGuide()">📏 ตารางไซส์</span>
         <span>|</span>
-        <span class="cursor-pointer hover:underline" onclick="openTrackingModal()">🚚 ติดตามพัสดุ</span>
+        <span class="cursor-pointer hover:text-white" onclick="openTrackingModal()">🚚 เช็คสถานะพัสดุ</span>
         <span>|</span>
-        <span>📞 02-888-9999</span>
+        <span class="text-[#00E599] font-bold">✓ HYPEBLACK TAG การันตีแท้</span>
       </div>
     </div>
   </div>
 
   <!-- ========================================================
-       STICKY MAIN NAVIGATION BAR
+       STICKY LUXURY MAIN NAVIGATION BAR
        ======================================================== -->
-  <header class="sticky top-0 z-40 glass-nav border-b border-slate-200/80 transition-all duration-300">
+  <header class="sticky top-0 z-40 glass-nav-dark transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20 gap-4">
         
-        <!-- Brand Logo -->
+        <!-- Brand Logo (HYPEBLACK) -->
         <a href="#" class="flex items-center gap-2.5 group">
-          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-orange-500 via-pink-500 to-purple-600 flex items-center justify-center text-white font-black text-2xl shadow-lg shadow-orange-500/30 group-hover:scale-105 transition-transform duration-300">
-            ⚡
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#E5B869] to-[#FFF0D0] flex items-center justify-center text-black font-black text-xl shadow-lg shadow-[#E5B869]/20 group-hover:scale-105 transition-transform duration-300">
+            HB
           </div>
           <div class="flex flex-col">
-            <span class="text-2xl font-black tracking-tight leading-none text-slate-900 group-hover:text-orange-600 transition-colors">
-              ACTIVE<span class="text-orange-500">PULSE</span>
-            </span>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">
-              SPORT PERFORMANCE
+            <div class="flex items-center gap-1.5">
+              <span class="text-2xl font-black tracking-tight leading-none text-white">
+                HYPE<span class="text-[#E5B869]">BLACK</span>
+              </span>
+              <span class="text-[9px] bg-[#00E599]/15 text-[#00E599] border border-[#00E599]/40 px-1.5 py-0.2 rounded font-extrabold">
+                VERIFIED
+              </span>
+            </div>
+            <span class="text-[9px] font-bold uppercase tracking-widest text-slate-400">
+              LUXURY, SNEAKERS & ACCESSORIES
             </span>
           </div>
         </a>
@@ -87,10 +101,10 @@
           <input 
             type="text" 
             id="global-search"
-            placeholder="ค้นหารองเท้าวิ่ง, เสื้อกีฬา, สตั๊ด, ไซส์..."
-            class="w-full bg-slate-100/90 text-slate-800 text-sm rounded-full pl-11 pr-4 py-2.5 border border-transparent focus:border-orange-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-orange-500/10 transition-all"
+            placeholder="ค้นหา Rolex, Chanel, Goyard, Travis Scott, Labubu, ไซส์..."
+            class="w-full bg-[#12131A] text-white text-xs sm:text-sm rounded-full pl-11 pr-4 py-2.5 border border-[#242636] focus:border-[#E5B869] focus:bg-[#161722] focus:outline-none transition-all placeholder:text-slate-500"
           />
-          <div class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
+          <div class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
             </svg>
@@ -101,30 +115,21 @@
         <div class="flex items-center gap-2 sm:gap-4">
           
           <!-- Category Quick Links (Desktop) -->
-          <nav class="hidden xl:flex items-center gap-5 text-sm font-semibold text-slate-600">
-            <a href="#catalog-section" onclick="filterByCategory('shoes-running')" class="hover:text-orange-600 transition-colors">รองเท้าวิ่ง</a>
-            <a href="#catalog-section" onclick="filterByCategory('shoes-court')" class="hover:text-orange-600 transition-colors">บาสเก็ตบอล</a>
-            <a href="#catalog-section" onclick="filterByCategory('apparel-men')" class="hover:text-orange-600 transition-colors">ชุดกีฬาชาย</a>
-            <a href="#catalog-section" onclick="filterByCategory('apparel-women')" class="hover:text-orange-600 transition-colors">ชุดกีฬาหญิง</a>
+          <nav class="hidden xl:flex items-center gap-5 text-xs font-semibold text-slate-300">
+            <a href="#catalog-section" onclick="filterByCategory('luxury')" class="hover:text-white transition-colors">👜 แบรนด์เนม</a>
+            <a href="#catalog-section" onclick="filterByCategory('accessory')" class="hover:text-white transition-colors">💍 แอคเซสเซอรี่</a>
+            <a href="#catalog-section" onclick="filterByCategory('sneakers')" class="hover:text-white transition-colors">👟 สนีกเกอร์</a>
+            <a href="#catalog-section" onclick="filterByCategory('collectibles')" class="hover:text-white transition-colors">🧸 อาร์ตทอย</a>
           </nav>
 
-          <div class="h-6 w-px bg-slate-200 hidden xl:block"></div>
-
-          <!-- Dark / Light Theme Toggle -->
-          <button 
-            id="theme-toggle-btn"
-            onclick="toggleTheme()" 
-            class="p-2.5 rounded-full hover:bg-slate-100 text-slate-700 hover:text-orange-600 transition-colors"
-            title="สลับโหมดสว่าง / มืด">
-            <span id="theme-icon">🌙</span>
-          </button>
+          <div class="h-6 w-px bg-white/10 hidden xl:block"></div>
 
           <!-- Order Tracking Button -->
           <button 
             onclick="openTrackingModal()"
-            class="relative p-2.5 rounded-full hover:bg-slate-100 text-slate-700 hover:text-orange-600 transition-colors"
+            class="relative p-2.5 rounded-full hover:bg-white/10 text-slate-300 hover:text-white transition-colors"
             title="ประวัติคำสั่งซื้อ & ติดตามพัสดุ">
-            <svg class="w-6 h-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.25V3.75A1.125 1.125 0 0013.125 2.625H4.125A1.125 1.125 0 003 3.75v10.5a1.125 1.125 0 001.125 1.125H6.75" />
             </svg>
           </button>
@@ -132,25 +137,23 @@
           <!-- Wishlist Button -->
           <button 
             onclick="showWishlistModal()"
-            class="relative p-2.5 rounded-full hover:bg-slate-100 text-slate-700 hover:text-red-500 transition-colors"
-            title="รายการโปรด">
-            <svg class="w-6 h-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+            class="relative p-2.5 rounded-full hover:bg-white/10 text-slate-300 hover:text-red-400 transition-colors"
+            title="รายการที่บันทึกไว้">
+            <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
             </svg>
-            <span class="wishlist-count-badge hidden absolute -top-1 -right-1 bg-red-500 text-white text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-md">0</span>
+            <span class="wishlist-count-badge hidden absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center shadow-md">0</span>
           </button>
 
           <!-- Cart Button Trigger -->
           <button 
             onclick="openCartDrawer()"
-            class="cart-button-trigger relative flex items-center gap-2.5 px-4 py-2.5 bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white rounded-full font-bold text-sm shadow-md shadow-orange-500/25 active:scale-95 transition-all">
-            <div class="relative">
-              <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-              </svg>
-              <span class="cart-count-badge hidden absolute -top-2 -right-3 bg-white text-orange-600 text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-sm">0</span>
-            </div>
-            <span class="hidden sm:inline">ตะกร้าสินค้า</span>
+            class="cart-button-trigger relative flex items-center gap-2 px-4 py-2 bg-white text-black hover:bg-slate-200 rounded-full font-black text-xs shadow-lg transition-all active:scale-95">
+            <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+            </svg>
+            <span class="hidden sm:inline">ตะกร้า</span>
+            <span class="cart-count-badge hidden bg-[#08090C] text-white text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center">0</span>
           </button>
 
         </div>
@@ -163,10 +166,10 @@
           <input 
             type="text" 
             oninput="handleSearchInput(event)"
-            placeholder="ค้นหาสินค้า เช่น รองเท้าวิ่ง ไซส์ 42..."
-            class="w-full bg-slate-100 text-slate-800 text-sm rounded-full pl-10 pr-4 py-2 border border-slate-200 focus:outline-none focus:border-orange-500"
+            placeholder="ค้นหาแบรนด์เนม, Rolex, Chanel, สนีกเกอร์..."
+            class="w-full bg-[#12131A] text-white text-xs rounded-full pl-10 pr-4 py-2.5 border border-[#242636] focus:outline-none focus:border-[#E5B869] placeholder:text-slate-500"
           />
-          <div class="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400">
+          <div class="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
             </svg>
@@ -178,14 +181,13 @@
   </header>
 
   <!-- ========================================================
-       HERO BANNER SECTION (Vibrant Energy)
+       HERO BANNER (HYPEBLACK Dark Luxury)
        ======================================================== -->
-  <section class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white py-12 md:py-20">
+  <section class="relative overflow-hidden bg-[#0A0B10] text-white py-12 md:py-20 border-b border-white/5">
     
-    <!-- Neon Decorative Glow Blobs -->
-    <div class="absolute -top-20 -left-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- Subtle Ambient Lighting -->
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-[#E5B869]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-10 w-80 h-80 bg-[#00E599]/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -193,879 +195,495 @@
         <!-- Left Content -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
           
-          <div class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/20 to-pink-500/20 border border-orange-500/40 rounded-full px-4 py-1.5 backdrop-blur">
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-            <span class="text-xs font-bold uppercase tracking-wider text-orange-400">NEW SEASON DROP 2026</span>
+          <div class="inline-flex items-center gap-2 bg-[#12131A] border border-[#242636] rounded-full px-4 py-1.5 backdrop-blur shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#00E599] animate-ping"></span>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-300">HYPEBLACK AUTHENTIC VERIFIED MARKETPLACE</span>
           </div>
 
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none uppercase">
-            ENERGY. SPEED.<br/>
-            <span class="gradient-text-fire">UNSTOPPABLE.</span>
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none">
+            HYPE<span class="text-[#E5B869]">BLACK</span>.<br/>
+            <span class="gold-gradient-text">LUXURY & STREETWEAR.</span>
           </h1>
 
-          <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
-            สัมผัสขีดสุดแห่งความเร็วและความเบาสบาย เสื้อผ้าระบายเหงื่อ QuickDry และรองเท้าวิ่งแผ่นคาร์บอนระดับแข่งขัน เพื่อทุกก้าวสู่เส้นชัยของคุณ
+          <p class="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            ศูนย์รวมสินค้าแบรนด์เนม สนีกเกอร์ เครื่องประดับ แอคเซสเซอรี่ และของสะสมแท้ 100% ตรวจเช็คโดยทีมงานผู้เชี่ยวชาญทุกชิ้น พร้อมแท็กการันตีความแท้ก่อนส่งถึงมือคุณ
           </p>
 
-          <!-- Flash Sale Countdown Timer -->
-          <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 max-w-md mx-auto lg:mx-0 flex items-center justify-between shadow-xl">
-            <div>
-              <p class="text-xs font-bold text-orange-400 uppercase tracking-wider mb-0.5">⚡ FLASH SALE ENDS IN:</p>
-              <p class="text-xs text-slate-300">ลดสูงสุด 60% สั่งก่อนหมดเวลา</p>
+          <!-- Authentic Trust Pillars -->
+          <div class="grid grid-cols-3 gap-3 max-w-lg mx-auto lg:mx-0 pt-2 text-left">
+            <div class="bg-[#12131A] border border-[#242636] p-3 rounded-xl">
+              <span class="text-[#00E599] font-black text-sm block">✓ 100% แท้</span>
+              <span class="text-[10px] text-slate-400">ตรวจเช็คทุกชิ้นก่อนส่ง</span>
             </div>
-            <div class="flex items-center gap-2 font-mono">
-              <div class="bg-black/60 rounded-xl px-2.5 py-1.5 text-center border border-white/10">
-                <span id="timer-hours" class="text-xl font-black text-white">14</span>
-                <span class="block text-[9px] text-slate-400">HRS</span>
-              </div>
-              <span class="text-orange-400 font-bold">:</span>
-              <div class="bg-black/60 rounded-xl px-2.5 py-1.5 text-center border border-white/10">
-                <span id="timer-mins" class="text-xl font-black text-white">45</span>
-                <span class="block text-[9px] text-slate-400">MIN</span>
-              </div>
-              <span class="text-orange-400 font-bold">:</span>
-              <div class="bg-black/60 rounded-xl px-2.5 py-1.5 text-center border border-white/10">
-                <span id="timer-secs" class="text-xl font-black text-orange-400">20</span>
-                <span class="block text-[9px] text-slate-400">SEC</span>
-              </div>
+            <div class="bg-[#12131A] border border-[#242636] p-3 rounded-xl">
+              <span class="text-[#E5B869] font-black text-sm block">⚡ พร้อมส่งด่วน</span>
+              <span class="text-[10px] text-slate-400">ส่งด่วนใน 1-2 วันทำการ</span>
+            </div>
+            <div class="bg-[#12131A] border border-[#242636] p-3 rounded-xl">
+              <span class="text-white font-black text-sm block">🛡️ ประกันขนส่ง</span>
+              <span class="text-[10px] text-slate-400">คุ้มครองมูลค่าเต็ม 100%</span>
             </div>
           </div>
 
           <!-- CTA Buttons -->
           <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
-            <a href="#catalog-section" class="px-7 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white font-bold text-sm shadow-xl shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105 active:scale-95 transition-all flex items-center gap-2">
-              <span>ช้อปสินค้าทั้งหมด</span>
-              <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
+            <a href="#catalog-section" class="px-7 py-3 rounded-full bg-white hover:bg-slate-200 text-black font-extrabold text-xs shadow-xl transition-all">
+              สำรวจสินค้าทั้งหมด
             </a>
-            <button onclick="applyPresetCoupon('SPORT20')" class="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-sm backdrop-blur transition-all flex items-center gap-2">
-              <span>🎟️ รับคูปองลด 20%</span>
+            <button onclick="applyPresetCoupon('HYPEVIP')" class="px-6 py-3 rounded-full bg-[#12131A] hover:bg-[#1A1C28] border border-[#242636] text-[#E5B869] font-bold text-xs transition-all flex items-center gap-1.5">
+              <span>🎟️ รับส่วนลด VIP 15%</span>
             </button>
           </div>
 
         </div>
 
-        <!-- Right Featured Hero Card -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative mx-auto max-w-sm sm:max-w-md bg-gradient-to-tr from-slate-900 to-slate-800 rounded-3xl p-6 border border-white/15 shadow-2xl overflow-hidden group">
-            
-            <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/30 rounded-full blur-2xl"></div>
-
-            <div class="flex items-center justify-between mb-4">
-              <span class="bg-orange-500 text-white text-[11px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
-                FEATURED HIGHLIGHT
-              </span>
-              <span class="text-emerald-400 text-xs font-bold">⚡ IN STOCK</span>
-            </div>
-
-            <div class="aspect-square rounded-2xl overflow-hidden mb-4 bg-slate-950/50 relative">
-              <img 
-                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" 
-                alt="Nike VaporFly 3"
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div class="absolute bottom-3 left-3 bg-black/70 backdrop-blur text-white text-xs px-3 py-1 rounded-full font-bold">
-                Carbon Plate Racing
+        <!-- Right Visual Feature -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-sm bg-[#12131A] border border-[#242636] rounded-3xl p-5 shadow-2xl">
+            <div class="aspect-square rounded-2xl overflow-hidden bg-[#181924] relative mb-4">
+              <img src="https://images.stockx.com/images/Rolex-Submariner-116610LV-Green-front.jpg?fit=fill&bg=FFFFFF&w=700&h=500" alt="Rolex Submariner" class="w-full h-full object-cover" />
+              <div class="absolute top-3 left-3 bg-[#00E599]/20 text-[#00E599] border border-[#00E599]/40 text-[10px] font-black px-2.5 py-0.5 rounded-full backdrop-blur">
+                ✓ HYPEBLACK TAG VERIFIED
               </div>
             </div>
-
             <div class="flex items-center justify-between">
               <div>
-                <h3 class="text-lg font-black text-white">Nike VaporFly 3 Next%</h3>
-                <p class="text-xs text-slate-400">รองเท้าวิ่งมาราธอนแผ่นคาร์บอน</p>
+                <span class="text-[10px] text-[#E5B869] font-black block uppercase">ROLEX</span>
+                <h4 class="text-sm font-bold text-white">Submariner Date 41mm 'Starbucks'</h4>
               </div>
-              <div class="text-right">
-                <span class="text-xl font-black text-orange-400">฿7,590</span>
-                <span class="block text-xs text-slate-400 line-through">฿8,900</span>
-              </div>
+              <span class="text-sm font-black text-white">฿545,000</span>
             </div>
-
-            <button onclick="openProductModal('prod-01')" class="mt-4 w-full py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-900 font-bold text-xs shadow-md transition-colors">
-              ดูรายละเอียดสินค้านี้
-            </button>
-
           </div>
         </div>
 
       </div>
-
-      <!-- Trust Badges Strip -->
-      <div class="mt-12 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-        <div class="flex items-center justify-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-xl font-bold">✓</div>
-          <div class="text-left">
-            <h4 class="text-xs font-bold text-white">ของแท้ 100%</h4>
-            <p class="text-[11px] text-slate-400">รับประกันศูนย์แบรนด์</p>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl font-bold">🚚</div>
-          <div class="text-left">
-            <h4 class="text-xs font-bold text-white">ส่งฟรีทั่วไทย</h4>
-            <p class="text-[11px] text-slate-400">เมื่อช้อปครบ ฿1,500</p>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl font-bold">🔄</div>
-          <div class="text-left">
-            <h4 class="text-xs font-bold text-white">เปลี่ยนไซส์ฟรี</h4>
-            <p class="text-[11px] text-slate-400">ภายใน 14 วัน ไร้กังวล</p>
-          </div>
-        </div>
-
-        <div class="flex items-center justify-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl font-bold">🛡️</div>
-          <div class="text-left">
-            <h4 class="text-xs font-bold text-white">ชำระเงินปลอดภัย</h4>
-            <p class="text-[11px] text-slate-400">พร้อมเพย์ / บัตร / COD</p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <!-- ========================================================
-       TOP BRAND LOGOS TICKER / STRIP
+       TOP LUXURY BRANDS BAR
        ======================================================== -->
-  <div class="bg-white border-y border-slate-200/70 py-4">
-    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-6 overflow-x-auto text-xs font-black text-slate-400 uppercase tracking-widest">
-      <span class="hover:text-slate-800 transition-colors cursor-pointer" onclick="filterByBrand('all')">★ แบรนด์กีฬาระดับโลก</span>
-      <span class="hover:text-slate-800 transition-colors cursor-pointer" onclick="filterByBrand('Nike')">NIKE</span>
-      <span class="hover:text-slate-800 transition-colors cursor-pointer" onclick="filterByBrand('Adidas')">ADIDAS</span>
-      <span class="hover:text-slate-800 transition-colors cursor-pointer" onclick="filterByBrand('Puma')">PUMA</span>
-      <span class="hover:text-slate-800 transition-colors cursor-pointer" onclick="filterByBrand('Jordan')">AIR JORDAN</span>
-      <span class="hover:text-slate-800 transition-colors cursor-pointer" onclick="filterByBrand('Asics')">ASICS</span>
-      <span class="hover:text-slate-800 transition-colors cursor-pointer" onclick="filterByBrand('ActivePulse')">ACTIVEPULSE</span>
+  <div class="border-b border-white/5 py-3 bg-[#0B0C12] overflow-x-auto no-scrollbar">
+    <div class="max-w-7xl mx-auto px-4 flex items-center gap-2 whitespace-nowrap">
+      <span class="text-[11px] font-black text-slate-400 mr-2 uppercase tracking-wider">แบรนด์ยอดนิยม:</span>
+      <button onclick="filterByBrand('all')" id="brand-btn-all" class="brand-chip active px-3.5 py-1 rounded-full text-[11px] font-bold bg-[#141520] border border-[#242636] text-slate-300 hover:text-white transition-all">
+        ทั้งหมด
+      </button>
+      <button onclick="filterByBrand('Goyard')" id="brand-btn-Goyard" class="brand-chip px-3.5 py-1 rounded-full text-[11px] font-bold bg-[#141520] border border-[#242636] text-slate-300 hover:text-white transition-all">
+        Goyard
+      </button>
+      <button onclick="filterByBrand('Chanel')" id="brand-btn-Chanel" class="brand-chip px-3.5 py-1 rounded-full text-[11px] font-bold bg-[#141520] border border-[#242636] text-slate-300 hover:text-white transition-all">
+        Chanel
+      </button>
+      <button onclick="filterByBrand('Louis Vuitton')" id="brand-btn-Louis Vuitton" class="brand-chip px-3.5 py-1 rounded-full text-[11px] font-bold bg-[#141520] border border-[#242636] text-slate-300 hover:text-white transition-all">
+        Louis Vuitton
+      </button>
+      <button onclick="filterByBrand('Rolex')" id="brand-btn-Rolex" class="brand-chip px-3.5 py-1 rounded-full text-[11px] font-bold bg-[#141520] border border-[#242636] text-slate-300 hover:text-white transition-all">
+        Rolex
+      </button>
+      <button onclick="filterByBrand('Cartier')" id="brand-btn-Cartier" class="brand-chip px-3.5 py-1 rounded-full text-[11px] font-bold bg-[#141520] border border-[#242636] text-slate-300 hover:text-white transition-all">
+        Cartier
+      </button>
+      <button onclick="filterByBrand('Chrome Hearts')" id="brand-btn-Chrome Hearts" class="brand-chip px-3.5 py-1 rounded-full text-[11px] font-bold bg-[#141520] border border-[#242636] text-slate-300 hover:text-white transition-all">
+        Chrome Hearts
+      </button>
+      <button onclick="filterByBrand('Hermès')" id="brand-btn-Hermès" class="brand-chip px-3.5 py-1 rounded-full text-[11px] font-bold bg-[#141520] border border-[#242636] text-slate-300 hover:text-white transition-all">
+        Hermès
+      </button>
+      <button onclick="filterByBrand('Gentle Monster')" id="brand-btn-Gentle Monster" class="brand-chip px-3.5 py-1 rounded-full text-[11px] font-bold bg-[#141520] border border-[#242636] text-slate-300 hover:text-white transition-all">
+        Gentle Monster
+      </button>
+      <button onclick="filterByBrand('Jordan')" id="brand-btn-Jordan" class="brand-chip px-3.5 py-1 rounded-full text-[11px] font-bold bg-[#141520] border border-[#242636] text-slate-300 hover:text-white transition-all">
+        Jordan / Travis
+      </button>
+      <button onclick="filterByBrand('Nike')" id="brand-btn-Nike" class="brand-chip px-3.5 py-1 rounded-full text-[11px] font-bold bg-[#141520] border border-[#242636] text-slate-300 hover:text-white transition-all">
+        Nike
+      </button>
+      <button onclick="filterByBrand('Pop Mart')" id="brand-btn-Pop Mart" class="brand-chip px-3.5 py-1 rounded-full text-[11px] font-bold bg-[#141520] border border-[#242636] text-slate-300 hover:text-white transition-all">
+        Pop Mart (Labubu)
+      </button>
     </div>
   </div>
 
   <!-- ========================================================
        MAIN CATALOG & FILTER SECTION
        ======================================================== -->
-  <main id="catalog-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <section id="catalog-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     
-    <!-- Header title & Category Pills -->
-    <div class="mb-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
-        <div>
-          <span class="text-xs font-extrabold uppercase tracking-widest text-orange-600 bg-orange-100 px-3 py-1 rounded-full">
-            EXPLORE GEAR
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
-            สินค้ากีฬายอดนิยม <span class="gradient-text-fire">สีสันสดใส คุณภาพพรีเมียม</span>
-          </h2>
-          <p class="text-sm text-slate-500 mt-1">
-            คัดสรรรองเท้าวิ่ง เสื้อผ้าออกกำลังกาย และอุปกรณ์ระดับแข่งขัน ตอบโจทย์ทุกสไตล์
-          </p>
-        </div>
-
-        <!-- Sort Select & Reset -->
-        <div class="flex items-center gap-3">
-          <label class="text-xs font-bold text-slate-500 whitespace-nowrap hidden sm:inline">จัดเรียงตาม:</label>
-          <select 
-            id="sort-select"
-            class="bg-white text-xs font-semibold text-slate-700 border border-slate-200 rounded-xl px-3 py-2.5 shadow-sm focus:outline-none focus:border-orange-500">
-            <option value="popular">🔥 ยอดนิยม (ขายดีสุด)</option>
-            <option value="price-asc">💵 ราคา: ต่ำไปสูง</option>
-            <option value="price-desc">💎 ราคา: สูงไปต่ำ</option>
-            <option value="discount-desc">⚡ ส่วนลดมากที่สุด</option>
-            <option value="rating-desc">⭐ คะแนนรีวิวสูงสุด</option>
-            <option value="newest">✨ สินค้ามาใหม่ล่าสุด</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Category Filter Pills (Horizontal Scroll on Mobile) -->
-      <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="category-pills">
-        <!-- Rendered by JS -->
-      </div>
-    </div>
-
-    <!-- Active Filters & Controls Sub-bar -->
-    <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-sm mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
+    <!-- Category Tabs & Controls -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-[#242636]">
       
-      <!-- Price Range Slider Filter -->
-      <div class="flex items-center gap-4 w-full md:w-auto">
-        <span class="text-xs font-bold text-slate-700 whitespace-nowrap">งบประมาณ:</span>
-        <input 
-          type="range" 
-          id="price-range-slider" 
-          min="300" 
-          max="10000" 
-          step="100" 
-          value="10000"
-          class="w-full sm:w-48 accent-orange-500 cursor-pointer"
-        />
-        <span id="price-range-label" class="text-xs font-extrabold text-orange-600 bg-orange-50 px-2.5 py-1 rounded-lg whitespace-nowrap">
-          ฿10,000
-        </span>
-      </div>
-
-      <!-- Quick Brand Chips -->
-      <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto text-xs font-semibold">
-        <span class="text-slate-400 mr-1 text-xs">แบรนด์:</span>
-        <button onclick="filterByBrand('all')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700">ทั้งหมด</button>
-        <button onclick="filterByBrand('Nike')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700">Nike</button>
-        <button onclick="filterByBrand('Adidas')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700">Adidas</button>
-        <button onclick="filterByBrand('Puma')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700">Puma</button>
-        <button onclick="filterByBrand('ActivePulse')" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700">ActivePulse</button>
-      </div>
-
-      <!-- Results Count & Reset Button -->
-      <div class="flex items-center justify-between w-full md:w-auto gap-3 text-xs">
-        <span class="text-slate-500 font-medium">พบ <b id="products-count" class="text-slate-800">16 รายการ</b></span>
-        <button onclick="resetFilters()" class="text-orange-600 hover:text-orange-700 font-bold underline">
-          ล้างตัวกรอง
+      <!-- Category Tabs (HYPEBLACK Style Pills) -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 no-scrollbar">
+        <button onclick="filterByCategory('all')" id="cat-btn-all" class="category-pill active px-4 py-2 rounded-full text-xs font-bold bg-[#12131A] text-slate-300 border border-[#242636] hover:text-white transition-all flex items-center gap-1.5 flex-shrink-0">
+          <span>✨</span> ทั้งหมด
+        </button>
+        <button onclick="filterByCategory('luxury')" id="cat-btn-luxury" class="category-pill px-4 py-2 rounded-full text-xs font-bold bg-[#12131A] text-slate-300 border border-[#242636] hover:text-white transition-all flex items-center gap-1.5 flex-shrink-0">
+          <span>👜</span> กระเป๋าแบรนด์เนม
+        </button>
+        <button onclick="filterByCategory('accessory')" id="cat-btn-accessory" class="category-pill px-4 py-2 rounded-full text-xs font-bold bg-[#12131A] text-slate-300 border border-[#242636] hover:text-white transition-all flex items-center gap-1.5 flex-shrink-0">
+          <span>💍</span> แอคเซสเซอรี่ & นาฬิกา
+        </button>
+        <button onclick="filterByCategory('sneakers')" id="cat-btn-sneakers" class="category-pill px-4 py-2 rounded-full text-xs font-bold bg-[#12131A] text-slate-300 border border-[#242636] hover:text-white transition-all flex items-center gap-1.5 flex-shrink-0">
+          <span>👟</span> สนีกเกอร์
+        </button>
+        <button onclick="filterByCategory('collectibles')" id="cat-btn-collectibles" class="category-pill px-4 py-2 rounded-full text-xs font-bold bg-[#12131A] text-slate-300 border border-[#242636] hover:text-white transition-all flex items-center gap-1.5 flex-shrink-0">
+          <span>🧸</span> อาร์ตทอย (Labubu)
+        </button>
+        <button onclick="filterByCategory('streetwear')" id="cat-btn-streetwear" class="category-pill px-4 py-2 rounded-full text-xs font-bold bg-[#12131A] text-slate-300 border border-[#242636] hover:text-white transition-all flex items-center gap-1.5 flex-shrink-0">
+          <span>👕</span> สตรีทแวร์
         </button>
       </div>
 
+      <!-- Quick Toggles & Sorting -->
+      <div class="flex items-center gap-3 self-end md:self-auto">
+        <!-- Ready to Ship Toggle -->
+        <button 
+          id="ready-to-ship-toggle"
+          onclick="toggleReadyToShipFilter()" 
+          class="px-3.5 py-2 rounded-full text-xs font-bold bg-[#161722] border border-[#242636] text-slate-300 hover:text-white flex items-center gap-1.5 transition-all">
+          <span>⚡ พร้อมส่งด่วน</span>
+        </button>
+
+        <!-- Sort Select -->
+        <select 
+          onchange="handleSortChange(this.value)"
+          class="bg-[#12131A] text-xs font-bold text-slate-300 border border-[#242636] rounded-full px-3.5 py-2 focus:outline-none focus:border-[#E5B869] cursor-pointer">
+          <option value="popular">ยอดนิยมสูงสุด</option>
+          <option value="price-low">ราคา: ต่ำ ➔ สูง</option>
+          <option value="price-high">ราคา: สูง ➔ ต่ำ</option>
+          <option value="rating">คะแนนรีวิว</option>
+        </select>
+      </div>
+
     </div>
 
-    <!-- Product Grid -->
-    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      <!-- Injected by app.js -->
+    <!-- Active Count & Reset -->
+    <div class="flex items-center justify-between py-4 text-xs text-slate-400">
+      <div>
+        <span>พบสินค้า: </span>
+        <span id="products-count" class="font-bold text-white">0 รายการ</span>
+      </div>
+      <button onclick="resetFilters()" class="text-xs text-slate-400 hover:text-[#E5B869] font-medium underline">
+        รีเซ็ตตัวกรองทั้งหมด
+      </button>
     </div>
 
-  </main>
+    <!-- Product Cards Grid -->
+    <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
+      <!-- Generated Dynamically by app.js -->
+    </div>
+
+  </section>
 
   <!-- ========================================================
-       SHOPPING CART DRAWER (ตะกร้าสินค้า)
+       PRODUCT DETAIL MODAL
        ======================================================== -->
-  <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
-    <!-- Backdrop -->
-    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeCartDrawer()"></div>
+  <div id="product-detail-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-4xl glass-modal-dark rounded-3xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl">
+      <button onclick="closeProductModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-sm font-bold z-20">
+        ✕
+      </button>
+      <div id="modal-content">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </div>
 
-    <!-- Slide-over panel -->
-    <div id="cart-drawer-panel" class="absolute inset-y-0 right-0 max-w-full w-full sm:w-[460px] bg-white shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300">
+  <!-- ========================================================
+       SHOPPING CART DRAWER
+       ======================================================== -->
+  <div id="cart-drawer" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex justify-end">
+    <div class="w-full max-w-md bg-[#0D0E15] border-l border-[#242636] h-full flex flex-col justify-between p-6 shadow-2xl">
       
       <!-- Drawer Header -->
-      <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+      <div class="flex items-center justify-between pb-4 border-b border-[#242636]">
         <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-xl bg-orange-500/10 text-orange-600 flex items-center justify-center font-bold">
-            🛒
-          </div>
-          <div>
-            <h3 class="font-bold text-slate-900 text-base">ตะกร้าสินค้าของคุณ</h3>
-            <p class="text-xs text-slate-400">ตรวจสอบและปรับเปลี่ยนจำนวนสินค้า</p>
-          </div>
+          <span class="text-lg">🛒</span>
+          <h3 class="font-extrabold text-white text-base">ตะกร้าสินค้า</h3>
+          <span class="cart-count-badge bg-[#E5B869] text-black text-[10px] font-black px-2 py-0.5 rounded-full">0</span>
         </div>
-        <button onclick="closeCartDrawer()" class="p-2 rounded-full hover:bg-slate-200 text-slate-400 hover:text-slate-700 transition-colors">
-          <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+        <button onclick="closeCartDrawer()" class="text-slate-400 hover:text-white text-lg font-bold">✕</button>
       </div>
 
-      <!-- Free Shipping Progress Indicator -->
-      <div class="px-5 py-3 bg-orange-50/80 border-b border-orange-100">
-        <p id="free-shipping-text" class="text-xs text-slate-700 mb-1.5 font-medium">
-          ช้อปอีก <span class="font-bold text-orange-600">฿1,500</span> เพื่อรับส่งฟรี!
-        </p>
-        <div class="w-full bg-orange-200/60 rounded-full h-2 overflow-hidden">
-          <div id="free-shipping-progress" class="bg-gradient-to-r from-orange-500 to-pink-500 h-full rounded-full transition-all duration-300" style="width: 0%"></div>
-        </div>
+      <!-- Cart Item List -->
+      <div id="cart-items-list" class="flex-1 overflow-y-auto py-4 space-y-3">
+        <!-- Rendered by app.js -->
       </div>
 
-      <!-- Cart Content (Scrollable) -->
-      <div class="flex-1 overflow-y-auto p-5">
+      <!-- Drawer Footer & Checkout -->
+      <div class="pt-4 border-t border-[#242636] space-y-4">
         
-        <!-- Empty Cart View -->
-        <div id="empty-cart-view" class="hidden text-center py-16">
-          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-slate-100 flex items-center justify-center text-3xl">
-            🛍️
-          </div>
-          <h4 class="font-bold text-slate-800 text-lg mb-1">ตะกร้าของคุณยังว่างอยู่</h4>
-          <p class="text-xs text-slate-400 mb-6">เลือกซื้อเสื้อผ้าและรองเท้ากีฬาคุณภาพดีได้เลย</p>
-          <button onclick="closeCartDrawer()" class="px-6 py-2.5 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold text-xs rounded-full shadow-md">
-            เริ่มช้อปเลยตอนนี้
-          </button>
-        </div>
-
-        <!-- Filled Cart View -->
-        <div id="filled-cart-view" class="space-y-4">
-          <div id="cart-items-list" class="space-y-3">
-            <!-- Rendered by JS -->
-          </div>
-
-          <!-- Coupon Input Box -->
-          <div class="pt-4 border-t border-slate-100">
-            <label class="block text-xs font-bold text-slate-700 mb-1.5">รหัสส่วนลด (Coupon Code):</label>
-            <div class="flex gap-2">
-              <input 
-                type="text" 
-                id="coupon-code-input" 
-                placeholder="เช่น SPORT20, WELCOME10"
-                class="flex-1 text-xs uppercase font-bold tracking-wider bg-slate-100 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-orange-500 focus:bg-white"
-              />
-              <button 
-                onclick="applyCouponCode()"
-                class="px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition-colors">
-                ใช้โค้ด
-              </button>
-            </div>
-
-            <!-- Quick Coupon Tags -->
-            <div class="flex flex-wrap gap-1.5 mt-2">
-              <span onclick="applyPresetCoupon('SPORT20')" class="cursor-pointer text-[11px] bg-orange-100 hover:bg-orange-200 text-orange-700 font-bold px-2 py-0.5 rounded-md">
-                🎟️ SPORT20 (ลด 20%)
-              </span>
-              <span onclick="applyPresetCoupon('FREESHIP')" class="cursor-pointer text-[11px] bg-emerald-100 hover:bg-emerald-200 text-emerald-700 font-bold px-2 py-0.5 rounded-md">
-                🚚 FREESHIP (ส่งฟรี)
-              </span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Drawer Footer (Summary & Checkout) -->
-      <div class="p-5 border-t border-slate-200 bg-slate-50/80 space-y-3">
-        <div class="space-y-1.5 text-xs text-slate-600">
-          <div class="flex justify-between">
-            <span>ราคารวมสินค้า:</span>
-            <span id="cart-subtotal" class="font-bold text-slate-800">฿0</span>
-          </div>
-          <div class="flex justify-between text-pink-600">
-            <span>ส่วนลดโปรโมชั่น:</span>
-            <span id="cart-discount" class="font-bold">฿0</span>
-          </div>
-          <div class="flex justify-between">
-            <span>ค่าจัดส่ง:</span>
-            <span id="cart-shipping" class="font-bold">฿50</span>
-          </div>
-          <div class="flex justify-between text-base font-black text-slate-900 pt-2 border-t border-slate-200">
-            <span>ยอดชำระสุทธิ:</span>
-            <span id="cart-total" class="text-xl text-orange-600">฿0</span>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-3 gap-2 pt-2">
-          <button 
-            onclick="clearCart()" 
-            class="col-span-1 py-3 rounded-2xl border border-slate-200 hover:bg-slate-200 text-slate-600 font-bold text-xs transition-colors">
-            ล้างตะกร้า
-          </button>
-          <button 
-            onclick="openCheckoutModal()" 
-            class="col-span-2 py-3 rounded-2xl bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-bold text-sm shadow-lg shadow-orange-500/25 active:scale-95 transition-all flex items-center justify-center gap-1.5">
-            <span>ชำระเงิน</span>
-            <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ========================================================
-       PRODUCT DETAIL / QUICK VIEW MODAL
-       ======================================================== -->
-  <div id="product-detail-modal" class="fixed inset-0 z-50 hidden">
-    <!-- Backdrop -->
-    <div class="absolute inset-0 bg-slate-900/70 backdrop-blur-sm" onclick="closeProductModal()"></div>
-
-    <!-- Modal Box -->
-    <div class="relative min-h-screen flex items-center justify-center p-4">
-      <div class="relative bg-white rounded-3xl max-w-4xl w-full shadow-2xl overflow-hidden border border-slate-100 z-10">
-        
-        <!-- Close Button -->
-        <button 
-          onclick="closeProductModal()"
-          class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-lg transition-colors">
-          ✕
-        </button>
-
-        <!-- Dynamic Product Content loaded by app.js -->
-        <div id="product-modal-content"></div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================
-       CHECKOUT MODAL (ชำระเงินจำลอง)
-       ======================================================== -->
-  <div id="checkout-modal" class="fixed inset-0 z-50 hidden">
-    <div class="absolute inset-0 bg-slate-900/70 backdrop-blur-sm" onclick="closeCheckoutModal()"></div>
-    
-    <div class="relative min-h-screen flex items-center justify-center p-4">
-      <div class="relative bg-white rounded-3xl max-w-2xl w-full shadow-2xl overflow-hidden z-10 max-h-[90vh] flex flex-col">
-        
-        <!-- Header -->
-        <div class="p-6 bg-gradient-to-r from-slate-900 to-slate-800 text-white flex items-center justify-between">
-          <div>
-            <h3 class="text-xl font-black">ขั้นตอนการสั่งซื้อ & ชำระเงิน</h3>
-            <p class="text-xs text-slate-400">กรอกที่อยู่จัดส่งและเลือกช่องทางการชำระเงิน</p>
-          </div>
-          <button onclick="closeCheckoutModal()" class="text-white hover:text-slate-300 font-bold text-xl">✕</button>
-        </div>
-
-        <!-- Form Body -->
-        <div id="checkout-form-container" class="p-6 overflow-y-auto space-y-6">
-          <form onsubmit="submitCheckoutOrder(event)" class="space-y-6">
-            
-            <!-- Shipping Information -->
-            <div>
-              <h4 class="text-sm font-bold text-slate-800 uppercase tracking-wider mb-3 flex items-center gap-2">
-                <span>📍 1. ที่อยู่สำหรับจัดส่งสินค้า</span>
-              </h4>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                <div>
-                  <label class="block text-slate-600 font-semibold mb-1">ชื่อ - นามสกุล *</label>
-                  <input type="text" id="cust-name" required value="สมชาย รักกีฬา" class="w-full p-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-orange-500 font-medium" />
-                </div>
-                <div>
-                  <label class="block text-slate-600 font-semibold mb-1">เบอร์โทรศัพท์ติดต่อ *</label>
-                  <input type="tel" id="cust-phone" required value="089-123-4567" class="w-full p-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-orange-500 font-medium" />
-                </div>
-                <div class="sm:col-span-2">
-                  <label class="block text-slate-600 font-semibold mb-1">ที่อยู่จัดส่ง (บ้านเลขที่, ซอย, ถนน) *</label>
-                  <textarea id="cust-address" required rows="2" class="w-full p-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-orange-500 font-medium">99/45 หมู่บ้านแอคทีฟวิลล์ ถ.สุขุมวิท แขวงคลองเตย เขตคลองเตย กทม. 10110</textarea>
-                </div>
-              </div>
-            </div>
-
-            <!-- Payment Method Selection -->
-            <div>
-              <h4 class="text-sm font-bold text-slate-800 uppercase tracking-wider mb-3 flex items-center gap-2">
-                <span>💳 2. ช่องทางการชำระเงิน</span>
-              </h4>
-              
-              <div class="space-y-2.5">
-                <!-- PromptPay QR -->
-                <label class="flex items-center gap-3 p-3.5 rounded-2xl border border-orange-500 bg-orange-50/50 cursor-pointer">
-                  <input type="radio" name="payment_method" value="promptpay" checked class="accent-orange-500 w-4 h-4" />
-                  <div class="flex-1">
-                    <p class="text-xs font-bold text-slate-900">พร้อมเพย์ QR Code (PromptPay - แนะนำ)</p>
-                    <p class="text-[11px] text-slate-500">สแกนจ่ายผ่าน Mobile Banking ได้ทุกธนาคาร ไม่มีค่าธรรมเนียม</p>
-                  </div>
-                  <span class="text-xs font-black bg-blue-600 text-white px-2 py-0.5 rounded">QR Pay</span>
-                </label>
-
-                <!-- Credit/Debit Card -->
-                <label class="flex items-center gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-slate-300 cursor-pointer">
-                  <input type="radio" name="payment_method" value="card" class="accent-orange-500 w-4 h-4" />
-                  <div class="flex-1">
-                    <p class="text-xs font-bold text-slate-900">บัตรเครดิต / เดบิต (Visa, Mastercard, JCB)</p>
-                    <p class="text-[11px] text-slate-500">ระบบรักษาความปลอดภัยมาตรฐาน 3D Secure</p>
-                  </div>
-                  <span class="text-xs font-bold text-slate-400">💳</span>
-                </label>
-
-                <!-- COD -->
-                <label class="flex items-center gap-3 p-3.5 rounded-2xl border border-slate-200 hover:border-slate-300 cursor-pointer">
-                  <input type="radio" name="payment_method" value="cod" class="accent-orange-500 w-4 h-4" />
-                  <div class="flex-1">
-                    <p class="text-xs font-bold text-slate-900">เก็บเงินปลายทาง (Cash on Delivery)</p>
-                    <p class="text-[11px] text-slate-500">ชำระเงินกับพนักงานจัดส่งเมื่อได้รับสินค้า</p>
-                  </div>
-                  <span class="text-xs font-bold text-slate-400">📦</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Order Items Preview -->
-            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200/60">
-              <h5 class="text-xs font-bold text-slate-700 mb-2">สรุปรายการสินค้าในคำสั่งซื้อ:</h5>
-              <div id="checkout-items-summary" class="space-y-1 max-h-28 overflow-y-auto pr-1"></div>
-              <div class="flex justify-between items-center text-sm font-black text-slate-900 pt-2 border-t border-slate-200 mt-2">
-                <span>ยอดชำระทั้งหมด:</span>
-                <span id="checkout-total-amount" class="text-lg text-orange-600">฿0</span>
-              </div>
-            </div>
-
-            <!-- Confirm Button -->
-            <button 
-              type="submit"
-              class="w-full py-4 rounded-2xl bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-extrabold text-base shadow-xl shadow-orange-500/30 transition-all flex items-center justify-center gap-2">
-              <span>ยืนยันการสั่งซื้อและชำระเงิน</span>
-              <span>⚡</span>
-            </button>
-
-          </form>
-        </div>
-
-        <!-- PromptPay QR Code Payment View -->
-        <div id="checkout-promptpay-container" class="hidden p-6 text-center space-y-4 overflow-y-auto">
-          <div class="max-w-sm mx-auto bg-white rounded-3xl border-2 border-blue-600 shadow-xl overflow-hidden text-slate-800">
-            <div class="bg-blue-600 text-white p-4">
-              <div class="flex items-center justify-between">
-                <span class="font-black text-sm tracking-widest uppercase">PROMPTPAY</span>
-                <span class="text-xs bg-white/20 px-2.5 py-0.5 rounded-full font-bold">พร้อมเพย์ QR</span>
-              </div>
-              <p class="text-[11px] text-blue-100 mt-1">ACTIVEPULSE SPORT THAILAND</p>
-            </div>
-            
-            <div class="p-6 space-y-4">
-              <div class="space-y-1">
-                <span class="text-xs text-slate-400 font-medium">ยอดชำระที่ต้องโอน</span>
-                <p id="promptpay-amount" class="text-3xl font-black text-slate-900">฿0</p>
-              </div>
-
-              <!-- SVG PromptPay QR Graphic -->
-              <div class="w-56 h-56 mx-auto bg-white border border-slate-200 rounded-2xl p-3 flex items-center justify-center shadow-inner relative">
-                <svg class="w-full h-full text-slate-900" viewBox="0 0 100 100" fill="currentColor">
-                  <!-- Finder Patterns -->
-                  <path d="M10 10h24v24h-24z m4 4v16h16v-16z m4 4h8v8h-8z"/>
-                  <path d="M66 10h24v24h-24z m4 4v16h16v-16z m4 4h8v8h-8z"/>
-                  <path d="M10 66h24v24h-24z m4 4v16h16v-16z m4 4h8v8h-8z"/>
-                  <!-- QR Data Bits Matrix -->
-                  <rect x="40" y="12" width="6" height="6"/>
-                  <rect x="52" y="12" width="6" height="6"/>
-                  <rect x="44" y="24" width="8" height="6"/>
-                  <rect x="12" y="44" width="8" height="6"/>
-                  <rect x="26" y="40" width="6" height="8"/>
-                  <rect x="40" y="40" width="8" height="8"/>
-                  <rect x="56" y="44" width="8" height="6"/>
-                  <rect x="72" y="42" width="6" height="8"/>
-                  <rect x="84" y="46" width="6" height="6"/>
-                  <rect x="42" y="58" width="6" height="8"/>
-                  <rect x="54" y="60" width="8" height="6"/>
-                  <rect x="70" y="58" width="8" height="8"/>
-                  <rect x="84" y="66" width="6" height="12"/>
-                  <rect x="44" y="74" width="8" height="8"/>
-                  <rect x="60" y="76" width="8" height="6"/>
-                  <rect x="74" y="78" width="6" height="8"/>
-                </svg>
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="bg-blue-600 text-white rounded-lg p-1.5 shadow-md">
-                    <span class="text-xs font-black">TH QR</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="bg-blue-50 text-blue-900 rounded-xl p-2.5 text-xs font-medium space-y-1">
-                <p>เปิดแอพธนาคารใดก็ได้ แล้วสแกนเพื่อชำระเงิน</p>
-                <p class="text-[11px] text-blue-600">รหัสอ้างอิง: <span id="promptpay-ref" class="font-mono font-bold">AP-REF-9921</span></p>
-              </div>
-
-              <div class="text-xs text-slate-500 font-semibold">
-                หมดเวลาชำระเงินใน: <span id="promptpay-timer" class="text-red-500 font-mono font-bold">04:59</span> นาที
-              </div>
-            </div>
-          </div>
-
-          <div class="flex items-center justify-center gap-3 pt-2">
-            <button 
-              type="button" 
-              onclick="cancelPromptPay()"
-              class="px-5 py-3 rounded-2xl border border-slate-300 text-slate-600 text-xs font-bold hover:bg-slate-100">
-              ย้อนกลับ
-            </button>
-            <button 
-              type="button" 
-              onclick="confirmPromptPayPayment()"
-              class="px-7 py-3 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white text-xs font-black shadow-lg shadow-emerald-500/30 flex items-center gap-2">
-              <span>⚡ จำลอง: สแกนจ่ายเรียบร้อย</span>
-              <span>✓</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Order Success View (Hidden by default) -->
-        <div id="checkout-success-container" class="hidden p-8 text-center space-y-4">
-          <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-2 animate-bounce">
-            🎉
-          </div>
-          <h3 class="text-2xl font-black text-slate-900">สั่งซื้อสินค้าสำเร็จแล้ว!</h3>
-          <p class="text-xs text-slate-500 max-w-md mx-auto">
-            เราได้รับคำสั่งซื้อของคุณเรียบร้อยแล้ว เจ้าหน้าที่จะจัดเตรียมสินค้าและจัดส่งให้คุณโดยเร็วที่สุด
-          </p>
-
-          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 max-w-sm mx-auto text-xs text-left space-y-2">
-            <div class="flex justify-between">
-              <span class="text-slate-500">หมายเลขคำสั่งซื้อ:</span>
-              <span id="success-order-id" class="font-mono font-bold text-slate-800">AP-892144</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-slate-500">ยอดชำระสุทธิ:</span>
-              <span id="success-order-total" class="font-bold text-orange-600">฿0</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-slate-500">ช่องทางการชำระ:</span>
-              <span id="success-order-payment" class="font-medium text-slate-800">พร้อมเพย์ QR</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-slate-500">สถานะจัดส่ง:</span>
-              <span class="font-bold text-emerald-600">กำลังจัดเตรียมพัสดุ</span>
-            </div>
-          </div>
-
-          <div class="pt-4">
-            <button 
-              onclick="finishOrderAndClose()"
-              class="px-8 py-3 bg-slate-900 text-white rounded-full font-bold text-xs hover:bg-slate-800 transition-colors">
-              กลับสู่หน้าร้านค้า
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================
-       WISHLIST MODAL (รายการโปรด)
-       ======================================================== -->
-  <div id="wishlist-modal" class="fixed inset-0 z-50 hidden">
-    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeWishlistModal()"></div>
-    <div class="relative min-h-screen flex items-center justify-center p-4">
-      <div class="relative bg-white rounded-3xl max-w-md w-full shadow-2xl p-6 z-10">
-        <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
-          <h4 class="font-bold text-slate-900 text-base flex items-center gap-2">
-            <span>❤️</span> รายการสินค้าที่ถูกใจ
-          </h4>
-          <button onclick="closeWishlistModal()" class="text-slate-400 hover:text-slate-600 font-bold">✕</button>
-        </div>
-        <div id="wishlist-modal-items" class="space-y-3 max-h-96 overflow-y-auto">
-          <!-- Rendered by JS -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================
-       ORDER TRACKING & HISTORY MODAL (ติดตามพัสดุ)
-       ======================================================== -->
-  <div id="tracking-modal" class="fixed inset-0 z-50 hidden">
-    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeTrackingModal()"></div>
-    <div class="relative min-h-screen flex items-center justify-center p-4">
-      <div class="relative bg-white rounded-3xl max-w-2xl w-full shadow-2xl p-6 z-10 max-h-[90vh] flex flex-col">
-        <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
-          <div>
-            <h4 class="font-black text-slate-900 text-lg flex items-center gap-2">
-              <span>🚚</span> ติดตามสถานะพัสดุ & ประวัติคำสั่งซื้อ
-            </h4>
-            <p class="text-xs text-slate-400">ตรวจสอบความคืบหน้าการจัดส่งสินค้าแบบเรียลไทม์</p>
-          </div>
-          <button onclick="closeTrackingModal()" class="text-slate-400 hover:text-slate-600 font-bold text-lg">✕</button>
-        </div>
-
-        <!-- Search Bar for Tracking -->
-        <div class="flex gap-2 mb-4">
+        <!-- Coupon input -->
+        <div class="flex gap-2">
           <input 
             type="text" 
-            id="tracking-search-input" 
-            placeholder="กรอกหมายเลขคำสั่งซื้อ เช่น AP-892144..."
-            class="flex-1 text-xs bg-slate-100 border border-slate-200 rounded-xl px-3 py-2.5 font-medium focus:outline-none focus:border-orange-500"
+            id="coupon-input"
+            placeholder="โค้ดส่วนลด เช่น HYPEVIP" 
+            class="flex-1 bg-[#12131A] text-white text-xs px-3.5 py-2.5 rounded-xl border border-[#242636] focus:outline-none focus:border-[#E5B869] uppercase placeholder:text-slate-500 font-bold"
           />
-          <button 
-            onclick="searchTrackingOrder()"
-            class="px-5 py-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-xl text-xs font-bold transition-colors">
-            ค้นหา
+          <button onclick="applyCouponCode()" class="px-4 py-2.5 bg-[#1E202E] hover:bg-white hover:text-black text-white text-xs font-bold rounded-xl border border-[#2D3145] transition-all">
+            ใช้โค้ด
           </button>
         </div>
 
-        <!-- Order List / Tracking Details Container -->
-        <div id="tracking-content-container" class="space-y-4 overflow-y-auto flex-1 pr-1">
-          <!-- Rendered dynamically by JS -->
+        <!-- Price breakdown -->
+        <div class="space-y-1.5 text-xs text-slate-400">
+          <div class="flex justify-between">
+            <span>ยอดรวมสินค้า</span>
+            <span id="cart-subtotal" class="font-bold text-white">฿0</span>
+          </div>
+          <div class="flex justify-between text-[#E5B869]">
+            <span>ส่วนลด</span>
+            <span id="cart-discount" class="font-bold">-฿0</span>
+          </div>
+          <div class="flex justify-between">
+            <span>ค่าจัดส่งพร้อมประกันแท้</span>
+            <span id="cart-shipping" class="font-bold text-white">฿100</span>
+          </div>
+          <div class="flex justify-between text-base font-black text-white pt-2 border-t border-[#242636]">
+            <span>ยอดสุทธิ</span>
+            <span id="cart-total" class="text-[#E5B869]">฿0</span>
+          </div>
         </div>
+
+        <!-- Checkout Button -->
+        <button 
+          onclick="proceedToCheckout()" 
+          class="w-full py-3.5 rounded-xl bg-white hover:bg-slate-200 text-black font-black text-sm shadow-xl transition-all">
+          ดำเนินการชำระเงิน
+        </button>
+
       </div>
+
     </div>
   </div>
 
   <!-- ========================================================
-       SIZE GUIDE MODAL (ตารางไซส์)
+       CHECKOUT MODAL
        ======================================================== -->
-  <div id="size-guide-modal" class="fixed inset-0 z-50 hidden">
-    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeSizeGuide()"></div>
-    <div class="relative min-h-screen flex items-center justify-center p-4">
-      <div class="relative bg-white rounded-3xl max-w-lg w-full shadow-2xl p-6 z-10 text-xs">
-        <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
-          <h4 class="font-bold text-slate-900 text-base">📏 ตารางเทียบขนาดไซส์มาตรฐาน</h4>
-          <button onclick="closeSizeGuide()" class="text-slate-400 hover:text-slate-600 font-bold">✕</button>
+  <div id="checkout-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="w-full max-w-lg glass-modal-dark rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl relative">
+      <button onclick="closeCheckoutModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white font-bold">✕</button>
+
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-[#E5B869] text-black font-black flex items-center justify-center text-lg">💳</div>
+        <div>
+          <h3 class="font-black text-white text-base">ยืนยันคำสั่งซื้อ & ชำระเงิน</h3>
+          <p class="text-[11px] text-slate-400">ชำระเงินปลอดภัยด้วยระบบ 256-bit SSL</p>
         </div>
+      </div>
 
-        <div class="space-y-4">
-          <!-- Interactive Size Calculator Tool -->
-          <div class="bg-gradient-to-r from-orange-50 to-pink-50 p-3.5 rounded-2xl border border-orange-200">
-            <h5 class="font-bold text-slate-800 text-xs mb-1.5 flex items-center gap-1.5">
-              <span>⚡</span> ค้นหาไซส์ที่แนะนำสำหรับคุณ (Size Calculator)
-            </h5>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
-              <div>
-                <label class="block text-slate-600 font-semibold mb-1">ความยาวเท้า (ซม.):</label>
-                <div class="flex gap-1.5">
-                  <input type="number" id="calc-foot-cm" step="0.5" placeholder="เช่น 26.5" class="w-full p-2 bg-white rounded-lg border border-slate-300 focus:outline-none focus:border-orange-500 font-bold" />
-                  <button type="button" onclick="calculateShoeSize()" class="px-3 bg-orange-500 text-white rounded-lg font-bold hover:bg-orange-600">คำนวณ</button>
-                </div>
-              </div>
-              <div>
-                <label class="block text-slate-600 font-semibold mb-1">รอบอก (นิ้ว):</label>
-                <div class="flex gap-1.5">
-                  <input type="number" id="calc-chest-in" step="1" placeholder="เช่น 40" class="w-full p-2 bg-white rounded-lg border border-slate-300 focus:outline-none focus:border-orange-500 font-bold" />
-                  <button type="button" onclick="calculateShirtSize()" class="px-3 bg-pink-500 text-white rounded-lg font-bold hover:bg-pink-600">คำนวณ</button>
-                </div>
-              </div>
-            </div>
-            <div id="calc-result" class="mt-2 text-xs font-bold text-orange-600 hidden bg-white/80 p-2 rounded-lg border border-orange-200 text-center"></div>
-          </div>
+      <!-- Shipping Form -->
+      <div class="space-y-3 text-xs">
+        <label class="block font-bold text-white uppercase tracking-wider text-[11px]">ข้อมูลที่อยู่จัดส่งสินค้า</label>
+        <input type="text" placeholder="ชื่อ-นามสกุล ผู้รับ..." class="w-full bg-[#12131A] border border-[#242636] rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#E5B869]" value="ศุภกร วัฒนศิลป์" />
+        <input type="tel" placeholder="เบอร์โทรศัพท์..." class="w-full bg-[#12131A] border border-[#242636] rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#E5B869]" value="089-123-4567" />
+        <textarea rows="2" placeholder="ที่อยู่จัดส่งโดยละเอียด..." class="w-full bg-[#12131A] border border-[#242636] rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#E5B869]">88/9 อาคารสยามสแควร์วัน ชั้น 4 ปทุมวัน กรุงเทพฯ 10330</textarea>
+      </div>
 
-          <div>
-            <h5 class="font-bold text-orange-600 mb-2">ตารางไซส์รองเท้ากีฬา (Shoes Size Guide)</h5>
-            <div class="overflow-x-auto">
-              <table class="w-full text-center border-collapse">
-                <thead>
-                  <tr class="bg-slate-100 text-slate-700">
-                    <th class="p-2 border border-slate-200">EU</th>
-                    <th class="p-2 border border-slate-200">US Men</th>
-                    <th class="p-2 border border-slate-200">UK</th>
-                    <th class="p-2 border border-slate-200">CM (ความยาวเท้า)</th>
-                  </tr>
-                </thead>
-                <tbody class="text-slate-600">
-                  <tr><td class="p-1.5 border border-slate-200 font-bold">39</td><td class="p-1.5 border border-slate-200">6.5</td><td class="p-1.5 border border-slate-200">6.0</td><td class="p-1.5 border border-slate-200">24.5 ซม.</td></tr>
-                  <tr><td class="p-1.5 border border-slate-200 font-bold">40</td><td class="p-1.5 border border-slate-200">7.0</td><td class="p-1.5 border border-slate-200">6.5</td><td class="p-1.5 border border-slate-200">25.0 ซม.</td></tr>
-                  <tr><td class="p-1.5 border border-slate-200 font-bold">41</td><td class="p-1.5 border border-slate-200">8.0</td><td class="p-1.5 border border-slate-200">7.5</td><td class="p-1.5 border border-slate-200">26.0 ซม.</td></tr>
-                  <tr><td class="p-1.5 border border-slate-200 font-bold">42</td><td class="p-1.5 border border-slate-200">8.5</td><td class="p-1.5 border border-slate-200">8.0</td><td class="p-1.5 border border-slate-200">26.5 ซม.</td></tr>
-                  <tr><td class="p-1.5 border border-slate-200 font-bold">43</td><td class="p-1.5 border border-slate-200">9.5</td><td class="p-1.5 border border-slate-200">9.0</td><td class="p-1.5 border border-slate-200">27.5 ซม.</td></tr>
-                  <tr><td class="p-1.5 border border-slate-200 font-bold">44</td><td class="p-1.5 border border-slate-200">10.0</td><td class="p-1.5 border border-slate-200">9.5</td><td class="p-1.5 border border-slate-200">28.0 ซม.</td></tr>
-                  <tr><td class="p-1.5 border border-slate-200 font-bold">45</td><td class="p-1.5 border border-slate-200">11.0</td><td class="p-1.5 border border-slate-200">10.5</td><td class="p-1.5 border border-slate-200">29.0 ซม.</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div>
-            <h5 class="font-bold text-orange-600 mb-2">ตารางไซส์เสื้อผ้ากีฬา (Apparel Size Guide)</h5>
-            <div class="overflow-x-auto">
-              <table class="w-full text-center border-collapse">
-                <thead>
-                  <tr class="bg-slate-100 text-slate-700">
-                    <th class="p-2 border border-slate-200">ขนาด</th>
-                    <th class="p-2 border border-slate-200">รอบอก (นิ้ว)</th>
-                    <th class="p-2 border border-slate-200">รอบเอว (นิ้ว)</th>
-                    <th class="p-2 border border-slate-200">ความยาว (นิ้ว)</th>
-                  </tr>
-                </thead>
-                <tbody class="text-slate-600">
-                  <tr><td class="p-1.5 border border-slate-200 font-bold">S</td><td class="p-1.5 border border-slate-200">36 - 38</td><td class="p-1.5 border border-slate-200">28 - 30</td><td class="p-1.5 border border-slate-200">27</td></tr>
-                  <tr><td class="p-1.5 border border-slate-200 font-bold">M</td><td class="p-1.5 border border-slate-200">38 - 40</td><td class="p-1.5 border border-slate-200">30 - 32</td><td class="p-1.5 border border-slate-200">28</td></tr>
-                  <tr><td class="p-1.5 border border-slate-200 font-bold">L</td><td class="p-1.5 border border-slate-200">40 - 42</td><td class="p-1.5 border border-slate-200">32 - 34</td><td class="p-1.5 border border-slate-200">29</td></tr>
-                  <tr><td class="p-1.5 border border-slate-200 font-bold">XL</td><td class="p-1.5 border border-slate-200">42 - 44</td><td class="p-1.5 border border-slate-200">34 - 36</td><td class="p-1.5 border border-slate-200">30</td></tr>
-                  <tr><td class="p-1.5 border border-slate-200 font-bold">2XL</td><td class="p-1.5 border border-slate-200">44 - 48</td><td class="p-1.5 border border-slate-200">36 - 40</td><td class="p-1.5 border border-slate-200">31</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+      <!-- Payment Method -->
+      <div class="space-y-2 text-xs">
+        <label class="block font-bold text-white uppercase tracking-wider text-[11px]">วิธีชำระเงิน</label>
+        <div class="grid grid-cols-2 gap-2">
+          <label class="flex items-center gap-2 p-3 bg-[#12131A] border border-[#E5B869] rounded-xl cursor-pointer">
+            <input type="radio" name="payment" checked class="accent-[#E5B869]" />
+            <span class="font-bold text-white">พร้อมเพย์ QR Code</span>
+          </label>
+          <label class="flex items-center gap-2 p-3 bg-[#12131A] border border-[#242636] rounded-xl cursor-pointer">
+            <input type="radio" name="payment" class="accent-[#E5B869]" />
+            <span class="font-bold text-slate-300">บัตรเครดิต / เดบิต</span>
+          </label>
         </div>
+      </div>
 
-        <button onclick="closeSizeGuide()" class="mt-5 w-full py-2.5 bg-slate-900 text-white rounded-xl font-bold">
-          ปิดหน้าต่าง
+      <!-- Total & Confirm -->
+      <div class="pt-4 border-t border-[#242636] flex items-center justify-between">
+        <div>
+          <span class="text-[10px] text-slate-400 block">ยอดชำระทั้งหมด</span>
+          <span id="checkout-total-price" class="text-xl font-black text-[#E5B869]">฿0</span>
+        </div>
+        <button onclick="completeOrder()" class="px-6 py-3 rounded-xl bg-white hover:bg-slate-200 text-black font-black text-xs shadow-xl">
+          ยืนยันการชำระเงิน ➔
         </button>
       </div>
+
     </div>
   </div>
 
   <!-- ========================================================
-       TOAST NOTIFICATION CONTAINER
+       ORDER SUCCESS & PROMPTPAY MODAL
        ======================================================== -->
-  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
+  <div id="order-success-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="w-full max-w-sm glass-modal-dark rounded-3xl p-6 text-center space-y-4 shadow-2xl border border-[#00E599]/30">
+      <div class="w-16 h-16 rounded-full bg-[#00E599]/15 border border-[#00E599]/50 text-[#00E599] flex items-center justify-center text-3xl mx-auto">
+        ✓
+      </div>
+      <div>
+        <h3 class="text-lg font-black text-white">สั่งซื้อสำเร็จเรียบร้อย!</h3>
+        <p class="text-xs text-slate-400 mt-1">รหัสคำสั่งซื้อ: <span id="success-order-id" class="font-mono text-[#E5B869] font-bold">HB-992144</span></p>
+      </div>
+
+      <!-- PromptPay Mockup -->
+      <div class="bg-white p-4 rounded-2xl max-w-[200px] mx-auto shadow-inner">
+        <svg class="w-full aspect-square" viewBox="0 0 100 100" fill="black">
+          <path d="M10 10h30v30H10zm5 5v20h20V15zm45-5h30v30H60zm5 5v20h20V15zM10 60h30v30H10zm5 5v20h20V65zm45 0h10v10H60zm10 10h10v10H70zm10-10h10v10H80zm-10 10h10v10H70zm10 10h10v10H80zm-20 0h10v10H60z"/>
+        </svg>
+        <span class="text-[9px] text-slate-800 font-bold block mt-1">สแกนชำระผ่าน PromptPay</span>
+      </div>
+
+      <p class="text-[11px] text-slate-400">
+        เมื่อชำระแล้ว สินค้าจะถูกส่งเข้าศูนย์ตรวจเช็คของแท้ HYPEBLACK และจัดส่งถึงคุณใน 1-2 วัน
+      </p>
+
+      <button onclick="closeOrderSuccessModal()" class="w-full py-3 rounded-xl bg-white text-black font-black text-xs hover:bg-slate-200">
+        กลับสู่หน้าหลัก
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       WISHLIST MODAL
+       ======================================================== -->
+  <div id="wishlist-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="w-full max-w-md glass-modal-dark rounded-3xl p-6 space-y-4 shadow-2xl relative">
+      <div class="flex items-center justify-between pb-3 border-b border-[#242636]">
+        <h4 class="font-bold text-white text-sm flex items-center gap-2">
+          <span>❤️</span> รายการที่บันทึกไว้
+        </h4>
+        <button onclick="closeWishlistModal()" class="text-slate-400 hover:text-white font-bold">✕</button>
+      </div>
+      <div id="wishlist-items-list" class="max-h-80 overflow-y-auto space-y-2">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SIZE GUIDE MODAL
+       ======================================================== -->
+  <div id="size-guide-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="w-full max-w-md glass-modal-dark rounded-3xl p-6 space-y-4 shadow-2xl relative">
+      <div class="flex items-center justify-between pb-3 border-b border-[#242636]">
+        <h4 class="font-bold text-white text-sm flex items-center gap-2">
+          <span>📏</span> ตารางเทียบขนาดไซส์สากล
+        </h4>
+        <button onclick="closeSizeGuide()" class="text-slate-400 hover:text-white font-bold">✕</button>
+      </div>
+      <div class="text-xs text-slate-300 space-y-3">
+        <p class="font-bold text-white">ตารางเทียบไซส์รองเท้า (EU / US / CM):</p>
+        <table class="w-full text-center border border-[#242636]">
+          <thead class="bg-[#12131A] text-white">
+            <tr>
+              <th class="p-2 border border-[#242636]">EU</th>
+              <th class="p-2 border border-[#242636]">US (Men)</th>
+              <th class="p-2 border border-[#242636]">ความยาวเท้า (CM)</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-400">
+            <tr><td class="p-1.5 border border-[#242636]">39</td><td class="p-1.5 border border-[#242636]">6.5</td><td class="p-1.5 border border-[#242636]">24.5</td></tr>
+            <tr><td class="p-1.5 border border-[#242636]">40</td><td class="p-1.5 border border-[#242636]">7.0</td><td class="p-1.5 border border-[#242636]">25.0</td></tr>
+            <tr><td class="p-1.5 border border-[#242636]">41</td><td class="p-1.5 border border-[#242636]">8.0</td><td class="p-1.5 border border-[#242636]">26.0</td></tr>
+            <tr><td class="p-1.5 border border-[#242636]">42</td><td class="p-1.5 border border-[#242636]">8.5</td><td class="p-1.5 border border-[#242636]">26.5</td></tr>
+            <tr><td class="p-1.5 border border-[#242636]">43</td><td class="p-1.5 border border-[#242636]">9.5</td><td class="p-1.5 border border-[#242636]">27.5</td></tr>
+            <tr><td class="p-1.5 border border-[#242636]">44</td><td class="p-1.5 border border-[#242636]">10.0</td><td class="p-1.5 border border-[#242636]">28.0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <button onclick="closeSizeGuide()" class="w-full py-2.5 bg-white text-black font-bold text-xs rounded-xl hover:bg-slate-200">
+        ปิด
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       TRACKING MODAL
+       ======================================================== -->
+  <div id="tracking-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="w-full max-w-md glass-modal-dark rounded-3xl p-6 space-y-4 shadow-2xl relative">
+      <div class="flex items-center justify-between pb-3 border-b border-[#242636]">
+        <h4 class="font-bold text-white text-sm flex items-center gap-2">
+          <span>🚚</span> ติดตามสถานะคำสั่งซื้อ & พัสดุ
+        </h4>
+        <button onclick="closeTrackingModal()" class="text-slate-400 hover:text-white font-bold">✕</button>
+      </div>
+      
+      <div class="bg-[#12131A] p-4 rounded-2xl border border-[#242636] space-y-3">
+        <div class="flex justify-between text-xs">
+          <span class="text-slate-400">เลขออเดอร์:</span>
+          <span class="font-mono text-[#E5B869] font-bold">HB-782190</span>
+        </div>
+        <div class="flex justify-between text-xs">
+          <span class="text-slate-400">สถานะ:</span>
+          <span class="text-[#00E599] font-bold">✓ ผ่านการตรวจแท้ 100% แล้ว</span>
+        </div>
+        <div class="flex justify-between text-xs">
+          <span class="text-slate-400">ผู้จัดส่ง:</span>
+          <span class="font-bold text-white">Kerry Express (TH24098812)</span>
+        </div>
+      </div>
+
+      <button onclick="closeTrackingModal()" class="w-full py-2.5 bg-white text-black font-bold text-xs rounded-xl hover:bg-slate-200">
+        ปิด
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       TOAST CONTAINER
+       ======================================================== -->
+  <div id="toast-container" class="fixed bottom-20 md:bottom-6 right-6 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
 
   <!-- ========================================================
        MOBILE BOTTOM NAVIGATION BAR
        ======================================================== -->
-  <nav class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 py-2 px-6 flex items-center justify-between text-xs font-semibold text-slate-500">
-    <a href="#" class="flex flex-col items-center gap-1 text-orange-600">
-      <span>🏠</span>
+  <nav class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-[#0E0F16]/95 backdrop-blur-xl border-t border-[#242636] py-2 px-6 flex items-center justify-between text-[11px] font-bold text-slate-400 select-none">
+    <a href="#" class="flex flex-col items-center gap-0.5 text-white">
+      <span class="text-base">🏠</span>
       <span>หน้าแรก</span>
     </a>
-    <a href="#catalog-section" class="flex flex-col items-center gap-1 hover:text-orange-600">
-      <span>🛍️</span>
-      <span>สินค้า</span>
+    <a href="#catalog-section" class="flex flex-col items-center gap-0.5 hover:text-white">
+      <span class="text-base">🏷️</span>
+      <span>ตลาด</span>
     </a>
-    <button onclick="showWishlistModal()" class="flex flex-col items-center gap-1 relative hover:text-orange-600">
-      <span>❤️</span>
-      <span>ถูกใจ</span>
-      <span class="wishlist-count-badge hidden absolute -top-1 -right-2 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+    <button onclick="toggleReadyToShipFilter()" class="flex flex-col items-center gap-0.5 hover:text-white">
+      <span class="text-base text-[#E5B869]">⚡</span>
+      <span>พร้อมส่ง</span>
     </button>
-    <button onclick="openCartDrawer()" class="flex flex-col items-center gap-1 relative hover:text-orange-600">
-      <span>🛒</span>
+    <button onclick="showWishlistModal()" class="flex flex-col items-center gap-0.5 relative hover:text-white">
+      <span class="text-base">❤️</span>
+      <span>บันทึก</span>
+      <span class="wishlist-count-badge hidden absolute -top-1 -right-2 bg-red-500 text-white text-[9px] w-3.5 h-3.5 rounded-full flex items-center justify-center">0</span>
+    </button>
+    <button onclick="openCartDrawer()" class="flex flex-col items-center gap-0.5 relative hover:text-white">
+      <span class="text-base">🛒</span>
       <span>ตะกร้า</span>
-      <span class="cart-count-badge hidden absolute -top-1 -right-2 bg-orange-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+      <span class="cart-count-badge hidden absolute -top-1 -right-2 bg-[#E5B869] text-black text-[9px] font-black w-3.5 h-3.5 rounded-full flex items-center justify-center">0</span>
     </button>
   </nav>
 
   <!-- ========================================================
        FOOTER
        ======================================================== -->
-  <footer class="bg-slate-950 text-slate-400 text-xs pt-16 pb-24 md:pb-12 border-t border-slate-900 mt-20">
+  <footer class="bg-[#050608] text-slate-500 text-xs pt-12 pb-24 md:pb-12 border-t border-white/5 mt-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-        
-        <div class="space-y-4">
-          <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-xl bg-orange-500 flex items-center justify-center text-white font-black text-lg">⚡</div>
-            <span class="text-xl font-black text-white">ACTIVE<span class="text-orange-500">PULSE</span></span>
-          </div>
-          <p class="leading-relaxed">
-            ศูนย์รวมอุปกรณ์กีฬา เสื้อผ้าระบายเหงื่อ และรองเท้าวิ่งระดับไฮเอนด์ ตอบโจทย์ทุกเป้าหมายการออกกำลังกายของคุณ
-          </p>
-          <div class="flex items-center gap-3 text-slate-300">
-            <span class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center cursor-pointer hover:bg-orange-500 transition-colors">f</span>
-            <span class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center cursor-pointer hover:bg-orange-500 transition-colors">ig</span>
-            <span class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center cursor-pointer hover:bg-orange-500 transition-colors">yt</span>
-            <span class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center cursor-pointer hover:bg-orange-500 transition-colors">tk</span>
-          </div>
-        </div>
-
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
         <div>
-          <h4 class="font-bold text-white uppercase tracking-wider mb-4">หมวดหมู่สินค้า</h4>
-          <ul class="space-y-2">
-            <li><a href="#catalog-section" onclick="filterByCategory('shoes-running')" class="hover:text-white transition-colors">รองเท้าวิ่งถนน & มาราธอน</a></li>
-            <li><a href="#catalog-section" onclick="filterByCategory('shoes-court')" class="hover:text-white transition-colors">รองเท้าบาสเก็ตบอล</a></li>
-            <li><a href="#catalog-section" onclick="filterByCategory('shoes-football')" class="hover:text-white transition-colors">รองเท้าสตั๊ดฟุตบอล</a></li>
-            <li><a href="#catalog-section" onclick="filterByCategory('apparel-men')" class="hover:text-white transition-colors">เสื้อผ้ากีฬาผู้ชาย</a></li>
-            <li><a href="#catalog-section" onclick="filterByCategory('apparel-women')" class="hover:text-white transition-colors">สปอร์ตบรา & เลกกิ้งผู้หญิง</a></li>
-          </ul>
+          <span class="text-lg font-black text-white">HYPE<span class="text-[#E5B869]">BLACK</span></span>
+          <p class="text-[11px] mt-1 text-slate-400">© 2026 HYPEBLACK Co., Ltd. ศูนย์รวมสินค้าแบรนด์เนมและสนีกเกอร์ของแท้ 100%</p>
         </div>
-
-        <div>
-          <h4 class="font-bold text-white uppercase tracking-wider mb-4">การบริการลูกค้า</h4>
-          <ul class="space-y-2">
-            <li><a href="#" onclick="openSizeGuide()" class="hover:text-white transition-colors">ตารางเทียบขนาดไซส์</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">เงื่อนไขการรับประกัน & เปลี่ยนไซส์ฟรี</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">นโยบายการจัดส่งสินค้า</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">วิธีชำระเงิน & เก็บเงินปลายทาง</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">ติดต่อสอบถามฝ่ายบริการลูกค้า</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-bold text-white uppercase tracking-wider mb-4">รับส่วนลดพิเศษ 10%</h4>
-          <p class="mb-3">สมัครรับข่าวสารและโปรโมชั่นก่อนใคร รับคูปองทันที</p>
-          <div class="flex gap-2">
-            <input type="email" placeholder="อีเมลของคุณ..." class="bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-orange-500 flex-1 text-xs" />
-            <button onclick="showToast('ขอบคุณสำหรับการติดตาม! ใช้โค้ด WELCOME10 รับส่วนลด 10% ได้เลย', 'success')" class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-4 py-2 rounded-xl transition-colors">
-              ตกลง
-            </button>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-4">
-        <p>© 2026 ACTIVEPULSE Sports Co., Ltd. สงวนลิขสิทธิ์ทุกประการ</p>
-        <div class="flex items-center gap-4">
-          <span>ความปลอดภัยระดับ 256-bit SSL</span>
+        <div class="flex items-center gap-4 text-[11px] text-slate-400">
+          <span>✓ ตรวจสอบของแท้ทุกชิ้น</span>
           <span>•</span>
-          <span>รองรับพร้อมเพย์ & บัตรเครดิตทุกธนาคาร</span>
+          <span>คุ้มครองผู้ซื้อ 100%</span>
+          <span>•</span>
+          <span>รับประกันแท้ตลอดชีพ</span>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Confetti Canvas for Celebrations -->
-  <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-[100] w-full h-full"></canvas>
-
-  <!-- Main JavaScript App -->
+  <!-- App Logic -->
   <script src="app.js"></script>
 </body>
 </html>
-
